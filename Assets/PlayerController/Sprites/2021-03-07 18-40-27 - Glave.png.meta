@@ -77,6 +77,8 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -86,8 +88,8 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -100
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -108,9 +110,12 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
   applyGammaDecoding: 0
   platformSettings:
   - serializedVersion: 3
@@ -528,6 +533,25 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      2021-03-07 18-40-27 - Glave_8: 6791022669015222390
+      2021-03-07 18-40-27 - Glave_13: 6076046742167354413
+      2021-03-07 18-40-27 - Glave_12: -8866580284695383156
+      2021-03-07 18-40-27 - Glave_15: -7146659504001760866
+      2021-03-07 18-40-27 - Glave_14: 2845666300511440954
+      2021-03-07 18-40-27 - Glave_1: 1851843109705927544
+      2021-03-07 18-40-27 - Glave_2: -5826084616006816811
+      2021-03-07 18-40-27 - Glave_11: -5889320464996800633
+      2021-03-07 18-40-27 - Glave_4: 2267730684627106472
+      2021-03-07 18-40-27 - Glave_3: -470120197634409140
+      2021-03-07 18-40-27 - Glave_10: 3492822511281185399
+      2021-03-07 18-40-27 - Glave_17: 3197679385593301049
+      2021-03-07 18-40-27 - Glave_16: 5871193832629695698
+      2021-03-07 18-40-27 - Glave_7: -3308815545714955987
+      2021-03-07 18-40-27 - Glave_6: 6307113266006518548
+      2021-03-07 18-40-27 - Glave_9: 7459647969396161911
+      2021-03-07 18-40-27 - Glave_5: 8191008202683232350
+      2021-03-07 18-40-27 - Glave_0: 1734658796249306662
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
