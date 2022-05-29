@@ -1,11 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
+﻿using UnityEngine;
 public class MobSpawner : MonoBehaviour
 {
     public GameObject enemyPrefab;
-
+    private Vector3 randomVector;
+    private GameObject target;
+    private Vector3 dir;
     void Start()
     {
         InvokeRepeating("SpawnEnemy", 1f, 1f);
@@ -18,6 +17,9 @@ public class MobSpawner : MonoBehaviour
 
     void SpawnEnemy()     
     {
-        Instantiate(enemyPrefab, Vector2.zero, Quaternion.identity);
+        target = GameObject.Find("Player");
+        dir = target.transform.position;
+        dir = dir + (Random.insideUnitSphere * 5.0f);
+        Instantiate(enemyPrefab, dir, Quaternion.identity);
     }
 }
