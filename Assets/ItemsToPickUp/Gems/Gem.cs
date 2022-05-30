@@ -1,16 +1,15 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-
 public class Gem : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public Sprite[] gemSprite;
+    int randomNumber;
     void Start()
     {
-        Destroy(gameObject, 3f);
+        //Take a random number in Sprite array and cast it to the sprite renderer
+        randomNumber = Random.Range(0, gemSprite.Length);
+        gameObject.GetComponentInChildren<SpriteRenderer>().sprite = gemSprite[randomNumber];
+        Destroy(gameObject, 15f);
     }
-
-    // Update is called once per frame
     public void Collected()
     {
         Destroy(gameObject);

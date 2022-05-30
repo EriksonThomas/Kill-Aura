@@ -8,6 +8,7 @@ public class PlayerController2D : MonoBehaviour
     public float maxStamina = 20f;
     public float currentStamina = 20f;
     public float staminaRegenTime = 2f;
+    public float startingGems = 0.0f;
 
     void FixedUpdate()
     {

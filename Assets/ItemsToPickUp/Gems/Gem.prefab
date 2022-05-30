@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2620506605651804744}
   m_Layer: 0
   m_Name: Sprite
-  m_TagString: Untagged
+  m_TagString: Gem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -130,6 +130,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd991b28c5a121b4aa9b6a04abfa459b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gemSprite:
+  - {fileID: -2118502509, guid: c9048e882b1dc42458b61a5302c78ff6, type: 3}
+  - {fileID: -1698492738, guid: c9048e882b1dc42458b61a5302c78ff6, type: 3}
+  - {fileID: 215556215, guid: c9048e882b1dc42458b61a5302c78ff6, type: 3}
+  - {fileID: -1884685346, guid: c9048e882b1dc42458b61a5302c78ff6, type: 3}
+  - {fileID: 2037044531, guid: c9048e882b1dc42458b61a5302c78ff6, type: 3}
+  - {fileID: 2078216613, guid: c9048e882b1dc42458b61a5302c78ff6, type: 3}
 --- !u!1 &4406096501014872657
 GameObject:
   m_ObjectHideFlags: 0
@@ -143,7 +150,7 @@ GameObject:
   - component: {fileID: 1159340348051345945}
   m_Layer: 0
   m_Name: GemCollider
-  m_TagString: Untagged
+  m_TagString: Gem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -199,4 +206,4 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.06116251
+  m_Radius: 0.07864192
