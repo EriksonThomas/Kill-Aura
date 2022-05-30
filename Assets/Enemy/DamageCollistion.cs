@@ -32,5 +32,10 @@ public class DamageCollistion : MonoBehaviour
             gameObject.GetComponentInParent<EnemyController>().DamageTaken(other.GetComponentInParent<LightningAttack>().lightningDamage);
             lightningDamageTimer = lightningAttackDelay;
         }
+
+        if (other.gameObject.tag == "BoardWipe")
+        {
+            gameObject.GetComponentInParent<EnemyController>().DamageTaken(other.GetComponentInParent<BoardWipeAttack>().BoardWipeDamage);
+        }
     }
 }
