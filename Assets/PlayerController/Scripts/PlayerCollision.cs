@@ -8,7 +8,7 @@ public class PlayerCollision : MonoBehaviour
         if (other.gameObject.tag == "Gem")
         {
             //Call method Collected in "Gem" Script to destroy gem on pickup
-            //other.gameObject.GetComponentInParent<Gem>().Collected();
+            other.gameObject.GetComponentInParent<Gem>().Collected();
         }
     }
 }

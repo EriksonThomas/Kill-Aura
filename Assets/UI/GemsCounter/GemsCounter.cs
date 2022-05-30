@@ -7,6 +7,6 @@ public PlayerController2D playerScript;
 public Text sliderText;
     void Update()
     {
-        //sliderText.text = playerScript.startingGems.ToString("00");
+        sliderText.text = playerScript.startingGems.ToString("00");
     }
 }

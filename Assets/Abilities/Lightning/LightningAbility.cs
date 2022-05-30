@@ -23,5 +23,4 @@ public class LightningAbility : MonoBehaviour
         GameObject clone = Instantiate(attackLightningAnimation, dir, Quaternion.identity);
         Destroy(clone, lightningDuration);
     }
-}
-        
+}       
