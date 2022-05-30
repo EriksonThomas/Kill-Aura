@@ -13,10 +13,10 @@ public class Gem : MonoBehaviour
     public void Collected()
     {
         Destroy(gameObject);
-        Debug.Log(gameObject.GetComponentInChildren<SpriteRenderer>().sprite);
-        if(gameObject.GetComponentInChildren<SpriteRenderer>().sprite)
+        if(gameObject.GetComponentInChildren<SpriteRenderer>().sprite = gemSprite[5])
         {
-
+            
         }
     }
 }
+
