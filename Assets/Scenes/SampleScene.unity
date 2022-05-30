@@ -626,6 +626,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 102564726}
   m_CullTransparentMesh: 0
+--- !u!1 &370131429 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7597302457976148875, guid: bf38bd032e874eb46a46db7985ee416b,
+    type: 3}
+  m_PrefabInstance: {fileID: 7597302457118155106}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &451470208
 GameObject:
   m_ObjectHideFlags: 0
@@ -1291,10 +1297,22 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 7597302457118155106}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 370131429}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8c628551fda1cd24a96c38f39ba0777a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1298412277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 370131429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 844567771699d6846aa6129e45e00bf9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1400874933
@@ -1344,7 +1362,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.0650406, y: 1}
+    m_SensorSize: {x: 2.0535476, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -1901,6 +1919,16 @@ PrefabInstance:
         type: 3}
       propertyPath: moveSpeed
       value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7597302457976148877, guid: bf38bd032e874eb46a46db7985ee416b,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7597302457976148883, guid: bf38bd032e874eb46a46db7985ee416b,
+        type: 3}
+      propertyPath: startAttackDelay
+      value: 0.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf38bd032e874eb46a46db7985ee416b, type: 3}

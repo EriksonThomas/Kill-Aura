@@ -194,6 +194,8 @@ MonoBehaviour:
   maxHealth: 10
   currentHealth: 10
   startDazedTime: 2
+  gemPrefab: {fileID: 2661557368925465875, guid: 06bba6f1cc11d864e903e89382df613d,
+    type: 3}
 --- !u!114 &1395002179024953186
 MonoBehaviour:
   m_ObjectHideFlags: 0

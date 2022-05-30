@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
@@ -8,11 +6,18 @@ public class EnemyController : MonoBehaviour
     public float currentHealth = 10f;
     private float dazedTime;
     public float startDazedTime = 2;
+    private float randomCount;
+    public GameObject gemPrefab;
 
     void FixedUpdate()
     {
         if (currentHealth <= 0)
         {
+        for (float i = 0; i <= Random.Range(0, 5.0f); i++)
+        {
+            gameObject.transform.position = gameObject.transform.position + (Random.insideUnitSphere * .3f);
+            GameObject gem = Instantiate(gemPrefab, gameObject.transform.position, Quaternion.identity);
+        }
             Destroy(gameObject);
         }
 
@@ -29,7 +34,6 @@ public class EnemyController : MonoBehaviour
     public void DamageTaken(float damage)
     {
         dazedTime = startDazedTime;
-        currentHealth -= damage;
-        //Debug.Log(currentHealth);
+        currentHealth -= damage;       
     } 
 }

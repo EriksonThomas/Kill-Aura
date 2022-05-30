@@ -116,7 +116,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b7ffe9b988169e47b134cb946adf075, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightningStrike: 1
+  lightningStrike: 0
   lightningInterval: 3
   lightningRangeExponent: 2.5
   lightningDuration: 2.5
