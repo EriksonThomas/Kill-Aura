@@ -1360,7 +1360,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2fc23e6559d4494082237bb70697f41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lightningAbilityPrefabEnabled: 1
   lightningAbilityPrefab: {fileID: 6848021490128977515, guid: 1ea55b178abd8b9448010129b9574c2f,
+    type: 3}
+  boardWipeAbilityPrefabEnabled: 1
+  boardWipeAbilityPrefab: {fileID: 6247818575599910994, guid: 9919b8423acf7f04bbb4f05b808ec55d,
     type: 3}
 --- !u!4 &1298412266 stripped
 Transform:
@@ -1439,7 +1443,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.8338727, y: 1}
+    m_SensorSize: {x: 1.8349514, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
