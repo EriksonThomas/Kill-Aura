@@ -6,7 +6,7 @@ public class BoardWipeAttack : MonoBehaviour
     {
         if (other.gameObject.tag == "Enemy")
         {
-            other.GetComponentInParent<EnemyController>().DamageTaken(BoardWipeDamage);
+            other.GetComponentInParent<EnemyController>().DoDamage(BoardWipeDamage);
         }
     }
 }

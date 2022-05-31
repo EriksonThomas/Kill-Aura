@@ -15,7 +15,7 @@ public class LightningAttack : MonoBehaviour
     {
         if (other.gameObject.tag == "Enemy" && lightningDamageTimer <= 0)
         {
-            other.GetComponentInParent<EnemyController>().DamageTaken(lightningDamage);
+            other.GetComponentInParent<EnemyController>().DoDamage(lightningDamage);
             lightningDamageTimer = lightningAttackDelay;
         }
     }

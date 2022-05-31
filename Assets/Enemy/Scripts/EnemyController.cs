@@ -34,9 +34,9 @@ public class EnemyController : MonoBehaviour
             dazedTime -= Time.fixedDeltaTime;
         }
     }
-    public void DamageTaken(float damage)
+    public void DoDamage(float damage)
     {
         dazedTime = startDazedTime;
         currentHealth -= damage;       
-    } 
+    }
 }
