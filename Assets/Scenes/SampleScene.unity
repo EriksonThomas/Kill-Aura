@@ -1360,10 +1360,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2fc23e6559d4494082237bb70697f41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightningAbilityPrefabEnabled: 1
+  lightningAbilityPrefabEnabled: 0
   lightningAbilityPrefab: {fileID: 6848021490128977515, guid: 1ea55b178abd8b9448010129b9574c2f,
     type: 3}
-  boardWipeAbilityPrefabEnabled: 1
+  boardWipeAbilityPrefabEnabled: 0
   boardWipeAbilityPrefab: {fileID: 6247818575599910994, guid: 9919b8423acf7f04bbb4f05b808ec55d,
     type: 3}
 --- !u!4 &1298412266 stripped
@@ -2210,6 +2210,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsTrigger
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7597302457976148882, guid: bf38bd032e874eb46a46db7985ee416b,
+        type: 3}
+      propertyPath: startingGems
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7597302457976148883, guid: bf38bd032e874eb46a46db7985ee416b,
         type: 3}
