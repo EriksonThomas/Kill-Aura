@@ -33,4 +33,8 @@ public class PlayerController2D : MonoBehaviour
     {
         currentHealth -= damage;
     } 
+    public void GemCollected(float gemCount)
+    {
+        startingGems += gemCount;
+    } 
 }

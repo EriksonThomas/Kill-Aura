@@ -18,5 +18,13 @@ public class Gem : MonoBehaviour
             
         }
     }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            Collected();
+            other.gameObject.GetComponentInParent<PlayerController2D>().GemCollected(1);
+        }
+    }
 }
 
