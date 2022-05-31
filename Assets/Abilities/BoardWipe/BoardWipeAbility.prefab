@@ -47,5 +47,5 @@ MonoBehaviour:
   boardWipe: 1
   boardWipeInterval: 10
   boardWipeDuration: 2.5
-  attackBoardWipeObject: {fileID: 1983020989631702563, guid: f796b9c067f9dd846b1a2c1c93e36e92,
+  attackBoardWipeObject: {fileID: 1420051255019916187, guid: f796b9c067f9dd846b1a2c1c93e36e92,
     type: 3}
