@@ -37,5 +37,5 @@ sysinfo.txt
 *.unitypackage
 
 # other
-#UserSettings/
+UserSettings/
 Logs/
