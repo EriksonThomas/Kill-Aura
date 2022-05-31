@@ -24,7 +24,6 @@ ExportedObj/
 *.pdb
 *.opendb
 *.VC.db
-#*.log
 
 # Unity3D generated meta files
 *.pidb.meta
@@ -38,4 +37,5 @@ sysinfo.txt
 *.unitypackage
 
 # other
-#UserSettings/
+UserSettings/
+Logs/
