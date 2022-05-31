@@ -4,7 +4,7 @@ public class PlayerController2D : MonoBehaviour
 {
     public float maxHealth = 10f;
     public float currentHealth = 10f;
-    public float healthRegenTime = 2f;
+    public float healthRegenTime = 0f;
     public float maxStamina = 20f;
     public float currentStamina = 20f;
     public float staminaRegenTime = 2f;
@@ -29,10 +29,18 @@ public class PlayerController2D : MonoBehaviour
             //TODO: death animation here
         }
     }
-    public void DamageTaken(float damage)
+    public void DoDamage(float damage)
     {
         currentHealth -= damage;
     } 
+        public void DoHeal(float healValue)
+    {
+        if (currentHealth + healValue > maxHealth)
+        {
+            healValue = maxHealth - currentHealth;
+        }
+        currentHealth += healValue;
+    }
     public void GemCollected(float gemCount)
     {
         startingGems += gemCount;

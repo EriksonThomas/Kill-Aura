@@ -6,6 +6,8 @@ public class AbilityManager : MonoBehaviour
     public GameObject lightningAbilityPrefab;
     public bool boardWipeAbilityPrefabEnabled = false;
     public GameObject boardWipeAbilityPrefab;
+    public bool HealDropAbilityEnabled = false;
+    public GameObject healDropAbilityPrefab;
     
 
     void Start()
@@ -18,6 +20,11 @@ public class AbilityManager : MonoBehaviour
         if(boardWipeAbilityPrefabEnabled == true)
         {
             Instantiate(boardWipeAbilityPrefab);
+        }
+
+        if (HealDropAbilityEnabled == true)
+        {
+            Instantiate(healDropAbilityPrefab);
         }
     }
 }

@@ -64,7 +64,7 @@ public class BaseAttack : MonoBehaviour
         Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackDirection.position, attackRange, whatIsEnemies);
         for(int i = 0; i < enemiesToDamage.Length; i++)
         {
-            enemiesToDamage[i].GetComponent<EnemyController>().DamageTaken(attackDamage);
+            enemiesToDamage[i].GetComponent<EnemyController>().DoDamage(attackDamage);
         }
     }
 }
