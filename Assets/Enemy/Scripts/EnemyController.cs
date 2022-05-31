@@ -7,20 +7,23 @@ public class EnemyController : MonoBehaviour
     private float dazedTime;
     public float startDazedTime = 2;
     private float randomCount;
-    public GameObject gemPrefab;
-
+    public GameObject[] gemPrefab;
+    private int randomNumber;
     void FixedUpdate()
     {
         if (currentHealth <= 0)
         {
         for (float i = 0; i <= Random.Range(0, 5.0f); i++)
         {
+            // Take a random number in Gem Prefab array and cast it to the spawn it in on death
+            randomNumber = Random.Range(0, gemPrefab.Length);
             gameObject.transform.position = gameObject.transform.position + (Random.insideUnitSphere * .3f);
-            GameObject gem = Instantiate(gemPrefab, gameObject.transform.position, Quaternion.identity);
+            GameObject gem = Instantiate(gemPrefab[randomNumber], gameObject.transform.position, Quaternion.identity);
         }
             Destroy(gameObject);
         }
 
+        // Daze on damaged
         if(dazedTime <= 0)
         {
             gameObject.GetComponent<EnemyMovement>().moveSpeed = gameObject.GetComponent<EnemyMovement>().moveSpeedStart;

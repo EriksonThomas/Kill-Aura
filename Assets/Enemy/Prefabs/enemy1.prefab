@@ -194,8 +194,13 @@ MonoBehaviour:
   maxHealth: 10
   currentHealth: 10
   startDazedTime: 2
-  gemPrefab: {fileID: 2661557368925465875, guid: 06bba6f1cc11d864e903e89382df613d,
-    type: 3}
+  gemPrefab:
+  - {fileID: 2661557368925465875, guid: 8e9453694dbe3d34b89e25650e9efd1e, type: 3}
+  - {fileID: 2661557368925465875, guid: 20fa063ecb60b6645b247b6147673037, type: 3}
+  - {fileID: 2661557368925465875, guid: 0620f1df52215284bb89eb72464f2ddc, type: 3}
+  - {fileID: 2661557368925465875, guid: 4f6ceba3c411d0b438cb0bd6ae5defd2, type: 3}
+  - {fileID: 2661557368925465875, guid: 7b354e533b87fba4c97c9333aa8c49a1, type: 3}
+  - {fileID: 2661557368925465875, guid: b755a98695fbff14aa91960a45eed3a4, type: 3}
 --- !u!114 &1395002179024953186
 MonoBehaviour:
   m_ObjectHideFlags: 0
