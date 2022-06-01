@@ -43,6 +43,7 @@ public class EffectableObject : MonoBehaviour
             if (activeEffects[index].GetType() == effect.GetType()) // TODO: check if this can be false (removes ALL effects)
             {
                 activeEffects.RemoveAt(index);
+                statusBarHasSeen = false;
             }
         }
     }

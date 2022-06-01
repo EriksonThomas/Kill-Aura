@@ -34,7 +34,6 @@ public class StatusBarBehavior : MonoBehaviour
     {
         if (playerEffectable.statusBarHasSeen == false)
         {
-            Debug.Log("status bar new");
             // kill all child icons
             foreach (GameObject icon in effectIcons)
             {
@@ -47,7 +46,9 @@ public class StatusBarBehavior : MonoBehaviour
             for (int i = 0; i < playerEffectable.activeEffects.Count; ++i)
             {
                 GameObject icon = Instantiate(playerEffectable.activeEffects[i].icon);
-                // icon.GetComponent<RectTransform>().SetPositionAndRotation = start + (i * spacing);
+                icon.transform.SetParent(gameObject.transform);
+                icon.transform.GetComponent<RectTransform>().anchoredPosition = new Vector2(start + (i * spacing), 0);
+                
                 effectIcons.Add(icon);
             }
 

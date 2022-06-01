@@ -219,7 +219,6 @@ RectTransform:
   - {fileID: 40915460}
   - {fileID: 1561865300}
   - {fileID: 216780464}
-  - {fileID: 233859724}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -755,54 +754,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spacing: 100
---- !u!1 &233859723
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 233859724}
-  - component: {fileID: 233859725}
-  m_Layer: 5
-  m_Name: UIDocument
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &233859724
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 233859723}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 30728251}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &233859725
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 233859723}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_PanelSettings: {fileID: 11400000, guid: dd950c9fbc1dda34386e740557dc1604, type: 2}
-  m_ParentUI: {fileID: 0}
-  sourceAsset: {fileID: 0}
-  m_SortingOrder: 0
 --- !u!1 &370131429 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7597302457976148875, guid: bf38bd032e874eb46a46db7985ee416b,
@@ -1534,17 +1485,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2fc23e6559d4494082237bb70697f41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightningAbilityPrefabEnabled: 1
+  lightningAbilityPrefabEnabled: 0
   lightningAbilityPrefab: {fileID: 6848021490128977515, guid: 1ea55b178abd8b9448010129b9574c2f,
     type: 3}
   boardWipeAbilityPrefabEnabled: 0
   boardWipeAbilityPrefab: {fileID: 6247818575599910994, guid: 9919b8423acf7f04bbb4f05b808ec55d,
     type: 3}
-  healDropAbilityEnabled: 1
+  healDropAbilityEnabled: 0
   healDropAbilityPrefab: {fileID: 6848021490128977515, guid: bb6faca6c9094de47a5d0b1620c3d979,
     type: 3}
-  healPoolAbilityEnabled: 0
-  healPoolAbilityPrefab: {fileID: 0}
+  healPoolAbilityEnabled: 1
+  healPoolAbilityPrefab: {fileID: 6848021490128977515, guid: 853c42a1736888f4eb0295695ccf9539,
+    type: 3}
 --- !u!4 &1298412266 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7597302457976148872, guid: bf38bd032e874eb46a46db7985ee416b,
@@ -1622,7 +1574,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.0622463, y: 1}
+    m_SensorSize: {x: 2.1220932, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
