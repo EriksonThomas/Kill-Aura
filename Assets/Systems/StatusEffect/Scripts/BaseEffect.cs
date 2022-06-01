@@ -29,4 +29,9 @@ public class BaseEffect : ScriptableObject
     {
         return originalHealPerSec;
     }
+
+    public virtual bool Effect_IsInvincible(bool originalInvincible)
+    {
+        return originalInvincible;
+    }
 }

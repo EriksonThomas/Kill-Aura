@@ -39,9 +39,10 @@ public class StatusBarBehavior : MonoBehaviour
             {
                 GameObject.Destroy(icon);
             }
+            effectIcons = new List<GameObject>();
 
             // instantiate icon for each
-            float start = -1f * (transform.childCount * spacing / 2f);
+            float start = -1f * (playerEffectable.activeEffects.Count * spacing / 2f);
 
             for (int i = 0; i < playerEffectable.activeEffects.Count; ++i)
             {

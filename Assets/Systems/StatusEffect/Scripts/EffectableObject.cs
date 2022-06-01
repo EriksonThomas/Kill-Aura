@@ -61,4 +61,18 @@ public class EffectableObject : MonoBehaviour
         }
         return workingHOT;
     }
+
+    public bool Effect_IsInvincible(bool originalInvincible)
+    {
+        bool workingInvincible = originalInvincible;
+
+        for (int index = 0; index < activeEffects.Count; ++index)
+        {
+            if (activeEffects[index].IsActive)
+            {
+                workingInvincible = activeEffects[index].Effect_IsInvincible(workingInvincible);
+            }
+        }
+        return workingInvincible;
+    }
 }
