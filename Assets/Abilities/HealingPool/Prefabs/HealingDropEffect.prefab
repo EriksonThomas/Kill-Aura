@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2241491262919157535}
   - component: {fileID: 4881031564056398853}
   - component: {fileID: 8861964962254302486}
-  - component: {fileID: 5867609882117863065}
+  - component: {fileID: 372969985962036991}
   - component: {fileID: -1886033234448704495}
   m_Layer: 0
   m_Name: HealingDropEffect
@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 3501762577967717947}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.88, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -70,8 +70,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0064756842, y: -0.2798485}
-  m_Size: {x: 0.88224715, y: 0.52624685}
+  m_Offset: {x: -0.00013906168, y: -0.40883446}
+  m_Size: {x: 0.49859345, y: 0.14920677}
   m_Direction: 1
 --- !u!95 &8861964962254302486
 Animator:
@@ -83,7 +83,7 @@ Animator:
   m_GameObject: {fileID: 3501762577967717947}
   m_Enabled: 0
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 16d280ef53fdc7848a1c6faecdb4435b, type: 2}
+  m_Controller: {fileID: 9100000, guid: 910a9b9ceb61d0849b5f0a7a4bbd4020, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -93,7 +93,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &5867609882117863065
+--- !u!114 &372969985962036991
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -102,10 +102,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 3501762577967717947}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4de27a0cccf731043ad4c668baea116a, type: 3}
+  m_Script: {fileID: 11500000, guid: 7799667df31666c4c8b05edc80f20185, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healValue: 10
+  healPerSec: 6
+  Effect: {fileID: 11400000, guid: 84f580837d77e2e419257be875838289, type: 2}
 --- !u!212 &-1886033234448704495
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -147,12 +148,12 @@ SpriteRenderer:
   m_SortingLayerID: -2002269539
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: -30399928, guid: 83d16858ebddaf745ba0e298633c76c0, type: 3}
+  m_Sprite: {fileID: -61415546, guid: dc7967653aae5be4ba61bfc4c557531f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2, y: 2}
+  m_Size: {x: 1.28, y: 1.28}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

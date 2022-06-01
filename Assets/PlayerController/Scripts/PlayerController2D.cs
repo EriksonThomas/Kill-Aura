@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections.Generic;
 
 public class PlayerController2D : MonoBehaviour
 {
@@ -10,30 +11,25 @@ public class PlayerController2D : MonoBehaviour
     public float staminaRegenTime = 2f;
     public float startingGems = 0.0f;
 
+    protected EffectableObject Effectable;
+
+    void Awake()
+    {
+        Effectable = GetComponent<EffectableObject>();
+    }
+
     void FixedUpdate()
     {
-        if (currentHealth < maxHealth)
-        {
-            currentHealth += healthRegenTime * Time.fixedDeltaTime;
-        }
-        if (currentStamina < maxStamina)
-        {
-            currentStamina += staminaRegenTime * Time.fixedDeltaTime;
-        }
-        
-        
-
-        if (currentHealth <= 0)
-        {
-            Time.timeScale = 0;
-            //TODO: death animation here
-        }
+        RegenHealth();
+        RegenStamina();
+        HealOverTime();
+        CheckIfDead();
     }
     public void DoDamage(float damage)
     {
         currentHealth -= damage;
     } 
-        public void DoHeal(float healValue)
+    public void DoHeal(float healValue)
     {
         if (currentHealth + healValue > maxHealth)
         {
@@ -44,5 +40,40 @@ public class PlayerController2D : MonoBehaviour
     public void GemCollected(float gemCount)
     {
         startingGems += gemCount;
-    } 
+    }
+
+    private void RegenHealth()
+    {
+        if (currentHealth < maxHealth)
+        {
+            currentHealth += healthRegenTime * Time.fixedDeltaTime;
+        }
+    }
+
+    private void RegenStamina()
+    {
+        if (currentStamina < maxStamina)
+        {
+            currentStamina += staminaRegenTime * Time.fixedDeltaTime;
+        }
+    }
+
+    private void HealOverTime()
+    {
+        float healPerSec = Effectable.Effect_HealPerSec(0);
+
+        if (healPerSec > 0)
+        {
+            currentHealth += healPerSec * Time.fixedDeltaTime;
+        }
+    }
+
+    private void CheckIfDead()
+    {
+        if (currentHealth <= 0)
+        {
+            Time.timeScale = 0;
+            //TODO: death animation here
+        }
+    }
 }

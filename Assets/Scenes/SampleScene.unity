@@ -1366,8 +1366,11 @@ MonoBehaviour:
   boardWipeAbilityPrefabEnabled: 0
   boardWipeAbilityPrefab: {fileID: 6247818575599910994, guid: 9919b8423acf7f04bbb4f05b808ec55d,
     type: 3}
-  HealDropAbilityEnabled: 0
+  healDropAbilityEnabled: 0
   healDropAbilityPrefab: {fileID: 6848021490128977515, guid: bb6faca6c9094de47a5d0b1620c3d979,
+    type: 3}
+  healPoolAbilityEnabled: 0
+  healPoolAbilityPrefab: {fileID: 6848021490128977515, guid: 853c42a1736888f4eb0295695ccf9539,
     type: 3}
 --- !u!4 &1298412266 stripped
 Transform:

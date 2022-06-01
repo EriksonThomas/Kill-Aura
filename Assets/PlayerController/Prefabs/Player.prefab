@@ -220,6 +220,7 @@ GameObject:
   - component: {fileID: 7597302457976148872}
   - component: {fileID: 7597302457976148876}
   - component: {fileID: 7597302457976148882}
+  - component: {fileID: 7709656305116773909}
   - component: {fileID: 7597302457976148879}
   - component: {fileID: 7597302457976148877}
   - component: {fileID: 7597302457976148883}
@@ -280,6 +281,19 @@ MonoBehaviour:
   maxStamina: 20
   currentStamina: 20
   staminaRegenTime: 2
+  startingGems: 0
+--- !u!114 &7709656305116773909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7597302457976148875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09fbf6daac02a9c44a8c63ba66a4a25e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!50 &7597302457976148879
 Rigidbody2D:
   serializedVersion: 4
