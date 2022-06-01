@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   duration: 0
   permanent: 1
+  icon: {fileID: 6453193544218790201, guid: a064e5b2e61f6b94684cae288dbae6c6, type: 3}
   HealPerSecondModifier: 10
