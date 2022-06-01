@@ -64,7 +64,8 @@ public class PlayerController2D : MonoBehaviour
 
         if (healPerSec > 0)
         {
-            currentHealth += healPerSec * Time.fixedDeltaTime;
+            // TODO: healing animation
+            DoHeal(healPerSec * Time.fixedDeltaTime);
         }
     }
 

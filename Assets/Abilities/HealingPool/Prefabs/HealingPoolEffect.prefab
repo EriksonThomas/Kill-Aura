@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 372969985962036991}
   - component: {fileID: -1886033234448704495}
   m_Layer: 0
-  m_Name: HealingDropEffect
+  m_Name: HealingPoolEffect
   m_TagString: Lightning
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

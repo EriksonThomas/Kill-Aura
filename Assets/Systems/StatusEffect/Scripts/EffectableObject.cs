@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class EffectableObject : MonoBehaviour
 {
-    List<BaseEffect> activeEffects = new List<BaseEffect>();
+    public List<BaseEffect> activeEffects = new List<BaseEffect>();
+    public bool statusBarHasSeen = false;
 
     void FixedUpdate()
     {
@@ -15,7 +16,11 @@ public class EffectableObject : MonoBehaviour
 
             // if effect finished
             if (!activeEffects[index].IsActive)
+            {
+                activeEffects[index].OnEffectEnd();
                 activeEffects.RemoveAt(index);
+                statusBarHasSeen = false;
+            }
         }
     }
 
@@ -27,6 +32,7 @@ public class EffectableObject : MonoBehaviour
         // make the effect active
         newEffect.EnableEffect();
         activeEffects.Add(newEffect);
+        statusBarHasSeen = false;
     }
 
     public void RemoveAllOfEffect(BaseEffect effect)
