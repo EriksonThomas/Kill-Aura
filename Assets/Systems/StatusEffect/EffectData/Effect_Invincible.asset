@@ -9,10 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae2c26de10488334d8ed446f16bee27b, type: 3}
-  m_Name: Effect_HealOverTime
+  m_Script: {fileID: 11500000, guid: 816b3b4f4f7e0ae4387b16494c622594, type: 3}
+  m_Name: Effect_Invincible
   m_EditorClassIdentifier: 
   duration: 0
   permanent: 1
-  icon: {fileID: 6453193544218790201, guid: a064e5b2e61f6b94684cae288dbae6c6, type: 3}
-  HealPerSecondModifier: 10
+  icon: {fileID: 754315720670512558, guid: ee5c54588f0a71f4a90fa64c912337b1, type: 3}
