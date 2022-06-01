@@ -2,7 +2,6 @@
 public class MobSpawner : MonoBehaviour
 {
     public GameObject[] enemyPrefab;
-    private Vector3 randomVector;
     private GameObject target;
     private Vector3 dir;
     private int randomNumber;
@@ -10,19 +9,13 @@ public class MobSpawner : MonoBehaviour
     {
         InvokeRepeating("SpawnEnemy", 1f, 1f);
     }
-
-    // Update is called once per frame
-    void FixedUpdate()
-    {
-    }
-
     void SpawnEnemy()     
     {
+        //Find the location of the player and get a random point in a large radius around the player to instansiate the enemy
         target = GameObject.Find("Player");
         dir = target.transform.position;
         dir = dir + (Random.insideUnitSphere * 5.0f);
         randomNumber = Random.Range(0, enemyPrefab.Length);
-        Debug.Log(randomNumber);
         Instantiate(enemyPrefab[randomNumber], dir, Quaternion.identity);
     }
 }

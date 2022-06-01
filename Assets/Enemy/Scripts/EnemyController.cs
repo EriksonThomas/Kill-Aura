@@ -13,13 +13,13 @@ public class EnemyController : MonoBehaviour
     {
         if (currentHealth <= 0)
         {
-        for (float i = 0; i <= Random.Range(0, 5.0f); i++)
-        {
-            // Take a random number in Gem Prefab array and cast it to the spawn it in on death
-            randomNumber = Random.Range(0, gemPrefab.Length);
-            gameObject.transform.position = gameObject.transform.position + (Random.insideUnitSphere * .3f);
-            GameObject gem = Instantiate(gemPrefab[randomNumber], gameObject.transform.position, Quaternion.identity);
-        }
+            for (float i = 0; i <= Random.Range(0, 5.0f); i++)
+            {
+                // Take a random number in Gem Prefab array and cast it to the spawn it in on death
+                randomNumber = Random.Range(0, gemPrefab.Length);
+                gameObject.transform.position = gameObject.transform.position + (Random.insideUnitSphere * .3f);
+                GameObject gem = Instantiate(gemPrefab[randomNumber], gameObject.transform.position, Quaternion.identity);
+            }
             Destroy(gameObject);
         }
 
