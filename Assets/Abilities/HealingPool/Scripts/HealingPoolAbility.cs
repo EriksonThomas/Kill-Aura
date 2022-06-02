@@ -19,6 +19,7 @@ public class HealingPoolAbility : MonoBehaviour
         target = GameObject.Find("Player");
         dir = target.transform.position;
         dir = dir + (Random.insideUnitSphere * rangeExponent);
+        dir.z = 0;
         GameObject clone = Instantiate(healingPoolAbility, dir, Quaternion.identity);
         Destroy(clone, duration);
     }
