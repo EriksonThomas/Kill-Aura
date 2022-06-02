@@ -43,6 +43,7 @@ public class EffectableObject : MonoBehaviour
             if (activeEffects[index].GetType() == effect.GetType()) // TODO: check if this can be false (removes ALL effects)
             {
                 activeEffects.RemoveAt(index);
+                statusBarHasSeen = false;
             }
         }
     }
@@ -59,5 +60,19 @@ public class EffectableObject : MonoBehaviour
             }
         }
         return workingHOT;
+    }
+
+    public bool Effect_IsInvincible(bool originalInvincible)
+    {
+        bool workingInvincible = originalInvincible;
+
+        for (int index = 0; index < activeEffects.Count; ++index)
+        {
+            if (activeEffects[index].IsActive)
+            {
+                workingInvincible = activeEffects[index].Effect_IsInvincible(workingInvincible);
+            }
+        }
+        return workingInvincible;
     }
 }

@@ -27,7 +27,11 @@ public class PlayerController2D : MonoBehaviour
     }
     public void DoDamage(float damage)
     {
-        currentHealth -= damage;
+        // has invincible status?
+        if (!Effectable.Effect_IsInvincible(false))
+        {
+            currentHealth -= damage;
+        }
     } 
     public void DoHeal(float healValue)
     {
