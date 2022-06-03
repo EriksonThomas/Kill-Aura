@@ -16,7 +16,7 @@ public class DamageCollistion : MonoBehaviour
         //Collided with player (layer 8)
         if (other.gameObject.tag == "Player" && damageTimer <= 0)
         {
-            other.gameObject.GetComponent<PlayerController2D>().DoDamage(other.gameObject.GetComponent<BaseAttack>().attackDamage);
+            other.gameObject.GetComponent<PlayerController2D>().DoDamage(gameObject.GetComponent<EnemyController>().attackDamage);
             damageTimer = timeToAttack;
         }
     }
