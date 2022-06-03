@@ -10,6 +10,7 @@ public class EnemyController : MonoBehaviour
     public GameObject[] gemPrefab;
     public GameObject[] expPrefab;
     private int randomNumber;
+    public float attackDamage;
     void FixedUpdate()
     {
         if (currentHealth <= 0)

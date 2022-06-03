@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D body;
     Vector2 movement;
     [SerializeField] private float dodgeDistance = 2.0f;
-    public GameObject baseAttackAnimation;
+    public GameObject playerBasicAttack;
     private Animator anim;
     private bool right = true;
 
@@ -95,23 +95,22 @@ public class PlayerMovement : MonoBehaviour
     void spawn_up_attack()
     {
         Debug.Log("up");
-        Instantiate(baseAttackAnimation, body.transform.position + new Vector3(0.0f, 0.35f), Quaternion.Euler(0f, 0f, 60f));
-        
+        Instantiate(playerBasicAttack, body.transform.position + new Vector3(0.0f, 0.35f), Quaternion.Euler(0f, 0f, 60f));
     }    
     void spawn_front_attack()
     {
         if (right){
             Debug.Log("right");
-            Instantiate(baseAttackAnimation, body.transform.position + new Vector3(0.25f, 0.0f), Quaternion.identity);
+            Instantiate(playerBasicAttack, body.transform.position + new Vector3(0.25f, 0.0f), Quaternion.identity);
         }else{
             Debug.Log("left");
-            Instantiate(baseAttackAnimation, body.transform.position + new Vector3(-0.25f, 0.0f), Quaternion.Euler(0f,180f,0f));
+            Instantiate(playerBasicAttack, body.transform.position + new Vector3(-0.25f, 0.0f), Quaternion.Euler(0f,180f,0f));
         }
     }
     void spawn_down_attack()
     {
         Debug.Log("down");
-        Instantiate(baseAttackAnimation, body.transform.position + new Vector3(0.0f, -0.45f), Quaternion.Euler(0f, 0f, 270f));
+        Instantiate(playerBasicAttack, body.transform.position + new Vector3(0.0f, -0.45f), Quaternion.Euler(0f, 0f, 270f));
         
     }
 }

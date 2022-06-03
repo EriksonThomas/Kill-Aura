@@ -205,6 +205,7 @@ MonoBehaviour:
   - {fileID: 1159959684635476338, guid: e47f623083d7ab8409bbb3946b34d824, type: 3}
   - {fileID: 4603509980170740003, guid: f1295c1241ad4624e8eaecdac2c349ce, type: 3}
   - {fileID: 4603509980170740003, guid: 7401ade2abe9b2045a841f7bc0d7e34e, type: 3}
+  attackDamage: 6
 --- !u!114 &1395002179024953186
 MonoBehaviour:
   m_ObjectHideFlags: 0
