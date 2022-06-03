@@ -1,0 +1,42 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class GemFollowPlayer : MonoBehaviour
+{
+    public float moveSpeed;
+    public GameObject target;
+    private float vectorTimer = 1;
+    private Vector3 randomDir;
+    private Vector3 lastTargetPos;
+    void Start()
+    {
+        target = GameObject.Find("Player");
+    }
+    void Update()
+    {
+        //calculate distance between the target and the object following
+        var distanceDifference = Vector3.Distance(target.transform.position, transform.position);
+        if(distanceDifference >= 0.0f && distanceDifference < 1.0f)
+        {
+            Vector3 dir = target.transform.position - transform.position;
+            //speed exp balls up as they approach the target
+            transform.position += dir.normalized * ((1 / distanceDifference) * .2f) * Time.deltaTime;
+        }
+        else
+        {
+            vectorTimer -= Time.deltaTime;
+            moveSpeed = 0.3f;
+            if(target.transform.position == lastTargetPos)
+            {
+                transform.position += randomDir.normalized * moveSpeed * Time.deltaTime;
+            }
+        }
+    }
+    public Vector3 RandomVector(Vector3 myVector, Vector3 min, Vector3 max)
+    {
+        //generate random vector within set bounds
+        myVector = new Vector3(UnityEngine.Random.Range(min.x, max.x), UnityEngine.Random.Range(min.y, max.y), UnityEngine.Random.Range(min.z, max.z));
+        return myVector;
+    }
+}

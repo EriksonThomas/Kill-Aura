@@ -24,7 +24,7 @@ public class FollowPlayer : MonoBehaviour
         {
             Vector3 dir = target.transform.position - transform.position;
             //speed exp balls up as they approach the target
-            transform.position += dir.normalized * ((1 / distanceDifference) * .5f) * Time.deltaTime;
+            transform.position += dir.normalized * moveSpeed * Time.deltaTime;
         }
         else
         {
