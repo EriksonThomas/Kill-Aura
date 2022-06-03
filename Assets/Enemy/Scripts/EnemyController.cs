@@ -48,6 +48,7 @@ public class EnemyController : MonoBehaviour
     }
     public void DoDamage(float damage)
     {
+        Debug.Log(gameObject.ToString() +"took" + damage + "damage");
         dazedTime = startDazedTime;
         currentHealth -= damage;       
     }
