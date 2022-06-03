@@ -72,7 +72,8 @@ public class PlayerMovement : MonoBehaviour
         {
             transform.rotation = Quaternion.Euler(0f,0f,0f);
             anim.SetTrigger("front_attack_trigger");
-        }   
+        }
+
 
         movement = movement.normalized;
         body.MovePosition(body.position + movement * moveSpeed * Time.fixedDeltaTime);
