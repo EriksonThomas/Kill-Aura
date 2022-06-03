@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -7,12 +7,13 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D body;
     Vector2 movement;
     [SerializeField] private float dodgeDistance = 2.0f;
-
-
+    private Animator anim;
+    
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
         body.freezeRotation = true;
+        anim = GetComponent<Animator>();        
     }
     void Update()
     {
@@ -48,15 +49,29 @@ public class PlayerMovement : MonoBehaviour
         {
             movement += Vector2.right;
         }
+
+        if(Input.GetKey(KeyCode.UpArrow))
+        {
+            transform.rotation = Quaternion.Euler(0f,180f,0f);
+            anim.SetTrigger("up_attack_trigger");
+        }
+
+        if(Input.GetKey(KeyCode.DownArrow))
+        {
+            transform.rotation = Quaternion.Euler(0f,0f,0f);
+            anim.SetTrigger("down_attack_trigger");
+        }  
         
         if(Input.GetKey(KeyCode.LeftArrow))
         {
             transform.rotation = Quaternion.Euler(0f,180f,0f);
+            anim.SetTrigger("front_attack_trigger");
         }
 
         if(Input.GetKey(KeyCode.RightArrow))
         {
             transform.rotation = Quaternion.Euler(0f,0f,0f);
+            anim.SetTrigger("front_attack_trigger");
         }   
 
         movement = movement.normalized;

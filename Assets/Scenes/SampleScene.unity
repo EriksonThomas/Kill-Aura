@@ -1453,6 +1453,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 844567771699d6846aa6129e45e00bf9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &1298412283
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 370131429}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0160eac6667606c4aaca0a61f58ca3e9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1400874933
 GameObject:
   m_ObjectHideFlags: 0
@@ -1500,7 +1520,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.0508022, y: 1}
+    m_SensorSize: {x: 2.1107893, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -2076,6 +2096,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1933687696 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7597302456713576831, guid: bf38bd032e874eb46a46db7985ee416b,
+    type: 3}
+  m_PrefabInstance: {fileID: 7597302457118155106}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1933687699
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1933687696}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0160eac6667606c4aaca0a61f58ca3e9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1937172525
 GameObject:
   m_ObjectHideFlags: 0
@@ -2242,7 +2288,7 @@ PrefabInstance:
     - target: {fileID: 3975809824630608287, guid: f182319175fc85142b5d743139375bd6,
         type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 3975809824630608287, guid: f182319175fc85142b5d743139375bd6,
         type: 3}
