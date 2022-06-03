@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4742728644010330337}
   - component: {fileID: 5308915370597091647}
-  - component: {fileID: -8797349202857664079}
   - component: {fileID: 4222485033477333055}
   - component: {fileID: 4222485033477333054}
+  - component: {fileID: 6742930270653490429}
   m_Layer: 0
   m_Name: Dice
   m_TagString: Untagged
@@ -87,20 +87,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-8797349202857664079
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1430721192392978507}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a9742d7b3f35184dad6fa49bea37069, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 0
-  minimumDistance: 0
 --- !u!50 &4222485033477333055
 Rigidbody2D:
   serializedVersion: 4
@@ -148,3 +134,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.07000001, y: 0.05}
   m_EdgeRadius: 0
+--- !u!114 &6742930270653490429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1430721192392978507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7b928680f0238a4f85a2bdaac04643b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 0.4
+  target: {fileID: 5289806291807088815, guid: bf38bd032e874eb46a46db7985ee416b, type: 3}
+  minimumDistance: 0.3

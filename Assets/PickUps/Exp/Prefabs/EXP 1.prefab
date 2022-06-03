@@ -10,10 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 341683347554416943}
   - component: {fileID: 5793681008071641504}
-  - component: {fileID: 4619212034843622129}
-  - component: {fileID: 1957325156468564730}
-  - component: {fileID: 3661094071736958599}
-  - component: {fileID: 125990330636151491}
+  - component: {fileID: 447780910341029465}
+  - component: {fileID: 763687074194563183}
   m_Layer: 0
   m_Name: EXP 1
   m_TagString: Untagged
@@ -88,54 +86,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &4619212034843622129
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1159959684635476338}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.02, y: 0.02}
-    newSize: {x: 0.02, y: 0.02}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.02, y: 0.02}
-  m_EdgeRadius: 0
---- !u!50 &1957325156468564730
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1159959684635476338}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!114 &3661094071736958599
+--- !u!114 &447780910341029465
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -144,11 +95,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1159959684635476338}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd17786320bc0ee45b6374cb269cc286, type: 3}
+  m_Script: {fileID: 11500000, guid: 086932dab37a850408ccaff9dcbd591c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   expValue: 10
---- !u!114 &125990330636151491
+--- !u!114 &763687074194563183
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -161,5 +112,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 0.3
-  target: {fileID: 0}
-  minimumDistance: 0
+  target: {fileID: 5289806291807088815, guid: bf38bd032e874eb46a46db7985ee416b, type: 3}
