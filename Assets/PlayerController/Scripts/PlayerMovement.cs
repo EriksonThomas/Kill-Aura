@@ -16,15 +16,7 @@ public class PlayerMovement : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            if (GetComponent<PlayerController2D>().currentStamina >= dodgeStamina)
-            {
-                GetComponent<PlayerController2D>().currentStamina -= dodgeStamina;
-                Vector2 temp = movement.normalized * dodgeDistance;
-                body.transform.position += new Vector3(temp.x,temp.y,0);
-            }
-        }  
+         
     }
     void FixedUpdate()
     {
@@ -48,6 +40,22 @@ public class PlayerMovement : MonoBehaviour
         {
             movement += Vector2.right;
         }
+        if (Input.GetKey(KeyCode.Space))
+        {
+            Debug.Log("got space");
+            if (GetComponent<PlayerController2D>().currentStamina >= dodgeStamina)
+            {
+                //TODO:
+                //SET IS INVONERABLE
+                //MATERIAL SET SLIGHTLY TRANSPARENT
+                // GetComponent<PlayerController2D>().currentStamina -= dodgeStamina;
+                // Vector2 temp = movement.normalized * dodgeDistance;
+                movement = movement.normalized;
+                body.MovePosition(body.position + movement * moveSpeed * 100 * Time.fixedDeltaTime);
+                // body.transform.position += new Vector3(temp.x,temp.y,0);
+                this.gameObject.GetComponent<Animator>().SetTrigger("dodge");
+            }
+        } 
 
         movement = movement.normalized;
         body.MovePosition(body.position + movement * moveSpeed * Time.fixedDeltaTime);
