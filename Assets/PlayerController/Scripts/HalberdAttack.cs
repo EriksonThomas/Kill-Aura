@@ -5,8 +5,6 @@ public class HalberdAttack : MonoBehaviour
     public GameObject playerBasicAttack;
     private Animator anim;
     private bool right = true;
-
-    
     void Start()
     {
         anim = GetComponent<Animator>();        
@@ -51,24 +49,22 @@ public class HalberdAttack : MonoBehaviour
 
     void spawn_up_attack()
     {
-        Debug.Log("up");
         Instantiate(playerBasicAttack, gameObject.transform.position + new Vector3(0.0f, 0.35f), Quaternion.Euler(0f, 0f, 60f));
     }    
     void spawn_front_attack()
     {
-        if (right){
-            Debug.Log("right");
+        if (right)
+        {
             Instantiate(playerBasicAttack, gameObject.transform.position + new Vector3(0.25f, 0.0f), Quaternion.identity);
-        }else{
-            Debug.Log("left");
+        }
+        else
+        {
             Instantiate(playerBasicAttack, gameObject.transform.position + new Vector3(-0.25f, 0.0f), Quaternion.Euler(0f,180f,0f));
         }
     }
     void spawn_down_attack()
     {
-        Debug.Log("down");
         Instantiate(playerBasicAttack, gameObject.transform.position + new Vector3(0.0f, -0.45f), Quaternion.Euler(0f, 0f, 270f));
-        
     }
 }
 

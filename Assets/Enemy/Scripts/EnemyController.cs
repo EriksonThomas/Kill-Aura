@@ -27,7 +27,6 @@ public class EnemyController : MonoBehaviour
             {
                 // Take a random number in EXP Prefab array and cast it to the spawn it in on death
                 randomNumber = Random.Range(0, 2);
-                Debug.Log(randomNumber);
                 gameObject.transform.position = gameObject.transform.position + (Random.insideUnitSphere * .3f);
                 GameObject exp = Instantiate(expPrefab[0], gameObject.transform.position, Quaternion.identity);
             }
@@ -48,7 +47,7 @@ public class EnemyController : MonoBehaviour
     }
     public void DoDamage(float damage)
     {
-        Debug.Log(gameObject.ToString() +"took" + damage + "damage");
+        Debug.Log(gameObject.ToString() +" TOOK " + damage + " DAMAGE ");
         dazedTime = startDazedTime;
         currentHealth -= damage;       
     }
