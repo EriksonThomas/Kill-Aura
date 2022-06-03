@@ -16,6 +16,7 @@ public class MobSpawner : MonoBehaviour
         dir = target.transform.position;
         dir = dir + (Random.insideUnitSphere * 5.0f);
         randomNumber = Random.Range(0, enemyPrefab.Length);
+        dir.z = 0;
         Instantiate(enemyPrefab[randomNumber], dir, Quaternion.identity);
     }
 }

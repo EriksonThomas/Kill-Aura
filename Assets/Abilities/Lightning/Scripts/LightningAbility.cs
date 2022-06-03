@@ -20,6 +20,7 @@ public class LightningAbility : MonoBehaviour
         target = GameObject.Find("Player");
         dir = target.transform.position;
         dir = dir + (Random.insideUnitSphere * lightningRangeExponent);
+        dir.z = 0;
         GameObject clone = Instantiate(attackLightningAnimation, dir, Quaternion.identity);
         Destroy(clone, lightningDuration);
     }
