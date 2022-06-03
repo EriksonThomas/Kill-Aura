@@ -982,6 +982,7 @@ GameObject:
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
   - component: {fileID: 519420030}
+  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1013,8 +1014,8 @@ MonoBehaviour:
   m_ShowCameraFrustum: 1
   m_IgnoreTimeScale: 0
   m_WorldUpOverride: {fileID: 0}
-  m_UpdateMethod: 2
-  m_BlendUpdateMethod: 1
+  m_UpdateMethod: 1
+  m_BlendUpdateMethod: 0
   m_DefaultBlend:
     m_Style: 1
     m_Time: 2
@@ -1089,6 +1090,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &519420033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a160d838ff8b4b4693ac20007e008c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AssetsPPU: 100
+  m_RefResolutionX: 320
+  m_RefResolutionY: 180
+  m_UpscaleRT: 0
+  m_PixelSnapping: 0
+  m_CropFrameX: 0
+  m_CropFrameY: 0
+  m_StretchFill: 0
 --- !u!1 &545572176
 GameObject:
   m_ObjectHideFlags: 0
@@ -1528,7 +1549,7 @@ PrefabInstance:
         type: 3}
       propertyPath: orbitTarget
       value: 
-      objectReference: {fileID: 1298412265}
+      objectReference: {fileID: 1641245867}
     - target: {fileID: 4742728644010330337, guid: 723717f09830ae840a261e428a66e44f,
         type: 3}
       propertyPath: m_RootOrder
@@ -1665,6 +1686,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1400874935}
   - component: {fileID: 1400874934}
+  - component: {fileID: 1400874936}
   m_Layer: 0
   m_Name: CM vcam1
   m_TagString: Untagged
@@ -1691,7 +1713,7 @@ MonoBehaviour:
   m_Priority: 10
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 1298412266}
+  m_Follow: {fileID: 2074231532}
   m_Lens:
     FieldOfView: 60
     OrthographicSize: 2
@@ -1701,7 +1723,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.2049239, y: 1}
+    m_SensorSize: {x: 2.048064, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -1726,6 +1748,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1400874936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1400874933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a8a05de0ac134f4f9d01bef6b9da077, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1402970137
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1737,7 +1771,7 @@ PrefabInstance:
         type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 1298412265}
+      objectReference: {fileID: 1641245867}
     - target: {fileID: -8797349202857664079, guid: 9fae82cb9e2267a44887bcd4fabbc0d1,
         type: 3}
       propertyPath: moveSpeed
@@ -2059,6 +2093,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerScript: {fileID: 2074231523}
   sliderText: {fileID: 1647820715}
+--- !u!1 &1641245867 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5289806291807088815, guid: bf38bd032e874eb46a46db7985ee416b,
+    type: 3}
+  m_PrefabInstance: {fileID: 513991557}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1647820713
 GameObject:
   m_ObjectHideFlags: 0
@@ -2517,12 +2557,18 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 513991557}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1641245867}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8c628551fda1cd24a96c38f39ba0777a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &2074231532 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5289806291807088812, guid: bf38bd032e874eb46a46db7985ee416b,
+    type: 3}
+  m_PrefabInstance: {fileID: 513991557}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1292295495228371784
 PrefabInstance:
   m_ObjectHideFlags: 0
