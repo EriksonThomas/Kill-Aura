@@ -7,43 +7,34 @@ public class FollowPlayer : MonoBehaviour
     public float moveSpeed;
     public GameObject target;
     public float minimumDistance;
-    private Vector3 randomPosition;
     private float vectorTimer = 1;
     private Vector3 randomDir;
     private Vector3 lastTargetPos;
+    void Start()
+    {
+        target = GameObject.Find("Player");
+    }
     void Update()
     {
         //Set no rotation of on collision
         gameObject.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
         //calculate distance between the target and the object following
         var distanceDifference = Vector3.Distance(target.transform.position, transform.position);
-        if(distanceDifference + .2 >= minimumDistance)
+        if(distanceDifference >= minimumDistance)
         {
             Vector3 dir = target.transform.position - transform.position;
-            transform.position += dir.normalized * moveSpeed * Time.deltaTime;
+            //speed exp balls up as they approach the target
+            transform.position += dir.normalized * ((1 / distanceDifference) * .5f) * Time.deltaTime;
         }
         else
         {
-            if (vectorTimer > 0)
+            vectorTimer -= Time.deltaTime;
+            moveSpeed = 0.3f;
+            if(target.transform.position == lastTargetPos)
             {
-                vectorTimer -= Time.deltaTime;
-                moveSpeed = 0.3f;
-                if(target.transform.position == lastTargetPos)
-                {
-                    transform.position += randomDir.normalized * moveSpeed * Time.deltaTime;
-                }
-                //transform.position += randomDir.normalized * moveSpeed * Time.deltaTime;
-            }
-            else if(vectorTimer <= 0)     
-            {
-                lastTargetPos = target.transform.position;
-                randomDir = RandomVector(randomPosition, new Vector3(5f, 5f, 0), new Vector3(8f, 8f, 0));
-                vectorTimer = 1;
+                transform.position += randomDir.normalized * moveSpeed * Time.deltaTime;
             }
         }
-        
-        
-        
     }
     public Vector3 RandomVector(Vector3 myVector, Vector3 min, Vector3 max)
     {

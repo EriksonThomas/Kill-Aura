@@ -8,6 +8,7 @@ public class EnemyController : MonoBehaviour
     public float startDazedTime = 2;
     private float randomCount;
     public GameObject[] gemPrefab;
+    public GameObject[] expPrefab;
     private int randomNumber;
     void FixedUpdate()
     {
@@ -20,6 +21,16 @@ public class EnemyController : MonoBehaviour
                 gameObject.transform.position = gameObject.transform.position + (Random.insideUnitSphere * .3f);
                 GameObject gem = Instantiate(gemPrefab[randomNumber], gameObject.transform.position, Quaternion.identity);
             }
+
+            for (float i = 0; i <= Random.Range(0, 3.0f); i++)
+            {
+                // Take a random number in EXP Prefab array and cast it to the spawn it in on death
+                randomNumber = Random.Range(0, 2);
+                Debug.Log(randomNumber);
+                gameObject.transform.position = gameObject.transform.position + (Random.insideUnitSphere * .3f);
+                GameObject exp = Instantiate(expPrefab[0], gameObject.transform.position, Quaternion.identity);
+            }
+
             Destroy(gameObject);
         }
 

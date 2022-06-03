@@ -10,6 +10,8 @@ public class PlayerController2D : MonoBehaviour
     public float currentStamina = 20f;
     public float staminaRegenTime = 2f;
     public float startingGems = 0.0f;
+    public float startingExp = 0.0f;
+
 
     protected EffectableObject Effectable;
 
@@ -44,6 +46,10 @@ public class PlayerController2D : MonoBehaviour
     public void GemCollected(float gemCount)
     {
         startingGems += gemCount;
+    }
+    public void ExpCollected(float expCount)
+    {
+        startingExp += expCount;
     }
 
     private void RegenHealth()
