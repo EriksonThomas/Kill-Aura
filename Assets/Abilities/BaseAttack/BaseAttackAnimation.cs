@@ -3,6 +3,6 @@ public class BaseAttackAnimation : MonoBehaviour
 {
     void FixedUpdate()
     {
-        Destroy(gameObject, 0.3f);
+        Destroy(gameObject, 0.1f);
     }
 }

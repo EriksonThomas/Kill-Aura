@@ -7,7 +7,10 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D body;
     Vector2 movement;
     [SerializeField] private float dodgeDistance = 2.0f;
+    public GameObject baseAttackAnimation;
     private Animator anim;
+    private bool right = true;
+
     
     void Start()
     {
@@ -64,6 +67,7 @@ public class PlayerMovement : MonoBehaviour
         
         if(Input.GetKey(KeyCode.LeftArrow))
         {
+            right = false;
             transform.rotation = Quaternion.Euler(0f,180f,0f);
             reset_triggers();
             anim.SetTrigger("front_attack_trigger");
@@ -71,33 +75,11 @@ public class PlayerMovement : MonoBehaviour
 
         if(Input.GetKey(KeyCode.RightArrow))
         {
+            right = true;
             transform.rotation = Quaternion.Euler(0f,0f,0f);
             reset_triggers();
             anim.SetTrigger("front_attack_trigger");
         }
-
-        // if(Input.GetKeyUp(KeyCode.UpArrow))
-        // {
-        //     anim.ResetTrigger("up_attack_trigger");
-        // }
-
-        // if(Input.GetKeyUp(KeyCode.DownArrow))
-        // {
-        //     anim.ResetTrigger("down_attack_trigger");
-        // }  
-        
-        // if(Input.GetKeyUp(KeyCode.LeftArrow))
-        // {
-        //     transform.rotation = Quaternion.Euler(0f,180f,0f);
-        //     anim.ResetTrigger("front_attack_trigger");
-        // }
-
-        // if(Input.GetKeyUp(KeyCode.RightArrow))
-        // {
-        //     transform.rotation = Quaternion.Euler(0f,0f,0f);
-        //     anim.ResetTrigger("front_attack_trigger");
-        // }
-
 
         movement = movement.normalized;
         body.MovePosition(body.position + movement * moveSpeed * Time.fixedDeltaTime);
@@ -107,7 +89,30 @@ public class PlayerMovement : MonoBehaviour
     {
         anim.ResetTrigger("up_attack_trigger");
         anim.ResetTrigger("front_attack_trigger");
-        anim.ResetTrigger("down_attack_trigger");
+        anim.ResetTrigger("down_attack_trigger");        
+    }
+
+    void spawn_up_attack()
+    {
+        Debug.Log("up");
+        Instantiate(baseAttackAnimation, body.transform.position + new Vector3(0.0f, 0.35f), Quaternion.Euler(0f, 0f, 60f));
+        
+    }    
+    void spawn_front_attack()
+    {
+        if (right){
+            Debug.Log("right");
+            Instantiate(baseAttackAnimation, body.transform.position + new Vector3(0.25f, 0.0f), Quaternion.identity);
+        }else{
+            Debug.Log("left");
+            Instantiate(baseAttackAnimation, body.transform.position + new Vector3(-0.25f, 0.0f), Quaternion.Euler(0f,180f,0f));
+        }
+    }
+    void spawn_down_attack()
+    {
+        Debug.Log("down");
+        Instantiate(baseAttackAnimation, body.transform.position + new Vector3(0.0f, -0.45f), Quaternion.Euler(0f, 0f, 270f));
+        
     }
 }
 

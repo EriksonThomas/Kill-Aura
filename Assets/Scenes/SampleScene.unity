@@ -898,6 +898,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3052457726297135843, guid: bf38bd032e874eb46a46db7985ee416b,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 3052457726297135843, guid: bf38bd032e874eb46a46db7985ee416b,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 3052457726297135843, guid: bf38bd032e874eb46a46db7985ee416b,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4210328930885717334, guid: bf38bd032e874eb46a46db7985ee416b,
         type: 3}
       propertyPath: m_Controller
@@ -908,6 +923,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: FirePoint
       objectReference: {fileID: 0}
+    - target: {fileID: 5289806291807088808, guid: bf38bd032e874eb46a46db7985ee416b,
+        type: 3}
+      propertyPath: attackRightPosition
+      value: 
+      objectReference: {fileID: 821543657}
+    - target: {fileID: 5289806291807088808, guid: bf38bd032e874eb46a46db7985ee416b,
+        type: 3}
+      propertyPath: baseAttackAnimation
+      value: 
+      objectReference: {fileID: 3140868970734422352, guid: a8c20de2d3e066740b0d1234e321b8f4,
+        type: 3}
     - target: {fileID: 5289806291807088812, guid: bf38bd032e874eb46a46db7985ee416b,
         type: 3}
       propertyPath: m_RootOrder
@@ -1267,6 +1293,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 638801796}
   m_CullTransparentMesh: 0
+--- !u!4 &821543657 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5289806292052197347, guid: bf38bd032e874eb46a46db7985ee416b,
+    type: 3}
+  m_PrefabInstance: {fileID: 513991557}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &828488547
 GameObject:
   m_ObjectHideFlags: 0
@@ -1666,6 +1698,7 @@ MonoBehaviour:
   currentStamina: 20
   staminaRegenTime: 2
   startingGems: 0
+  startingExp: 0
 --- !u!4 &1298412273
 Transform:
   m_ObjectHideFlags: 0
@@ -1728,7 +1761,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.0947967, y: 1}
+    m_SensorSize: {x: 2.0916843, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -2383,7 +2416,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemySpawnerPrefab: {fileID: 4881489232283465027, guid: 558e4de7990b96844bf111baa02311e8,
     type: 3}
-  mobSpawnerEnabled: 0
+  mobSpawnerEnabled: 1
 --- !u!4 &1800732325
 Transform:
   m_ObjectHideFlags: 0
