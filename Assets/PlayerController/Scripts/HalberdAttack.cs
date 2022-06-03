@@ -55,11 +55,11 @@ public class HalberdAttack : MonoBehaviour
     {
         if (right)
         {
-            Instantiate(playerBasicAttack, gameObject.transform.position + new Vector3(0.25f, 0.0f), Quaternion.identity);
+            Instantiate(playerBasicAttack, gameObject.transform.position + new Vector3(0.35f, 0.0f), Quaternion.identity);
         }
         else
         {
-            Instantiate(playerBasicAttack, gameObject.transform.position + new Vector3(-0.25f, 0.0f), Quaternion.Euler(0f,180f,0f));
+            Instantiate(playerBasicAttack, gameObject.transform.position + new Vector3(-0.35f, 0.0f), Quaternion.Euler(0f,180f,0f));
         }
     }
     void spawn_down_attack()
