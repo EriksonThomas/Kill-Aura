@@ -968,6 +968,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 5289806291807088823, guid: bf38bd032e874eb46a46db7985ee416b,
+        type: 3}
+      propertyPath: attackRange
+      value: 0.41
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf38bd032e874eb46a46db7985ee416b, type: 3}
 --- !u!1 &519420028
@@ -1530,7 +1535,7 @@ MonoBehaviour:
   healDropAbilityEnabled: 0
   healDropAbilityPrefab: {fileID: 6848021490128977515, guid: bb6faca6c9094de47a5d0b1620c3d979,
     type: 3}
-  healPoolAbilityEnabled: 1
+  healPoolAbilityEnabled: 0
   healPoolAbilityPrefab: {fileID: 6848021490128977515, guid: 853c42a1736888f4eb0295695ccf9539,
     type: 3}
 --- !u!1001 &1290477735
@@ -1723,7 +1728,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.048064, y: 1}
+    m_SensorSize: {x: 2.0947967, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
