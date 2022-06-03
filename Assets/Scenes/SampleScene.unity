@@ -901,17 +901,17 @@ PrefabInstance:
     - target: {fileID: 3052457726297135843, guid: bf38bd032e874eb46a46db7985ee416b,
         type: 3}
       propertyPath: m_Size.x
-      value: 0.64
+      value: 1.28
       objectReference: {fileID: 0}
     - target: {fileID: 3052457726297135843, guid: bf38bd032e874eb46a46db7985ee416b,
         type: 3}
       propertyPath: m_Size.y
-      value: 0.64
+      value: 1.28
       objectReference: {fileID: 0}
     - target: {fileID: 3052457726297135843, guid: bf38bd032e874eb46a46db7985ee416b,
         type: 3}
       propertyPath: m_WasSpriteAssigned
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4210328930885717334, guid: bf38bd032e874eb46a46db7985ee416b,
         type: 3}
@@ -933,7 +933,7 @@ PrefabInstance:
         type: 3}
       propertyPath: attackRightPosition
       value: 
-      objectReference: {fileID: 821543657}
+      objectReference: {fileID: 0}
     - target: {fileID: 5289806291807088808, guid: bf38bd032e874eb46a46db7985ee416b,
         type: 3}
       propertyPath: baseAttackAnimation
@@ -1300,12 +1300,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 638801796}
   m_CullTransparentMesh: 0
---- !u!4 &821543657 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5289806292052197347, guid: bf38bd032e874eb46a46db7985ee416b,
-    type: 3}
-  m_PrefabInstance: {fileID: 513991557}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &828488547
 GameObject:
   m_ObjectHideFlags: 0
@@ -1838,7 +1832,6 @@ MonoBehaviour:
     LensShift: {x: 0, y: 0}
     GateFit: 2
     m_SensorSize: {x: 2.0916843, y: 1}
-
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
