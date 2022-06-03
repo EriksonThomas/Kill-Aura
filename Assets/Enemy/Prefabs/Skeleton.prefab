@@ -193,7 +193,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 10
   currentHealth: 10
-  startDazedTime: 2
+  dazeCounter: 0
   gemPrefab:
   - {fileID: 2661557368925465875, guid: 8e9453694dbe3d34b89e25650e9efd1e, type: 3}
   - {fileID: 2661557368925465875, guid: 20fa063ecb60b6645b247b6147673037, type: 3}
