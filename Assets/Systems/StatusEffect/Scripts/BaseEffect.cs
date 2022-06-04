@@ -7,7 +7,8 @@ public class BaseEffect : ScriptableObject
     [SerializeField] protected float duration = 0f;
     [SerializeField] protected bool permanent = false;
     public bool IsActive => (permanent || durationRemaining > 0f);
-    public GameObject icon;
+    public GameObject icon; // prefab with icon image for the status bar
+    public GameObject statusSprite; // prefab with sprite animator for particle effects around player
     float durationRemaining = 0f;
 
     public void EnableEffect()
