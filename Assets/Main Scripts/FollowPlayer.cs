@@ -27,7 +27,6 @@ public class FollowPlayer : MonoBehaviour
         else
         {
             vectorTimer -= Time.deltaTime;
-            moveSpeed = 0.3f;
             if(target.transform.position == lastTargetPos)
             {
                 transform.position += randomDir.normalized * moveSpeed * Time.deltaTime;
