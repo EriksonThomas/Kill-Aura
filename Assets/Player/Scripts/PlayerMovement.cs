@@ -48,7 +48,7 @@ public class PlayerMovement : MonoBehaviour
                 //TODO:
                 //SET IS INVONERABLE
                 //MATERIAL SET SLIGHTLY TRANSPARENT
-                // GetComponent<PlayerController2D>().currentStamina -= dodgeStamina;
+                gameObject.GetComponent<PlayerController2D>().currentStamina -= dodgeStamina;
                 // Vector2 temp = movement.normalized * dodgeDistance;
                 movement = movement.normalized;
                 body.MovePosition(body.position + movement * moveSpeed * 100 * Time.fixedDeltaTime);

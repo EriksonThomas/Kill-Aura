@@ -5,7 +5,7 @@ using UnityEngine;
 public class FollowPlayer : MonoBehaviour
 {
     public float moveSpeed;
-    public GameObject target;
+    private GameObject target;
     public float minimumDistance;
     private float vectorTimer = 1;
     private Vector3 randomDir;

@@ -11,8 +11,6 @@ public class GameHandler : MonoBehaviour
     }
     void Start()
     {
-        
-        
         if(mobSpawnerEnabled == true)
         {
         GameObject spawner = Instantiate(enemySpawnerPrefab, Vector3.zero, Quaternion.identity);
