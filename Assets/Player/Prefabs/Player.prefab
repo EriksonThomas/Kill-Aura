@@ -70,8 +70,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c628551fda1cd24a96c38f39ba0777a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 500
-  currentHealth: 500
+  maxHealth: 50
+  currentHealth: 50
   healthRegenTime: 0
   maxStamina: 20
   currentStamina: 20

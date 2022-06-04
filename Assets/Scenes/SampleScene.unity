@@ -805,7 +805,7 @@ MonoBehaviour:
   diceItemEnabled: 1
   diceItemyPrefab: {fileID: 1430721192392978507, guid: 9fae82cb9e2267a44887bcd4fabbc0d1,
     type: 3}
-  puzzleItemEnabled: 1
+  puzzleItemEnabled: 0
   puzzleItemyPrefab: {fileID: 1430721192392978507, guid: 723717f09830ae840a261e428a66e44f,
     type: 3}
 --- !u!1 &451470208
@@ -1482,7 +1482,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2fc23e6559d4494082237bb70697f41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightningAbilityPrefabEnabled: 0
+  lightningAbilityPrefabEnabled: 1
   lightningAbilityPrefab: {fileID: 6848021490128977515, guid: 1ea55b178abd8b9448010129b9574c2f,
     type: 3}
   boardWipeAbilityPrefabEnabled: 0
