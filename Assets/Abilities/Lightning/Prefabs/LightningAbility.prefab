@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lightningStrike: 1
-  lightningInterval: 0.4
+  lightningInterval: 2
   lightningRangeExponent: 2.5
   lightningDuration: 5
   attackLightningAnimation: {fileID: 3501762577967717947, guid: 6cb35ad5a995dd04e848821654a43c1a,
