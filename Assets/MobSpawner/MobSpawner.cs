@@ -7,7 +7,7 @@ public class MobSpawner : MonoBehaviour
     private int randomNumber;
     void Start()
     {
-        InvokeRepeating("SpawnEnemy", 1f, .1f);
+        InvokeRepeating("SpawnEnemy", 1f, .5f);
     }
     void SpawnEnemy()     
     {
