@@ -3,6 +3,7 @@
 public class DamageCollistion : MonoBehaviour
 {
     private float damageTimer = 0;
+    private Animator anim;
     [SerializeField] private float timeToAttack = 0.4f;
     void FixedUpdate()
     {
@@ -17,6 +18,7 @@ public class DamageCollistion : MonoBehaviour
         if (other.gameObject.tag == "Player" && damageTimer <= 0)
         {
             other.gameObject.GetComponent<PlayerController2D>().DoDamage(gameObject.GetComponent<EnemyController>().attackDamage);
+            this.gameObject.GetComponent<Animator>().SetTrigger("enemy_attack");
             damageTimer = timeToAttack;
         }
     }
