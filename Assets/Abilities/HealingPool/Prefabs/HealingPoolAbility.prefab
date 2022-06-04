@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37710785108eba849bf01ff9858b2110, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interval: 1
+  interval: 5
   rangeExponent: 2.5
   duration: 20
   healingPoolEffect: {fileID: 3501762577967717947, guid: 45be0342c0ced4544a65e0bf7e375028,

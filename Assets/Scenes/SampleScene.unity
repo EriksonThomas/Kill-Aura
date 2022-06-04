@@ -933,13 +933,18 @@ PrefabInstance:
         type: 3}
       propertyPath: attackRightPosition
       value: 
-      objectReference: {fileID: 821543657}
+      objectReference: {fileID: 0}
     - target: {fileID: 5289806291807088808, guid: bf38bd032e874eb46a46db7985ee416b,
         type: 3}
       propertyPath: baseAttackAnimation
       value: 
       objectReference: {fileID: 3140868970734422352, guid: a8c20de2d3e066740b0d1234e321b8f4,
         type: 3}
+    - target: {fileID: 5289806291807088809, guid: bf38bd032e874eb46a46db7985ee416b,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5289806291807088812, guid: bf38bd032e874eb46a46db7985ee416b,
         type: 3}
       propertyPath: m_RootOrder
@@ -1052,7 +1057,7 @@ MonoBehaviour:
   m_ShowCameraFrustum: 1
   m_IgnoreTimeScale: 0
   m_WorldUpOverride: {fileID: 0}
-  m_UpdateMethod: 1
+  m_UpdateMethod: 0
   m_BlendUpdateMethod: 0
   m_DefaultBlend:
     m_Style: 1
@@ -1300,12 +1305,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 638801796}
   m_CullTransparentMesh: 0
---- !u!4 &821543657 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5289806292052197347, guid: bf38bd032e874eb46a46db7985ee416b,
-    type: 3}
-  m_PrefabInstance: {fileID: 513991557}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &828488547
 GameObject:
   m_ObjectHideFlags: 0
@@ -1588,7 +1587,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4222485033477333055, guid: 9fae82cb9e2267a44887bcd4fabbc0d1, type: 3}
+    - {fileID: 4222485033477333054, guid: 9fae82cb9e2267a44887bcd4fabbc0d1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 9fae82cb9e2267a44887bcd4fabbc0d1, type: 3}
 --- !u!1 &1287868651
 GameObject:
@@ -1718,7 +1719,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4222485033477333054, guid: 723717f09830ae840a261e428a66e44f, type: 3}
+    - {fileID: 4222485033477333055, guid: 723717f09830ae840a261e428a66e44f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 723717f09830ae840a261e428a66e44f, type: 3}
 --- !u!1 &1298412265
 GameObject:
@@ -1837,8 +1840,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.0916843, y: 1}
-
+    m_SensorSize: {x: 1.7783712, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0

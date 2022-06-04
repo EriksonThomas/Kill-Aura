@@ -9,12 +9,10 @@ public class LightningAbility : MonoBehaviour
     private Vector3 randomVector;
     private GameObject target;
     private Vector3 dir;
-
     void Start()
     {
         InvokeRepeating("LightningStrikeAttack", 1, lightningInterval);
     }
-
     public void LightningStrikeAttack()
     {
         target = GameObject.Find("Player");
@@ -24,4 +22,4 @@ public class LightningAbility : MonoBehaviour
         GameObject clone = Instantiate(attackLightningAnimation, dir, Quaternion.identity);
         Destroy(clone, lightningDuration);
     }
-}       
+}

@@ -7,10 +7,17 @@ public class StatusBarBehavior : MonoBehaviour
     public float spacing = 15;
     private EffectableObject playerEffectable;
     private List<GameObject> effectIcons = new List<GameObject>();
+    private GameObject target;
 
+    void Awake()
+    {
+        
+    }
     void Start()
     {
-        playerEffectable = GameObject.Find("Player").GetComponent<EffectableObject>();
+        target = GameObject.Find("Player");
+        Debug.Log(target);
+        playerEffectable = target.GetComponent<EffectableObject>();
     }
 
     // GameObject AddStatusIcon(GameObject icon)

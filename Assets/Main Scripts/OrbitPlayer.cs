@@ -5,7 +5,11 @@ public class OrbitPlayer : MonoBehaviour
     public float orbitSpeed = 0.0f;
     private float angle = 0.0f;
     public float orbitDistance = 0.0f;
-    public GameObject orbitTarget;
+    private GameObject orbitTarget;
+    void Start()
+    {
+        orbitTarget = GameObject.Find("Player");
+    }
     void Update()
     {
         //Do some trig to figure out a vector3 to orbit the player

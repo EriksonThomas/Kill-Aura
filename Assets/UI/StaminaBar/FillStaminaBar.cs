@@ -3,13 +3,14 @@ using UnityEngine.UI;
 
 public class FillStaminaBar : MonoBehaviour
 {
-public PlayerController2D playerScript;
+private PlayerController2D playerScript;
 public Text sliderText;
 public Image fillImage;
 private Slider slider;
 
-    void Awake()
+    void Start()
     {
+        playerScript = GameObject.Find("Player").GetComponent<PlayerController2D>();
         slider = GetComponent<Slider>();
     }
 

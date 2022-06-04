@@ -16,8 +16,6 @@ public class FollowPlayer : MonoBehaviour
     }
     void Update()
     {
-        //Set no rotation of on collision
-        gameObject.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
         //calculate distance between the target and the object following
         var distanceDifference = Vector3.Distance(target.transform.position, transform.position);
         if(distanceDifference >= minimumDistance)
