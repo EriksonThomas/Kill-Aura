@@ -1488,7 +1488,7 @@ MonoBehaviour:
   boardWipeAbilityPrefabEnabled: 0
   boardWipeAbilityPrefab: {fileID: 6247818575599910994, guid: 9919b8423acf7f04bbb4f05b808ec55d,
     type: 3}
-  healDropAbilityEnabled: 0
+  healDropAbilityEnabled: 1
   healDropAbilityPrefab: {fileID: 6848021490128977515, guid: bb6faca6c9094de47a5d0b1620c3d979,
     type: 3}
   healPoolAbilityEnabled: 1
@@ -1542,7 +1542,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7783712, y: 1}
+    m_SensorSize: {x: 2.1220932, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0

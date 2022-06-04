@@ -5,7 +5,8 @@ using UnityEngine;
 public class EffectableObject : MonoBehaviour
 {
     public List<BaseEffect> activeEffects = new List<BaseEffect>();
-    public bool statusBarHasSeen = false;
+    public bool statusBarHasSeen = false; // TODO: change to list of pointers or something
+    public bool statusSpriteHasSeen = false;
 
     void FixedUpdate()
     {
@@ -20,6 +21,7 @@ public class EffectableObject : MonoBehaviour
                 activeEffects[index].OnEffectEnd();
                 activeEffects.RemoveAt(index);
                 statusBarHasSeen = false;
+                statusSpriteHasSeen = false;
             }
         }
     }
@@ -33,6 +35,7 @@ public class EffectableObject : MonoBehaviour
         newEffect.EnableEffect();
         activeEffects.Add(newEffect);
         statusBarHasSeen = false;
+        statusSpriteHasSeen = false;
     }
 
     public void RemoveAllOfEffect(BaseEffect effect)
@@ -44,6 +47,7 @@ public class EffectableObject : MonoBehaviour
             {
                 activeEffects.RemoveAt(index);
                 statusBarHasSeen = false;
+                statusSpriteHasSeen = false;
             }
         }
     }

@@ -8,30 +8,11 @@ public class StatusBarBehavior : MonoBehaviour
     private EffectableObject playerEffectable;
     private List<GameObject> effectIcons = new List<GameObject>();
     private GameObject target;
-
-    void Awake()
-    {
-        
-    }
     void Start()
     {
         target = GameObject.Find("Player");
-        Debug.Log(target);
         playerEffectable = target.GetComponent<EffectableObject>();
     }
-
-    // GameObject AddStatusIcon(GameObject icon)
-    // {
-    //     if (icon != null)
-    //     {
-    //         GameObject newIcon = Instantiate(icon);
-    //         effectIcons.Add(newIcon);
-    //         UpdateStatusEffectPositions();
-
-    //         return (newIcon);
-    //     }
-    //     return (null);
-    // }
 
     void Update()
     {
