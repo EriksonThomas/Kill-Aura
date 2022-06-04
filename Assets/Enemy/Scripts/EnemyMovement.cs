@@ -23,11 +23,11 @@ public class EnemyMovement : MonoBehaviour
         //if the enemy is looking left or right flip the sprite
         if(dir.x > 0)
         {
-            transform.rotation = Quaternion.Euler(0f,0f,0f);
+            transform.rotation = Quaternion.Euler(0f,0,0f);
         }
         else
         {
-            transform.rotation = Quaternion.Euler(0f,180f,0f);
+            transform.rotation = Quaternion.Euler(0f,180,0f);
         }
         //apply movement to the enemy
         transform.position += dir.normalized * moveSpeed * Time.fixedDeltaTime;
