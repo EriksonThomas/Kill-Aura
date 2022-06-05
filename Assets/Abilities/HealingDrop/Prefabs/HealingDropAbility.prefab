@@ -44,8 +44,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c68f5b6e033eeb447843ee18e6801091, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interval: 4
+  interval: 0.2
   rangeExponent: 2.5
+  innerBound: 4
+  outerBound: 8
   duration: 10
   healingDropAbility: {fileID: 3501762577967717947, guid: 0fb7bccf48a6c1a4394715177abc3b66,
     type: 3}

@@ -1,26 +1,25 @@
 using UnityEngine;
 public class HealingDropAbility : MonoBehaviour
 {
-    public float interval = 0.5f;
+    public float interval = 0.01f;
     public float rangeExponent = 2.5f;
+    public float innerBound = 5f;
+    public float outerBound = 8f;
     public float duration = 10f;
     public GameObject healingDropAbility;
     private Vector3 randomVector;
     private GameObject target;
-    private Vector3 dir;
 
     void Start()
     {
+        target = GameObject.Find("Player");
         InvokeRepeating("SpawnHealingDrop", 0, interval);
     }
 
     public void SpawnHealingDrop()
     {
-        target = GameObject.Find("Player");
-        dir = target.transform.position;
-        dir = dir + (Random.insideUnitSphere * rangeExponent);
-        dir.z = 0;
-        GameObject clone = Instantiate(healingDropAbility, dir, Quaternion.identity);
+        Vector3 positionOffset = Random.insideUnitCircle.normalized * Random.Range(innerBound, outerBound);
+        GameObject clone = Instantiate(healingDropAbility, target.transform.position + positionOffset, Quaternion.identity);
         Destroy(clone, duration);
     }
 }
