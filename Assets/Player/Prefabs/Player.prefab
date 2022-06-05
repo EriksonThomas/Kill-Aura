@@ -53,7 +53,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5403f7025745db04f9e95eb6168958e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 1.5
+  moveSpeed: 1
   dodgeStamina: 5
   dodgeDistance: 0.5
   playerBasicAttack: {fileID: 3140868970734422352, guid: a8c20de2d3e066740b0d1234e321b8f4,
@@ -224,7 +224,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -2002269539
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 150333375, guid: 6fc17722f480db245b65a3c5b3b025c8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
