@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8297018913013361383}
   - component: {fileID: 7036449357271828395}
   m_Layer: 0
-  m_Name: healBurstParticleSystem
+  m_Name: old_healBurstParticleSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -16,22 +16,28 @@ public class AbilityManager : MonoBehaviour
     {
         if(lightningAbilityPrefabEnabled == true)
         {
-            Instantiate(lightningAbilityPrefab);
+            AddAbility(lightningAbilityPrefab);
         }
 
         if(boardWipeAbilityPrefabEnabled == true)
         {
-            Instantiate(boardWipeAbilityPrefab);
+            AddAbility(boardWipeAbilityPrefab);
         }
 
         if (healDropAbilityEnabled == true)
         {
-            Instantiate(healDropAbilityPrefab);
+            AddAbility(healDropAbilityPrefab);
         }
 
         if (healPoolAbilityEnabled == true)
         {
-            Instantiate(healPoolAbilityPrefab);
+            AddAbility(healPoolAbilityPrefab);
         }
+    }
+
+    private void AddAbility(GameObject prefab)
+    {
+        GameObject ability = Instantiate(prefab);
+        ability.transform.SetParent(transform);
     }
 }
