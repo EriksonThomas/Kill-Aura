@@ -58,12 +58,12 @@ public class EnemyController : MonoBehaviour
     }
     private void spawn_loot()
     {
-        //for (float i = 0; i <= Random.Range(0, 5f); i++)
+        //for (float i = 0; i <= Random.Range(0, gemPrefab.Length); i++)
         //{
         //    // Take a random number in Gem Prefab array and cast it to the spawn it in on death
         //    randomNumber = Random.Range(0, gemPrefab.Length);
         //    gameObject.transform.position = gameObject.transform.position + (Random.insideUnitSphere * .3f);
-        //    GameObject gem = Instantiate(gemPrefab[randomNumber], gameObject.transform.position, Quaternion.Euler(0.0f, 0.0f, 45.0f));
+        //    GameObject gem = Instantiate(gemPrefab[randomNumber], gameObject.transform.position, Quaternion.Euler(0.0f, 0.0f, 0.0f));
         //}
 
         for (float i = 0; i <= Random.Range(0, 6.0f); i++)
