@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class GemFollowPlayer : MonoBehaviour
@@ -23,20 +21,5 @@ public class GemFollowPlayer : MonoBehaviour
             //speed exp balls up as they approach the target
             transform.position += dir.normalized * ((1 / distanceDifference) * .2f) * Time.deltaTime;
         }
-        else
-        {
-            vectorTimer -= Time.deltaTime;
-            moveSpeed = 0.3f;
-            if(target.transform.position == lastTargetPos)
-            {
-                transform.position += randomDir.normalized * moveSpeed * Time.deltaTime;
-            }
-        }
-    }
-    public Vector3 RandomVector(Vector3 myVector, Vector3 min, Vector3 max)
-    {
-        //generate random vector within set bounds
-        myVector = new Vector3(UnityEngine.Random.Range(min.x, max.x), UnityEngine.Random.Range(min.y, max.y), UnityEngine.Random.Range(min.z, max.z));
-        return myVector;
     }
 }

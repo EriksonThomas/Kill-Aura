@@ -1,24 +1,24 @@
 using UnityEngine;
-public class Gem4 : MonoBehaviour
+public class EXP : MonoBehaviour
 {
-    public float gemValue = 10.0f;
+    public float expValue;
     private GameObject target;
     void Start()
     {
         target = GameObject.Find("Player");
-        Destroy(gameObject, 15f);
+        Destroy(gameObject, 20f);
     }
     public void Collected()
     {
         Destroy(gameObject);
     }
-    private void Update()
+    void Update()
     {
         var distanceDifference = Vector3.Distance(target.transform.position, transform.position);
-        if (distanceDifference <= .03)
+        if (distanceDifference <= .07)
         {
             Collected();
-            target.gameObject.GetComponentInParent<PlayerController2D>().GemCollected(gemValue);
+            target.gameObject.GetComponentInParent<PlayerController2D>().ExpCollected(expValue);
         }
     }
 }
