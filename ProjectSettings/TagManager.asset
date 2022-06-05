@@ -51,6 +51,9 @@ TagManager:
   - name: Wall
     uniqueID: 161986623
     locked: 0
+  - name: StatusParticles
+    uniqueID: 255510179
+    locked: 0
   - name: Player
     uniqueID: 2292697757
     locked: 0
