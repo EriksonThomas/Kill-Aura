@@ -4,11 +4,11 @@ public class LightningAttack : MonoBehaviour
     public float lightningDamage = 6f;
     private float lightningDamageTimer = 0;
     [SerializeField] private float lightningAttackDelay = 0.4f;
-    void Start()
+    void Update()
     {
         if (lightningDamageTimer > 0)
         {
-            lightningDamageTimer -= Time.fixedDeltaTime;
+            lightningDamageTimer -= Time.deltaTime;
         }
     }
     private void OnTriggerEnter2D(Collider2D other)

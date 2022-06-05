@@ -48,6 +48,9 @@ TagManager:
   - name: Background
     uniqueID: 1972691227
     locked: 0
+  - name: BackgroundSpawns
+    uniqueID: 4153359499
+    locked: 0
   - name: Wall
     uniqueID: 161986623
     locked: 0

@@ -10,12 +10,13 @@ private Slider slider;
 
     void Start()
     {
-        playerScript = GameObject.Find("Player").GetComponent<PlayerController2D>();
         slider = GetComponent<Slider>();
     }
 
     void Update()
     {
+        playerScript = GameHandler.instance.player.GetComponent<PlayerController2D>();
+
         if (slider.value <= slider.minValue)
         {
             fillImage.enabled = false;

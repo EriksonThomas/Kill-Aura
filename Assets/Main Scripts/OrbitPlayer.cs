@@ -6,12 +6,9 @@ public class OrbitPlayer : MonoBehaviour
     private float angle = 0.0f;
     public float orbitDistance = 0.0f;
     private GameObject orbitTarget;
-    void Start()
-    {
-        orbitTarget = GameObject.Find("Player");
-    }
     void Update()
     {
+        orbitTarget = GameHandler.instance.player;
         //Do some trig to figure out a vector3 to orbit the player
         angle += Time.deltaTime * orbitSpeed;
         transform.position = new Vector3(Mathf.Cos(angle), Mathf.Sin(angle), 0) * orbitDistance + orbitTarget.transform.position;

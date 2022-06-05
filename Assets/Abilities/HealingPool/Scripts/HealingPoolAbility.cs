@@ -16,7 +16,7 @@ public class HealingPoolAbility : MonoBehaviour
 
     public void SpawnHealingPool()
     {
-        target = GameObject.Find("Player");
+        target = GameHandler.instance.player;
         dir = target.transform.position;
         dir = dir + (Random.insideUnitSphere * rangeExponent);
         GameObject clone = Instantiate(healingPoolEffect, dir, Quaternion.identity);

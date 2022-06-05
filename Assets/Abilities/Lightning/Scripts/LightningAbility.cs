@@ -15,7 +15,7 @@ public class LightningAbility : MonoBehaviour
     }
     public void LightningStrikeAttack()
     {
-        target = GameObject.Find("Player");
+        target = GameHandler.instance.player;
         dir = target.transform.position;
         dir = dir + (Random.insideUnitSphere * lightningRangeExponent);
         dir.z = 0;
