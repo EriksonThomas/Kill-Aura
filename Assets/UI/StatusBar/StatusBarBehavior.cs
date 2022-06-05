@@ -8,11 +8,6 @@ public class StatusBarBehavior : MonoBehaviour
     private EffectableObject playerEffectable;
     private List<GameObject> effectIcons = new List<GameObject>();
     private GameObject target;
-    void Start()
-    {
-        target = GameObject.Find("Player");
-        playerEffectable = target.GetComponent<EffectableObject>();
-    }
 
     void Update()
     {
@@ -20,6 +15,8 @@ public class StatusBarBehavior : MonoBehaviour
     }
     void UpdateStatusIcons()
     {
+        playerEffectable = GameHandler.instance.player.GetComponent<EffectableObject>();
+
         if (playerEffectable.statusBarHasSeen == false)
         {
             // kill all child icons

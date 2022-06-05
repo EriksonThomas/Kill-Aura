@@ -5,7 +5,6 @@ public class Gem : MonoBehaviour
     private GameObject target;
     void Start()
     {
-        target = GameObject.Find("Player");
         Destroy(gameObject, 15f);
     }
     public void Collected()
@@ -14,6 +13,7 @@ public class Gem : MonoBehaviour
     }
     private void Update()
     {
+        target = GameHandler.instance.player;
         var distanceDifference = Vector3.Distance(target.transform.position, transform.position);
         if (distanceDifference <= .15)
         {

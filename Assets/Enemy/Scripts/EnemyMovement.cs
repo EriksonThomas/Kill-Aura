@@ -13,10 +13,10 @@ public class EnemyMovement : MonoBehaviour
         //check for the direction of the player
         body = GetComponent<Rigidbody2D>();
         body.freezeRotation = true;
-        target = GameObject.Find("Player");
     }
     void FixedUpdate()
     { 
+        target = GameHandler.instance.player;
         //move in the direction of the player
         body.velocity = Vector2.zero;
         Vector3 dir = target.transform.position - transform.position;

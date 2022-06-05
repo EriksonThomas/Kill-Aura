@@ -10,7 +10,7 @@ public class FollowPlayer : MonoBehaviour
     private Vector3 lastTargetPos;
     void Start()
     {
-        target = GameObject.Find("Player");
+        target = GameHandler.instance.player;
     }
     void Update()
     {

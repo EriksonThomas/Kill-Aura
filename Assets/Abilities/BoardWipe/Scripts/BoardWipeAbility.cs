@@ -12,7 +12,7 @@ public class BoardWipeAbility : MonoBehaviour
     }
     public void BoardWipeAttack()
     {
-        target = GameObject.Find("Player");
+        target = GameHandler.instance.player;
         GameObject clone = Instantiate(attackBoardWipeObject, target.transform.position, Quaternion.identity);
         Destroy(clone, boardWipeDuration);
     }
