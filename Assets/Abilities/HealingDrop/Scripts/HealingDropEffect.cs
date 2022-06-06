@@ -2,7 +2,10 @@ using UnityEngine;
 public class HealingDropEffect : MonoBehaviour
 {
     public float healValue = 6f;
-    public GameObject burstPrefab;
+    public GameObject burstPrefab;  
+    public AudioSource audioSource;
+    public AudioClip Mushroom;
+    public float volume = 5f;
     private bool hasTriggered = false;
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -11,6 +14,7 @@ public class HealingDropEffect : MonoBehaviour
         {
             // enable pop animatino and destroy when done
             GetComponent<Animator>().enabled = true;
+            AudioSource.PlayClipAtPoint(Mushroom, transform.position);
             Destroy(gameObject, GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length);
 
             // burst particles
