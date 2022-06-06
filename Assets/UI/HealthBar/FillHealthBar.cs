@@ -3,18 +3,20 @@ using UnityEngine.UI;
 
 public class FillHealthBar : MonoBehaviour
 {
-private PlayerController2D playerScript;
-public Text sliderText;
-public Image fillImage;
-private Slider slider;
+    private PlayerController2D playerScript;
+    public Text sliderText;
+    public Image fillImage;
+    private Slider slider;
+    private PlayerStats playerStats;
+   
     void Awake()
     {
+        //playerStats = gameObject.GetComponent<PlayerStats>();
         slider = GetComponent<Slider>();
-    }
-
+    } 
     void Update()
     {
-        playerScript = GameHandler.instance.player.GetComponent<PlayerController2D>();
+        playerStats = GameHandler.instance.player.GetComponent<PlayerStats>();
 
         if (slider.value <= slider.minValue)
         {
@@ -26,7 +28,7 @@ private Slider slider;
             fillImage.enabled = true;
         }
 
-        float fillValue = playerScript.currentHealth / playerScript.maxHealth;
+        float fillValue = playerStats.currentHealth / playerStats.maxHealth;
 
         if(fillValue <= slider.maxValue / 3)
         {
@@ -38,6 +40,6 @@ private Slider slider;
         }
 
         slider.value = fillValue;
-        sliderText.text = playerScript.currentHealth.ToString("00") + "/" + playerScript.maxHealth;
+        sliderText.text = playerStats.currentHealth.ToString("00") + "/" + playerStats.maxHealth;
     }
 }

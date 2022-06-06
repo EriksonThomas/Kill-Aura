@@ -3,7 +3,7 @@ public class LightningAttack : MonoBehaviour
 {
     public float lightningDamage = 6f;
     private float lightningDamageTimer = 0;
-    [SerializeField] private float lightningAttackDelay = 0.4f;
+    [SerializeField] private float lightningAttackDelay = 0.2f;
     void Update()
     {
         if (lightningDamageTimer > 0)

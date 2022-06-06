@@ -3,23 +3,18 @@ using System.Collections.Generic;
 
 public class PlayerController2D : MonoBehaviour
 {
-    public float maxHealth = 10f;
-    public float currentHealth = 10f;
-    public float healthRegenTime = 0f;
-    public float maxStamina = 20f;
-    public float currentStamina = 20f;
-    public float staminaRegenTime = 2f;
     public float startingGems = 0.0f;
     public float startingExp = 0.0f;
-
-
     protected EffectableObject Effectable;
-
+    private PlayerStats playerStats;
     void Awake()
     {
         Effectable = GetComponent<EffectableObject>();
     }
-
+    void Start()
+    {
+        playerStats = gameObject.GetComponent<PlayerStats>();
+    }
     void FixedUpdate()
     {
         RegenHealth();
@@ -33,16 +28,16 @@ public class PlayerController2D : MonoBehaviour
         
         if (!Effectable.Effect_IsInvincible(false))
         {
-            currentHealth -= damage;
+            playerStats.currentHealth -= damage;
         }
     } 
     public void DoHeal(float healValue)
     {
-        if (currentHealth + healValue > maxHealth)
+        if (playerStats.currentHealth + healValue > playerStats.maxHealth)
         {
-            healValue = maxHealth - currentHealth;
+            healValue = playerStats.maxHealth - playerStats.currentHealth;
         }
-        currentHealth += healValue;
+        playerStats.currentHealth += healValue;
     }
     public void GemCollected(float gemCount)
     {
@@ -55,17 +50,17 @@ public class PlayerController2D : MonoBehaviour
 
     private void RegenHealth()
     {
-        if (currentHealth < maxHealth)
+        if (playerStats.currentHealth < playerStats.maxHealth)
         {
-            currentHealth += healthRegenTime * Time.fixedDeltaTime;
+            playerStats.currentHealth += playerStats.healthRegenTime * Time.fixedDeltaTime;
         }
     }
 
     private void RegenStamina()
     {
-        if (currentStamina < maxStamina)
+        if (playerStats.currentStamina < playerStats.maxStamina)
         {
-            currentStamina += staminaRegenTime * Time.fixedDeltaTime;
+            playerStats.currentStamina += playerStats.staminaRegenTime * Time.fixedDeltaTime;
         }
     }
 
@@ -82,7 +77,7 @@ public class PlayerController2D : MonoBehaviour
 
     private void CheckIfDead()
     {
-        if (currentHealth <= 0)
+        if (playerStats.currentHealth <= 0)
         {
             Time.timeScale = 0;
             //TODO: death animation here

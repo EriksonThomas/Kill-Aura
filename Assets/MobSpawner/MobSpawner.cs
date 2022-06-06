@@ -5,6 +5,9 @@ public class MobSpawner : MonoBehaviour
     private GameObject target;
     private Vector3 dir;
     private int randomNumber;
+    public float currentDamageDebug;
+    public float currentHealthDebug;
+
     void Start()
     {
         //set spawning interval for enemies and kill the mob spawner after a set amount of time
@@ -22,15 +25,22 @@ public class MobSpawner : MonoBehaviour
         randomNumber = Random.Range(0, enemyPrefab.Length);
         dir.z = 0;
 
-        //spawn a randomized enemy prefab from the array
+        //spawn a randomized enemy prefab from the array and spawn the enemy
+        //get the enemycontroller componenet for the current enemy
+        //scale current damage annd hp of the spawned enemy to scale with waveNumber
         GameObject currentEnemy = Instantiate(enemyPrefab[randomNumber], dir, Quaternion.identity);
         
-        //scale current damage annd hp of the spawned enemy to scale with waveNumber
-        var currentDamage = currentEnemy.GetComponent<EnemyController>().attackDamage;
-        currentEnemy.GetComponent<EnemyController>().attackDamage = currentDamage + (waveNumber / 6);
-        Debug.Log(currentEnemy.GetComponent<EnemyController>().attackDamage);
-        var currentHealth = currentEnemy.GetComponent<EnemyController>().currentHealth;
-        currentEnemy.GetComponent<EnemyController>().currentHealth = currentHealth + (waveNumber / 2);
+        //var enemyController = currentEnemy.GetComponent<EnemyController>();
+
+        var attackDamage = currentEnemy.GetComponent<EnemyController>().attackDamage;
+
+        currentEnemy.GetComponent<EnemyController>().attackDamage = currentEnemy.GetComponent<EnemyController>().attackDamage + (waveNumber / 6);
+        currentDamageDebug = currentEnemy.GetComponent<EnemyController>().attackDamage / attackDamage;
+        Debug.Log("Enemy DMG scaled by: " + currentEnemy.GetComponent<EnemyController>().attackDamage / attackDamage + "x");
+        
+        currentEnemy.GetComponent<EnemyController>().maxHealth = currentEnemy.GetComponent<EnemyController>().maxHealth + (waveNumber / 2);
+        currentEnemy.GetComponent<EnemyController>().currentHealth = currentEnemy.GetComponent<EnemyController>().currentHealth + (waveNumber / 2);
+        Debug.Log("Enemy HP: " + currentEnemy.GetComponent<EnemyController>().currentHealth);
     }
     void OnDestroy()
     {

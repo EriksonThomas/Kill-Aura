@@ -9,8 +9,10 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float dodgeDistance = 2.0f;
     public GameObject playerBasicAttack;
     private Animator anim;
+    private PlayerStats playerStats;
     void Start()
     {
+        playerStats = gameObject.GetComponent<PlayerStats>();
         body = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();    
         body.freezeRotation = true;
@@ -46,18 +48,18 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.Space))
         {
             Debug.Log("got space");
-            if (GetComponent<PlayerController2D>().currentStamina >= dodgeStamina)
-            {
-                //TODO:
-                //SET IS INVONERABLE
-                //MATERIAL SET SLIGHTLY TRANSPARENT
-                gameObject.GetComponent<PlayerController2D>().currentStamina -= dodgeStamina;
-                // Vector2 temp = movement.normalized * dodgeDistance;
-                movement = movement.normalized;
-                body.MovePosition(body.position + movement * moveSpeed * 100 * Time.fixedDeltaTime);
-                //body.transform.position += new Vector3(temp.x,temp.y,0);
-                this.gameObject.GetComponent<Animator>().SetTrigger("dodge");
-            }
+            //if (playerStats.currentStamina >= dodgeStamina)
+            //{
+            //    //TODO:
+            //    //SET IS INVONERABLE
+            //    //MATERIAL SET SLIGHTLY TRANSPARENT
+            //    playerStats.currentStamina -= dodgeStamina;
+            //    // Vector2 temp = movement.normalized * dodgeDistance;
+            //    movement = movement.normalized;
+            //    body.MovePosition(body.position + movement * moveSpeed * 100 * Time.fixedDeltaTime);
+            //   //body.transform.position += new Vector3(temp.x,temp.y,0);
+            //    this.gameObject.GetComponent<Animator>().SetTrigger("dodge");
+            //}
         } 
 
         movement = movement.normalized;

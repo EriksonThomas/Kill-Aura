@@ -3,19 +3,17 @@ using UnityEngine.UI;
 
 public class FillStaminaBar : MonoBehaviour
 {
-private PlayerController2D playerScript;
-public Text sliderText;
-public Image fillImage;
-private Slider slider;
-
-    void Start()
+    public Text sliderText;
+    public Image fillImage;
+    private Slider slider;
+    private PlayerStats playerStats;
+    void Awake()
     {
         slider = GetComponent<Slider>();
     }
-
     void Update()
     {
-        playerScript = GameHandler.instance.player.GetComponent<PlayerController2D>();
+        playerStats = GameHandler.instance.player.GetComponent<PlayerStats>();
 
         if (slider.value <= slider.minValue)
         {
@@ -27,7 +25,7 @@ private Slider slider;
             fillImage.enabled = true;
         }
 
-        float fillValue = playerScript.currentStamina / playerScript.maxStamina;
+        float fillValue = playerStats.currentStamina / playerStats.maxStamina;
 
         if(fillValue <= slider.maxValue / 3)
         {
@@ -39,6 +37,6 @@ private Slider slider;
         }
 
         slider.value = fillValue;
-        sliderText.text = playerScript.currentStamina.ToString("00") + "/" + playerScript.maxStamina;
+        sliderText.text = playerStats.currentStamina.ToString("00") + "/" + playerStats.maxStamina;
     }
 }
