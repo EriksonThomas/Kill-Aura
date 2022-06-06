@@ -19,7 +19,6 @@ GameObject:
   - component: {fileID: 6231632395756418409}
   - component: {fileID: 5064756682878919388}
   - component: {fileID: 7788170159681591631}
-  - component: {fileID: 6797261154983103369}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -73,7 +72,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 50
-  currentHealth: 500
+  currentHealth: 50
   healthRegenTime: 0
   maxStamina: 20
   currentStamina: 20
@@ -253,6 +252,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerBasicAttack: {fileID: 3140868970734422352, guid: a8c20de2d3e066740b0d1234e321b8f4,
     type: 3}
+  audioSource: {fileID: 0}
+  Attack: {fileID: 0}
+  volume: 5
 --- !u!1 &5152000842858748536
 GameObject:
   m_ObjectHideFlags: 0
