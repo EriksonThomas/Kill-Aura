@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 8937373961095554049}
   - component: {fileID: 1395002179024953186}
   m_Layer: 12
-  m_Name: Skeleton
+  m_Name: Bat
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -80,7 +80,7 @@ SpriteRenderer:
   m_SortingLayerID: -2002269539
   m_SortingLayer: 5
   m_SortingOrder: 0
-  m_Sprite: {fileID: -74749446, guid: 1549ae244e58b8f439ceed8505a25e3e, type: 3}
+  m_Sprite: {fileID: 1046882008, guid: 3293c6ba2f8f42b41ae3d6062a732822, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -101,7 +101,7 @@ Animator:
   m_GameObject: {fileID: 132615332186250358}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 41022b61fa51e584ea653d96fc18c88e, type: 2}
+  m_Controller: {fileID: 9100000, guid: fe8093611b0c48f468e80288544331cd, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -124,8 +124,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.003212452, y: -0.15622005}
-  m_Size: {x: 0.101624295, y: 0.3014531}
+  m_Offset: {x: 0.010050476, y: -0.0050224266}
+  m_Size: {x: 0.18120182, y: 0.1812019}
   m_Direction: 0
 --- !u!50 &-7033972602623474476
 Rigidbody2D:
@@ -161,9 +161,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.16180769}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.1980273
+  m_Radius: 0.16
 --- !u!114 &8077140848445027432
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -176,8 +176,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61f96645537eaac43827ea6a9efe557d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0.5
-  moveSpeedStart: 0.5
+  moveSpeed: 0.6
+  moveSpeedStart: 0.6
   body: {fileID: 0}
 --- !u!114 &8937373961095554049
 MonoBehaviour:
@@ -191,8 +191,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb3935ab6a70b0c47bce007749540d7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 15
-  currentHealth: 15
+  maxHealth: 8
+  currentHealth: 8
   dazeCounter: 0.2
   gemPrefab:
   - {fileID: 2661557368925465875, guid: 8e9453694dbe3d34b89e25650e9efd1e, type: 3}
@@ -205,7 +205,7 @@ MonoBehaviour:
   - {fileID: 1159959684635476338, guid: e47f623083d7ab8409bbb3946b34d824, type: 3}
   - {fileID: 4603509980170740003, guid: f1295c1241ad4624e8eaecdac2c349ce, type: 3}
   - {fileID: 4603509980170740003, guid: 7401ade2abe9b2045a841f7bc0d7e34e, type: 3}
-  attackDamage: 7
+  attackDamage: 4
 --- !u!114 &1395002179024953186
 MonoBehaviour:
   m_ObjectHideFlags: 0

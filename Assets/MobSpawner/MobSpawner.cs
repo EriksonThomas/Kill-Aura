@@ -7,7 +7,7 @@ public class MobSpawner : MonoBehaviour
     private int randomNumber;
     public float currentDamageDebug;
     public float currentHealthDebug;
-
+    private int randomEnemy;
     void Start()
     {
         //set spawning interval for enemies and kill the mob spawner after a set amount of time
@@ -16,19 +16,34 @@ public class MobSpawner : MonoBehaviour
     }
     void SpawnEnemy()
     {
+        //generate a randomized enemy prefab from the array
+        randomNumber = Random.Range(0, 100);
+        if(randomNumber < 45)
+        {   
+            randomEnemy = 0;
+        }
+        else if(randomNumber > 45 && randomNumber < 94)
+        {
+            randomEnemy = 1;
+        }
+        else
+        {
+            randomEnemy = 2;
+        }
+      
+
         //get the current wave number from WaveManager
         var waveNumber = WaveManager.instance.GetComponent<WaveManager>().waveNumber;
         //Find the location of the player and get a random point in a large radius around the player to instansiate the enemy
         target = GameHandler.instance.player;
         dir = target.transform.position;
         dir = dir + (Random.insideUnitSphere * 9.0f);
-        randomNumber = Random.Range(0, enemyPrefab.Length);
         dir.z = 0;
 
-        //spawn a randomized enemy prefab from the array and spawn the enemy
+        //spawn the randomized enemy
         //get the enemycontroller componenet for the current enemy
         //scale current damage annd hp of the spawned enemy to scale with waveNumber
-        GameObject currentEnemy = Instantiate(enemyPrefab[randomNumber], dir, Quaternion.identity);
+        GameObject currentEnemy = Instantiate(enemyPrefab[randomEnemy], dir, Quaternion.identity);
         
         //var enemyController = currentEnemy.GetComponent<EnemyController>();
 

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 27fb2db76b58a524db25da098cfaea78
+guid: d452ceb72dbd7304487b7f22980d260d
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -69,7 +69,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -104,7 +104,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Enemy Skel Walk_0
+      name: Enemy Boss Skeleton walk animation_0
       rect:
         serializedVersion: 2
         x: 0
@@ -118,14 +118,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fe07878e60aa3ac42bbae8deb1a3fdcf
-      internalID: -1818990932
+      spriteID: 0f57721dfadd37e4992190050cf3e9ee
+      internalID: -30211006
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy Skel Walk_1
+      name: Enemy Boss Skeleton walk animation_1
       rect:
         serializedVersion: 2
         x: 64
@@ -139,8 +139,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 644a573626e2fc040b3106357e135ab7
-      internalID: -24316869
+      spriteID: ff46c933468044b4797d83bca6747e71
+      internalID: 1739908454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy Boss Skeleton walk animation_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ea9a70e614f7a0478519306fcd62aea
+      internalID: 1353833111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy Boss Skeleton walk animation_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af7ee5b9dfcca9d499e97f244f9c16c4
+      internalID: 1300296614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy Boss Skeleton walk animation_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cd08854c5404f04989ba40b20593ff1
+      internalID: -1054228878
       vertices: []
       indices: 
       edges: []
@@ -156,8 +219,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Enemy Skel Walk_1: -24316869
-      Enemy Skel Walk_0: -1818990932
+      Enemy Boss Skeleton walk animation_4: -1054228878
+      Enemy Boss Skeleton walk animation_1: 1739908454
+      Enemy Boss Skeleton walk animation_3: 1300296614
+      Enemy Boss Skeleton walk animation_2: 1353833111
+      Enemy Boss Skeleton walk animation_0: -30211006
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

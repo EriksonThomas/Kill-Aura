@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 865c5a0fee64c1e4eb5202e05684e8d5
+guid: 64301bf88b654004eae4a6f775536f75
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -69,7 +69,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -104,7 +104,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Enemy Skel_0
+      name: Enemy Boss skeleton attack_0
       rect:
         serializedVersion: 2
         x: 0
@@ -118,14 +118,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dbda449e9d4d85948b804d0906eb1acd
-      internalID: -670101640
+      spriteID: 504096ddc6cef704eab58a70f707831c
+      internalID: 1442828868
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy Skel_1
+      name: Enemy Boss skeleton attack_1
       rect:
         serializedVersion: 2
         x: 64
@@ -139,14 +139,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 950a6d49edace514d9850e1a520c6f91
-      internalID: 1264398911
+      spriteID: 93f4d19999f76c14db19b3b901906a9d
+      internalID: -559548627
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy Skel_2
+      name: Enemy Boss skeleton attack_2
       rect:
         serializedVersion: 2
         x: 128
@@ -160,8 +160,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a253e1dd031e55e49aac85ac867d6b90
-      internalID: 873891983
+      spriteID: e841e5aed5f360c41a5033e2c202a3ce
+      internalID: -1646890534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy Boss skeleton attack_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28db5cd52877b95468afdf721782f432
+      internalID: 240757463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy Boss skeleton attack_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f315782f8be66cf478afb84a326af4c1
+      internalID: -1052207157
       vertices: []
       indices: 
       edges: []
@@ -177,9 +219,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Enemy Skel_2: 873891983
-      Enemy Skel_0: -670101640
-      Enemy Skel_1: 1264398911
+      Enemy Boss skeleton attack_3: 240757463
+      Enemy Boss skeleton attack_4: -1052207157
+      Enemy Boss skeleton attack_1: -559548627
+      Enemy Boss skeleton attack_0: 1442828868
+      Enemy Boss skeleton attack_2: -1646890534
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
