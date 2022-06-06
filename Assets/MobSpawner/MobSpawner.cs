@@ -15,21 +15,22 @@ public class MobSpawner : MonoBehaviour
     {
         //get the current wave number from WaveManager
         var waveNumber = WaveManager.instance.GetComponent<WaveManager>().waveNumber;
-
-        enemyPrefab[0].GetComponent<EnemyController>().attackDamage = enemyPrefab[1].GetComponent<EnemyController>().attackDamage + (waveNumber / 10);
-        enemyPrefab[1].GetComponent<EnemyController>().attackDamage = enemyPrefab[1].GetComponent<EnemyController>().attackDamage + (waveNumber / 10);
-
-        enemyPrefab[0].GetComponent<EnemyController>().currentHealth = enemyPrefab[1].GetComponent<EnemyController>().currentHealth + (waveNumber / 2);
-        enemyPrefab[1].GetComponent<EnemyController>().currentHealth = enemyPrefab[1].GetComponent<EnemyController>().currentHealth + (waveNumber / 2);
-
         //Find the location of the player and get a random point in a large radius around the player to instansiate the enemy
         target = GameHandler.instance.player;
         dir = target.transform.position;
         dir = dir + (Random.insideUnitSphere * 9.0f);
         randomNumber = Random.Range(0, enemyPrefab.Length);
         dir.z = 0;
+
         //spawn a randomized enemy prefab from the array
-        Instantiate(enemyPrefab[randomNumber], dir, Quaternion.identity);
+        GameObject currentEnemy = Instantiate(enemyPrefab[randomNumber], dir, Quaternion.identity);
+        
+        //scale current damage annd hp of the spawned enemy to scale with waveNumber
+        var currentDamage = currentEnemy.GetComponent<EnemyController>().attackDamage;
+        currentEnemy.GetComponent<EnemyController>().attackDamage = currentDamage + (waveNumber / 6);
+        Debug.Log(currentEnemy.GetComponent<EnemyController>().attackDamage);
+        var currentHealth = currentEnemy.GetComponent<EnemyController>().currentHealth;
+        currentEnemy.GetComponent<EnemyController>().currentHealth = currentHealth + (waveNumber / 2);
     }
     void OnDestroy()
     {
