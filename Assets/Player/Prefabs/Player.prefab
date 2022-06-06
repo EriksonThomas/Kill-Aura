@@ -262,7 +262,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 50
-  currentHealth: 5000
+  currentHealth: 50
   healthRegenTime: 0
   maxStamina: 20
   currentStamina: 20
