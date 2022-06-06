@@ -4,6 +4,9 @@ public class HalberdAttack : MonoBehaviour
 {
     public GameObject playerBasicAttack;
     private Animator anim;
+    public AudioSource audioSource;
+    public AudioClip Attack;
+    public float volume = 5f;
     private bool right = true;
     void Start()
     {
@@ -49,21 +52,25 @@ public class HalberdAttack : MonoBehaviour
 
     void spawn_up_attack()
     {
+        AudioSource.PlayClipAtPoint(Attack, transform.position);
         Instantiate(playerBasicAttack, gameObject.transform.position + new Vector3(0.0f, 0.35f), Quaternion.Euler(0f, 0f, 60f));
     }    
     void spawn_front_attack()
     {
         if (right)
         {
+            AudioSource.PlayClipAtPoint(Attack, transform.position);
             Instantiate(playerBasicAttack, gameObject.transform.position + new Vector3(0.35f, 0.0f), Quaternion.identity);
         }
         else
         {
+            AudioSource.PlayClipAtPoint(Attack, transform.position);
             Instantiate(playerBasicAttack, gameObject.transform.position + new Vector3(-0.35f, 0.0f), Quaternion.Euler(0f,180f,0f));
         }
     }
     void spawn_down_attack()
     {
+        AudioSource.PlayClipAtPoint(Attack, transform.position);
         Instantiate(playerBasicAttack, gameObject.transform.position + new Vector3(0.0f, -0.45f), Quaternion.Euler(0f, 0f, 270f));
     }
 }

@@ -1542,7 +1542,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7774141, y: 1}
+    m_SensorSize: {x: 1.9431217, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -1591,7 +1591,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4be905f8b1ca27349b23a3b23dbbe053, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Tag: Player
 --- !u!850595691 &1468256057
 LightingSettings:
   m_ObjectHideFlags: 0
