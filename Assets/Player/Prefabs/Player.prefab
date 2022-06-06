@@ -253,7 +253,7 @@ MonoBehaviour:
   playerBasicAttack: {fileID: 3140868970734422352, guid: a8c20de2d3e066740b0d1234e321b8f4,
     type: 3}
   audioSource: {fileID: 0}
-  Attack: {fileID: 0}
+  Attack: {fileID: 8300000, guid: da861943768e09c4cbe5bd7e00e4d124, type: 3}
   volume: 5
 --- !u!1 &5152000842858748536
 GameObject:
