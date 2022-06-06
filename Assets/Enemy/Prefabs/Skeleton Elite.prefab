@@ -203,8 +203,9 @@ MonoBehaviour:
   - {fileID: 2661557368925465875, guid: b755a98695fbff14aa91960a45eed3a4, type: 3}
   expPrefab:
   - {fileID: 1159959684635476338, guid: e47f623083d7ab8409bbb3946b34d824, type: 3}
-  - {fileID: 4603509980170740003, guid: f1295c1241ad4624e8eaecdac2c349ce, type: 3}
+  - {fileID: 4603509980170740003, guid: 24f82bcbd1323294c85028673413540f, type: 3}
   - {fileID: 4603509980170740003, guid: 7401ade2abe9b2045a841f7bc0d7e34e, type: 3}
+  expDropped: 2
   attackDamage: 12
 --- !u!114 &1395002179024953186
 MonoBehaviour:

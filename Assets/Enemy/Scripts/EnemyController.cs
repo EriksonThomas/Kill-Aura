@@ -12,6 +12,7 @@ public class EnemyController : MonoBehaviour
     private Material default_mat;
     public GameObject[] gemPrefab;
     public GameObject[] expPrefab;
+    public int expDropped;
     private int randomNumber;
     public float attackDamage;
 
@@ -69,9 +70,8 @@ public class EnemyController : MonoBehaviour
         for (float i = 0; i <= Random.Range(0, 6.0f); i++)
         {
             // Take a random number in EXP Prefab array and cast it to the spawn it in on death
-            randomNumber = Random.Range(0, 2);
             gameObject.transform.position = gameObject.transform.position + (Random.insideUnitSphere * .3f);
-            GameObject exp = Instantiate(expPrefab[2], gameObject.transform.position, Quaternion.identity);
+            GameObject exp = Instantiate(expPrefab[expDropped], gameObject.transform.position, Quaternion.identity);
         }
     }
 }
