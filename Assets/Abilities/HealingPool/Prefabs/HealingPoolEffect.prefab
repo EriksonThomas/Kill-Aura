@@ -107,6 +107,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healPerSec: 6
   Effect: {fileID: 11400000, guid: 84f580837d77e2e419257be875838289, type: 2}
+  playerIsIn: 0
 --- !u!212 &-1886033234448704495
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -145,8 +146,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -2002269539
-  m_SortingLayer: 3
+  m_SortingLayerID: -141607797
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: -61415546, guid: dc7967653aae5be4ba61bfc4c557531f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

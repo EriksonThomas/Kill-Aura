@@ -8,10 +8,11 @@ public class PlayerMovement : MonoBehaviour
     Vector2 movement;
     [SerializeField] private float dodgeDistance = 2.0f;
     public GameObject playerBasicAttack;
-
+    private Animator anim;
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();    
         body.freezeRotation = true;
     }
     void Update()
@@ -38,7 +39,9 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKey(KeyCode.D))
         {
+            //anim.SetTrigger("right_walk_trigger");
             movement += Vector2.right;
+            
         }
         if (Input.GetKey(KeyCode.Space))
         {
@@ -52,7 +55,7 @@ public class PlayerMovement : MonoBehaviour
                 // Vector2 temp = movement.normalized * dodgeDistance;
                 movement = movement.normalized;
                 body.MovePosition(body.position + movement * moveSpeed * 100 * Time.fixedDeltaTime);
-                // body.transform.position += new Vector3(temp.x,temp.y,0);
+                //body.transform.position += new Vector3(temp.x,temp.y,0);
                 this.gameObject.GetComponent<Animator>().SetTrigger("dodge");
             }
         } 

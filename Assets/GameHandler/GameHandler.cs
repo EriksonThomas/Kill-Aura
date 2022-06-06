@@ -6,8 +6,6 @@ public class GameHandler : MonoBehaviour
     private static GameHandler _instance;
     public static GameHandler instance { get { return _instance; } }
     public GameObject playerPrefab;
-    public GameObject enemySpawnerPrefab;
-    public bool mobSpawnerEnabled;
     private GameObject _player;
     public GameObject player { get { return _player; } }
 
@@ -24,12 +22,6 @@ public class GameHandler : MonoBehaviour
     void Start()
     {
         _player = Instantiate(playerPrefab);
-
-        if(mobSpawnerEnabled == true)
-        {
-        GameObject spawner = Instantiate(enemySpawnerPrefab, Vector3.zero, Quaternion.identity);
-        Destroy(spawner, 40f);
-        }
     }
 
 

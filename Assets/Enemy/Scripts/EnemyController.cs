@@ -2,10 +2,10 @@
 
 public class EnemyController : MonoBehaviour
 {
-    public float maxHealth = 10f;
-    public float currentHealth = 10f;
+    public float maxHealth;
+    public float currentHealth;
     private const float dazeTime = 0.4f;
-    public float dazeCounter = 0.0f;
+    public float dazeCounter;
     private float randomCount;
     private SpriteRenderer my_sprite_renderer;
     private Material white_mat;
@@ -37,7 +37,7 @@ public class EnemyController : MonoBehaviour
     {
         
         currentHealth -= damage;  
-        Debug.Log(gameObject.ToString() +" TOOK " + damage + " DAMAGE ");
+        //Debug.Log(gameObject.ToString() +" TOOK " + damage + " DAMAGE ");
         if (currentHealth <= 0)
         {
             Destroy(gameObject);
