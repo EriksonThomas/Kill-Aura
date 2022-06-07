@@ -486,7 +486,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbfc1838f642a8149a8517cf749e97b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textMesh: {fileID: 0}
   textObject: {fileID: 1883374210628012735, guid: 16a3b9af9898e144987f49844064e7fd,
     type: 3}
 --- !u!1 &86996644
@@ -1482,6 +1481,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waveNumberText: {fileID: 671409727}
+--- !u!1 &1084970767 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8923184641225038254, guid: f182319175fc85142b5d743139375bd6,
+    type: 3}
+  m_PrefabInstance: {fileID: 1292295495228371784}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1084970771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1084970767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ead525e80d48df4d91d7cfb04b30f68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1134912430
 GameObject:
   m_ObjectHideFlags: 0

@@ -57,12 +57,12 @@ TagManager:
   - name: StatusParticles
     uniqueID: 255510179
     locked: 0
-  - name: DamageNumbers
-    uniqueID: 2710443277
-    locked: 0
   - name: Player
     uniqueID: 2292697757
     locked: 0
   - name: Player Items
     uniqueID: 1664633001
+    locked: 0
+  - name: DamageNumbers
+    uniqueID: 2710443277
     locked: 0
