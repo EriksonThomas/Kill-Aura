@@ -124,5 +124,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc51992466a6f754ea0f76ac3b7f49f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Effect: {fileID: 11400000, guid: 2ccf7caeb0f712642a16009f230f6011, type: 2}
+  Effect: {fileID: 11400000, guid: 3e65d9e89b130e8468ca6177f08a72a4, type: 2}
   removeWhenLeaves: 1
