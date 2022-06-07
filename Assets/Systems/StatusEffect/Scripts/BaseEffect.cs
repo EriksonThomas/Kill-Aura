@@ -35,4 +35,8 @@ public class BaseEffect : ScriptableObject
     {
         return originalInvincible;
     }
+    public virtual bool Effect_IsDodging(bool originalDodging)
+    {
+        return originalDodging;
+    }
 }

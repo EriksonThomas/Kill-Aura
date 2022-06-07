@@ -4,6 +4,7 @@ public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed = 5f;
     [SerializeField] private float dodgeStamina = 5f;
+    [SerializeField] private Effect_Dodge dodgeData; 
     private Rigidbody2D body;
     Vector2 movement;
     [SerializeField] private float dodgeDistance = 2.0f;
@@ -16,10 +17,19 @@ public class PlayerMovement : MonoBehaviour
         body = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();    
         body.freezeRotation = true;
+         Debug.Log("Started");
     }
     void Update()
     {
-         
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Debug.Log("got space");
+            if (playerStats.currentStamina >= dodgeStamina)
+            {
+                playerStats.currentStamina -= dodgeStamina;
+                GameHandler.instance.player.GetComponent<EffectableObject>().ApplyEffect(dodgeData);
+            } 
+        }
     }
     void FixedUpdate()
     {
@@ -41,29 +51,9 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKey(KeyCode.D))
         {
-            //anim.SetTrigger("right_walk_trigger");
             movement += Vector2.right;
-            
         }
-        if (Input.GetKey(KeyCode.Space))
-        {
-            Debug.Log("got space");
-            //if (playerStats.currentStamina >= dodgeStamina)
-            //{
-            //    //TODO:
-            //    //SET IS INVONERABLE
-            //    //MATERIAL SET SLIGHTLY TRANSPARENT
-            //    playerStats.currentStamina -= dodgeStamina;
-            //    // Vector2 temp = movement.normalized * dodgeDistance;
-            //    movement = movement.normalized;
-            //    body.MovePosition(body.position + movement * moveSpeed * 100 * Time.fixedDeltaTime);
-            //   //body.transform.position += new Vector3(temp.x,temp.y,0);
-            //    this.gameObject.GetComponent<Animator>().SetTrigger("dodge");
-            //}
-        } 
-
         movement = movement.normalized;
         body.MovePosition(body.position + movement * moveSpeed * Time.fixedDeltaTime);
     }
 }
-
