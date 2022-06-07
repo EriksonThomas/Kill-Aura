@@ -18,7 +18,11 @@ public class MobSpawner : MonoBehaviour
     {
         //generate a randomized enemy prefab from the array
         randomNumber = Random.Range(0, 100);
-        if(randomNumber < 45)
+        if(randomNumber < 5)
+        {
+            randomEnemy = 3;
+        }
+        else if(randomNumber > 5 && randomNumber < 45)
         {   
             randomEnemy = 0;
         }
@@ -51,11 +55,11 @@ public class MobSpawner : MonoBehaviour
 
         currentEnemy.GetComponent<EnemyController>().attackDamage = currentEnemy.GetComponent<EnemyController>().attackDamage + (waveNumber / 6);
         currentDamageDebug = currentEnemy.GetComponent<EnemyController>().attackDamage / attackDamage;
-        Debug.Log("Enemy DMG scaled by: " + currentEnemy.GetComponent<EnemyController>().attackDamage / attackDamage + "x");
+        //Debug.Log("Enemy DMG scaled by: " + currentEnemy.GetComponent<EnemyController>().attackDamage / attackDamage + "x");
         
         currentEnemy.GetComponent<EnemyController>().maxHealth = currentEnemy.GetComponent<EnemyController>().maxHealth + (waveNumber / 2);
         currentEnemy.GetComponent<EnemyController>().currentHealth = currentEnemy.GetComponent<EnemyController>().currentHealth + (waveNumber / 2);
-        Debug.Log("Enemy HP: " + currentEnemy.GetComponent<EnemyController>().currentHealth);
+        //Debug.Log("Enemy HP: " + currentEnemy.GetComponent<EnemyController>().currentHealth);
     }
     void OnDestroy()
     {

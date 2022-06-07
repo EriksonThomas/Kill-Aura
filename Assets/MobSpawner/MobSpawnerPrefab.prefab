@@ -45,8 +45,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab:
-  - {fileID: 132615332186250358, guid: 8fb543141ff37ea45a32ed2a1cc26c84, type: 3}
+  - {fileID: 132615332186250358, guid: 526e8558e7b0ce94eb66a4ae73b3bf45, type: 3}
   - {fileID: 132615332186250358, guid: 0d324cd3a1e3b0642b575a4b0d45e8e1, type: 3}
   - {fileID: 132615332186250358, guid: 21710eea7e887424cae1e04d1c57c001, type: 3}
+  - {fileID: 132615332186250358, guid: 8fb543141ff37ea45a32ed2a1cc26c84, type: 3}
   currentDamageDebug: 0
   currentHealthDebug: 0
