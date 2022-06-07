@@ -8,7 +8,7 @@ public class FillHealthBar : MonoBehaviour
     public Image fillImage;
     private Slider slider;
     private PlayerStats playerStats;
-   
+    
     void Awake()
     {
         //playerStats = gameObject.GetComponent<PlayerStats>();
