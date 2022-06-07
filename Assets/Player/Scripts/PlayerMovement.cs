@@ -7,7 +7,6 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Effect_Dodge dodgeData; 
     private Rigidbody2D body;
     Vector2 movement;
-    [SerializeField] private float dodgeDistance = 2.0f;
     public GameObject playerBasicAttack;
     private Animator anim;
     private PlayerStats playerStats;
@@ -17,13 +16,11 @@ public class PlayerMovement : MonoBehaviour
         body = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();    
         body.freezeRotation = true;
-         Debug.Log("Started");
     }
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Debug.Log("got space");
             if (playerStats.currentStamina >= dodgeStamina)
             {
                 playerStats.currentStamina -= dodgeStamina;

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   duration: 0
   permanent: 1
-  icon: {fileID: 6453193544218790201, guid: a064e5b2e61f6b94684cae288dbae6c6, type: 3}
-  statusSprite: {fileID: 5600875915121442631, guid: e67a143ebfd5d3f4e81a8533f55cc515,
+  icon: {fileID: 6453193544218790201, guid: ae79669f44582904a8d8e4651cfaaacb, type: 3}
+  statusSprite: {fileID: 5600875915121442631, guid: c000bc151929eba45b85b0e57e0ce7f7,
     type: 3}
   HealPerSecondModifier: 10

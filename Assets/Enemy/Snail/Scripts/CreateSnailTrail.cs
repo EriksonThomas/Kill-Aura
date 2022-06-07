@@ -27,6 +27,6 @@ public class CreateSnailTrail : MonoBehaviour
         var pos = gameObject.GetComponent<Transform>().position;
         pos.y = pos.y - 0.14f;
         trailList[ballCounter] = Instantiate(snailTrail, pos, Quaternion.identity) as GameObject; 
-        Debug.Log(trailList[ballCounter]);
+        // Debug.Log(trailList[ballCounter]);
     }  
 }

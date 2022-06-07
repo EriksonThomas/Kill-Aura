@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 191a2cd33602701409bf15218ffa01a4, type: 3}
   m_Name: Effect_Dodge
   m_EditorClassIdentifier: 
-  duration: 1
+  duration: 0.3
   permanent: 0
   icon: {fileID: 6453193544218790201, guid: a064e5b2e61f6b94684cae288dbae6c6, type: 3}
   statusSprite: {fileID: 0}
