@@ -33,11 +33,14 @@ public class StatusSpriteGiver : MonoBehaviour
 
             for (int i = 0; i < playerEffectable.activeEffects.Count; ++i)
             {
+                if (playerEffectable.activeEffects[i].statusSprite!= null)
+                {
                 GameObject statusSprite = Instantiate(playerEffectable.activeEffects[i].statusSprite);
                 statusSprite.transform.SetParent(target.transform);
                 statusSprite.transform.position = target.transform.position;
                 
                 activeSprites.Add(statusSprite);
+                }
             }
 
             playerEffectable.statusSpriteHasSeen = true;
