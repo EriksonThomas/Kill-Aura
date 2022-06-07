@@ -19,7 +19,8 @@ public class EXP : MonoBehaviour
     void Update()
     {
         target = GameHandler.instance.player;
-        var distanceDifference = Vector3.Distance(target.transform.position, transform.position);
+        Vector3 adjusted = target.transform.position + new Vector3(0,-.14f);
+        var distanceDifference = Vector3.Distance(adjusted, transform.position);
         if (distanceDifference <= .07)
         {
             AudioSource.PlayClipAtPoint(Bwip, transform.position);
