@@ -17,20 +17,21 @@ public class PlayerMovement : MonoBehaviour
         body = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();    
         body.freezeRotation = true;
+         Debug.Log("Started");
     }
-    // void Update()
-    // {
-    //     if (Input.GetKeyDown(KeyCode.Space))
-    //     {
-    //         Debug.Log("got space");
-    //         if (playerStats.currentStamina >= dodgeStamina)
-    //         {
-    //             playerStats.currentStamina -= dodgeStamina;
-    //             GameHandler.instance.player.GetComponent<EffectableObject>().ApplyEffect(dodgeData);
-    //         } 
-    //     }
-    // }
-    void fixedUpdate()
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Debug.Log("got space");
+            if (playerStats.currentStamina >= dodgeStamina)
+            {
+                playerStats.currentStamina -= dodgeStamina;
+                GameHandler.instance.player.GetComponent<EffectableObject>().ApplyEffect(dodgeData);
+            } 
+        }
+    }
+    void FixedUpdate()
     {
         movement = Vector2.zero;
         if (Input.GetKey(KeyCode.W))
