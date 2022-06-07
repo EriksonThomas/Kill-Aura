@@ -15,9 +15,5 @@ public class BaseAttack : MonoBehaviour
         {
             other.GetComponent<EnemyController>().DoDamage(attackDamage);
         }
-        if (other.gameObject.tag == "Enemy")
-        {
-            other.GetComponent<EnemyController>().DoDamage(attackDamage);
-        }
     }
 }
