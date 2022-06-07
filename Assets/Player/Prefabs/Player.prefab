@@ -56,6 +56,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 1
   dodgeStamina: 5
+  dodgeData: {fileID: 11400000, guid: ffd4714732738ad42aaa9274537d9b7d, type: 2}
   dodgeDistance: 0.5
   playerBasicAttack: {fileID: 3140868970734422352, guid: a8c20de2d3e066740b0d1234e321b8f4,
     type: 3}
