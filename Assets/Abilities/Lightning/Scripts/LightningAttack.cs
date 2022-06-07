@@ -6,6 +6,7 @@ public class LightningAttack : MonoBehaviour
     [SerializeField] private float lightningAttackDelay = 0.2f;
     void Update()
     {
+        
         if (lightningDamageTimer > 0)
         {
             lightningDamageTimer -= Time.deltaTime;
@@ -15,7 +16,8 @@ public class LightningAttack : MonoBehaviour
     {
         if (other.gameObject.tag == "Enemy" && lightningDamageTimer <= 0)
         {
-            other.GetComponentInParent<EnemyController>().DoDamage(lightningDamage);
+            var randomNumber = GameHandler.instance.GetComponent<RandomDamageNumber>().GenerateRandomNumber();
+            other.GetComponentInParent<EnemyController>().DoDamage(lightningDamage * randomNumber);
             lightningDamageTimer = lightningAttackDelay;
         }
     }

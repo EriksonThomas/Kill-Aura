@@ -268,3 +268,4 @@ MonoBehaviour:
   maxStamina: 20
   currentStamina: 20
   staminaRegenTime: 2
+  attackDamage: 5

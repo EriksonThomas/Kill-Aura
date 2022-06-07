@@ -8,7 +8,6 @@ public class GameHandler : MonoBehaviour
     public GameObject playerPrefab;
     private GameObject _player;
     public GameObject player { get { return _player; } }
-
     void Awake()
     {
         if (_instance != null && _instance != this)

@@ -1,10 +1,10 @@
 ﻿using UnityEngine;
-using System.Collections.Generic;
 public class BaseAttack : MonoBehaviour
 {   
-    public float attackDamage = 5.0f;
+    private float attackDamage;
     void FixedUpdate()
     {
+        attackDamage = GameHandler.instance.player.GetComponent<PlayerStats>().attackDamage;
         Destroy(gameObject, 0.1f);
     }
 
@@ -13,7 +13,8 @@ public class BaseAttack : MonoBehaviour
         //TEMPORARY CHECK CAPSULE COLLIDER INSTEAD OF TAG
         if (other.gameObject.tag == "Enemy" && other.GetType() == typeof(CapsuleCollider2D))
         {
-            other.GetComponent<EnemyController>().DoDamage(attackDamage);
+            var randomNumber = GameHandler.instance.GetComponent<RandomDamageNumber>().GenerateRandomNumber();
+            other.GetComponent<EnemyController>().DoDamage(attackDamage * randomNumber);
         }
     }
 }

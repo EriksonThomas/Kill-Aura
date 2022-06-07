@@ -2,12 +2,13 @@ using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
 {
-    public float maxHealth = 0f;
-    public float currentHealth = 0f;
+    public float maxHealth;
+    public float currentHealth;
     public float healthRegenTime;
-    public float maxStamina = 0f;
-    public float currentStamina = 0f;
+    public float maxStamina;
+    public float currentStamina;
     public float staminaRegenTime;
+    public float attackDamage;
     void Start()
     {
         
