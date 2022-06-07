@@ -38,6 +38,7 @@ public class EnemyController : MonoBehaviour
     {
         
         currentHealth -= damage;  
+        DamageNumbers.instance.Create(gameObject.GetComponent<Transform>().position, Mathf.RoundToInt(damage));
         //Debug.Log(gameObject.ToString() +" TOOK " + damage + " DAMAGE ");
         if (currentHealth <= 0)
         {
