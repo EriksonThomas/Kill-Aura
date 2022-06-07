@@ -15,6 +15,22 @@ public class PlayerController2D : MonoBehaviour
     {
         playerStats = gameObject.GetComponent<PlayerStats>();
     }
+    void Update()
+    {
+        if (Effectable.Effect_IsDodging(false))
+        {
+            GameHandler.instance.player.GetComponent<BoxCollider2D>().enabled = false;
+            GameHandler.instance.player.GetComponent<SpriteRenderer>().color = new Color(1,1,1,.35f);
+            GameHandler.instance.player.GetComponent<PlayerMovement>().moveSpeed = 2.5f;
+
+        }
+        else
+        {
+            GameHandler.instance.player.GetComponent<BoxCollider2D>().enabled = true;
+            GameHandler.instance.player.GetComponent<SpriteRenderer>().color = new Color(1,1,1,1);
+            GameHandler.instance.player.GetComponent<PlayerMovement>().moveSpeed = 1f;
+        }
+    }
     void FixedUpdate()
     {
         RegenHealth();
@@ -25,8 +41,7 @@ public class PlayerController2D : MonoBehaviour
     public void DoDamage(float damage)
     {
         // has invincible status?
-        
-        if (!Effectable.Effect_IsInvincible(false))
+        if (!Effectable.Effect_IsInvincible(false) && !Effectable.Effect_IsDodging(false))
         {
             playerStats.currentHealth -= damage;
         }

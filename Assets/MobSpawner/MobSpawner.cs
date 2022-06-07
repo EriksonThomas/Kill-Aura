@@ -20,7 +20,7 @@ public class MobSpawner : MonoBehaviour
         randomNumber = Random.Range(0, 100);
         if(randomNumber < 5)
         {
-            randomEnemy = 3;
+            randomEnemy = 0;
         }
         else if(randomNumber > 5 && randomNumber < 45)
         {   

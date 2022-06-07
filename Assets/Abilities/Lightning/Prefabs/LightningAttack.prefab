@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b434c695f4782a4469d0329a5bb29077, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightningDamage: 6
+  lightningDamage: 17
   lightningAttackDelay: 0.4
 --- !u!50 &2241491262919157535
 Rigidbody2D:
@@ -125,8 +125,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -2002269539
-  m_SortingLayer: 3
+  m_SortingLayerID: -141607797
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: -1331947709, guid: f043cfcbd829c02419bffd6912da3e56, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

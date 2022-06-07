@@ -79,4 +79,18 @@ public class EffectableObject : MonoBehaviour
         }
         return workingInvincible;
     }
+
+    public bool Effect_IsDodging(bool originalDodging)
+    {
+        bool workingDodging = originalDodging;
+
+        for (int index = 0; index < activeEffects.Count; ++index)
+        {
+            if (activeEffects[index].IsActive)
+            {
+                workingDodging = activeEffects[index].Effect_IsDodging(workingDodging);
+            }
+        }
+        return workingDodging;
+    }
 }

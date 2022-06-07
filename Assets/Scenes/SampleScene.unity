@@ -1481,24 +1481,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waveNumberText: {fileID: 671409727}
---- !u!1 &1084970767 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8923184641225038254, guid: f182319175fc85142b5d743139375bd6,
-    type: 3}
-  m_PrefabInstance: {fileID: 1292295495228371784}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1084970771
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1084970767}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ead525e80d48df4d91d7cfb04b30f68, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1134912430
 GameObject:
   m_ObjectHideFlags: 0
@@ -1628,6 +1610,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 132615332186250356, guid: 8fb543141ff37ea45a32ed2a1cc26c84,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 132615332186250356, guid: 8fb543141ff37ea45a32ed2a1cc26c84,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: -141607797
+      objectReference: {fileID: 0}
     - target: {fileID: 132615332186250358, guid: 8fb543141ff37ea45a32ed2a1cc26c84,
         type: 3}
       propertyPath: m_Name
@@ -1739,7 +1731,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.0771055, y: 1}
+    m_SensorSize: {x: 2.0916843, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -2659,6 +2651,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1800732325}
   - component: {fileID: 1800732324}
+  - component: {fileID: 1800732328}
   - component: {fileID: 1800732327}
   - component: {fileID: 1800732326}
   m_Layer: 0
@@ -2775,6 +2768,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1800732328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1800732323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb08ee86007b4144a84591820f002be5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  randomNumberMax: 1.25
 --- !u!1 &1937172525
 GameObject:
   m_ObjectHideFlags: 0
