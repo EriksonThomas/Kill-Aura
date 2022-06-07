@@ -6,6 +6,7 @@ public class ExpFollowPlayer : MonoBehaviour
 {
     public float moveSpeed;
     public GameObject target;
+    
     private float vectorTimer = 1;
     private Vector3 randomDir;
     private Vector3 lastTargetPos;
@@ -15,11 +16,12 @@ public class ExpFollowPlayer : MonoBehaviour
     }
     void Update()
     {
+        Vector3 adjusted = target.transform.position + new Vector3(0,-.14f);
         //calculate distance between the target and the object following
-        var distanceDifference = Vector3.Distance(target.transform.position, transform.position);
+        var distanceDifference = Vector3.Distance(adjusted + new Vector3(0,0), transform.position);
         if(distanceDifference >= 0)
         {
-            Vector3 dir = target.transform.position - transform.position;
+            Vector3 dir = adjusted - transform.position;
             //speed exp balls up as they approach the target
             transform.position += dir.normalized * ((1 / distanceDifference) * .5f) * Time.deltaTime;
         }
@@ -27,7 +29,7 @@ public class ExpFollowPlayer : MonoBehaviour
         {
             vectorTimer -= Time.deltaTime;
             moveSpeed = 0.3f;
-            if(target.transform.position == lastTargetPos)
+            if(adjusted == lastTargetPos)
             {
                 transform.position += randomDir.normalized * moveSpeed * Time.deltaTime;
             }
