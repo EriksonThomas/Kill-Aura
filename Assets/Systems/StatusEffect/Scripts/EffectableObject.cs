@@ -33,6 +33,7 @@ public class EffectableObject : MonoBehaviour
 
         // make the effect active
         newEffect.EnableEffect();
+        newEffect.OnEffectStart();
         activeEffects.Add(newEffect);
         statusBarHasSeen = false;
         statusSpriteHasSeen = false;

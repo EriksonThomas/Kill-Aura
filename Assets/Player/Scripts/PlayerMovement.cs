@@ -21,7 +21,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            if (playerStats.currentStamina >= dodgeStamina)
+            if (playerStats.currentStamina >= dodgeStamina && GameHandler.instance.globalTimer.GetComponent<GlobalTimer>().requestAbility("dodgeCD"))
             {
                 playerStats.currentStamina -= dodgeStamina;
                 GameHandler.instance.player.GetComponent<EffectableObject>().ApplyEffect(dodgeData);

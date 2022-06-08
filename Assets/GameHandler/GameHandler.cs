@@ -8,6 +8,10 @@ public class GameHandler : MonoBehaviour
     public GameObject playerPrefab;
     private GameObject _player;
     public GameObject player { get { return _player; } }
+    //timer 
+    public GameObject globalTimerPrefab;
+    private GameObject _globalTimer;
+    public GameObject globalTimer { get { return _globalTimer; } }
     void Awake()
     {
         if (_instance != null && _instance != this)
@@ -21,6 +25,7 @@ public class GameHandler : MonoBehaviour
     void Start()
     {
         _player = Instantiate(playerPrefab);
+        _globalTimer = Instantiate(globalTimerPrefab);
     }
 
 
