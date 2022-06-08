@@ -8,12 +8,14 @@ public class FollowPlayer : MonoBehaviour
     private float vectorTimer = 1;
     private Vector3 randomDir;
     private Vector3 lastTargetPos;
+
     void Start()
     {
         target = GameHandler.instance.player;
     }
     void Update()
     {
+        
         //calculate distance between the target and the object following
         var distanceDifference = Vector3.Distance(target.transform.position, transform.position);
         if(distanceDifference >= minimumDistance)

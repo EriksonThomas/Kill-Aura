@@ -13,7 +13,8 @@ public class GlobalTimer : MonoBehaviour
     public void Awake()
     {
         //populate from json
-        globalCooldownLength.Add("dodgeCD", .3);
+        globalCooldownLength.Add("dodgeCD", .31);
+        globalCooldownLength.Add("skullspawn", .8);
     }
     void FixedUpdate()
     {
