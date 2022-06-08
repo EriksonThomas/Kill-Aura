@@ -21,8 +21,10 @@ public class BaseEffect : ScriptableObject
         if (permanent == false && durationRemaining > 0)
             durationRemaining -= Time.fixedDeltaTime;
     }
-
-    public void OnEffectEnd()
+    public virtual void OnEffectStart()
+    {
+    }
+    public virtual void OnEffectEnd()
     {
     }
 

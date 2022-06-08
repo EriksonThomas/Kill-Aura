@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class EXP : MonoBehaviour
 {
-    public float expValue;
+    public float expElement;
     public AudioSource audioSource;
     public AudioClip Bwip;
     public float volume = 1f;
@@ -14,6 +14,19 @@ public class EXP : MonoBehaviour
     }
     public void Collected()
     {
+        if(expElement == 0)
+        {
+            GameHandler.instance.player.GetComponent<PlayerStats>().normalEnemyMeter += 1;
+        } 
+        else if(expElement == 1)
+        {
+            GameHandler.instance.player.GetComponent<PlayerStats>().eliteEnemyMeter += 1;
+        }  
+        else if(expElement == 2)
+        {
+            GameHandler.instance.player.GetComponent<PlayerStats>().bossEnemyMeter += 1;
+        }
+
         Destroy(gameObject);
     }
     void Update()
@@ -26,7 +39,7 @@ public class EXP : MonoBehaviour
             AudioSource.PlayClipAtPoint(Bwip, transform.position);
             Collected();
             //GetComponent<AudioSource>().PlayOneShot(Bwip);
-            target.gameObject.GetComponentInParent<PlayerController2D>().ExpCollected(expValue);
+            target.gameObject.GetComponentInParent<PlayerController2D>().ExpCollected(expElement);
         }
     }
 }

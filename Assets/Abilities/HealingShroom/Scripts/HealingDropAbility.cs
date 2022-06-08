@@ -18,7 +18,7 @@ public class HealingDropAbility : MonoBehaviour
     public void SpawnHealingDrop()
     {
         target = GameHandler.instance.player;
-        Vector3 positionOffset = Random.insideUnitCircle.normalized * Random.Range(innerBound, outerBound);
+        var positionOffset = GameHandler.instance.GetComponent<GlobalRandomMultiplier>().GenerateRandomVector(innerBound, outerBound);  
         GameObject clone = Instantiate(healingDropAbility, target.transform.position + positionOffset, Quaternion.identity);
         Destroy(clone, duration);
     }

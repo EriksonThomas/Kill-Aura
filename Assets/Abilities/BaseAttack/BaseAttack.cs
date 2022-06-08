@@ -13,7 +13,7 @@ public class BaseAttack : MonoBehaviour
         //TEMPORARY CHECK CAPSULE COLLIDER INSTEAD OF TAG
         if (other.gameObject.tag == "Enemy" && other.GetType() == typeof(CapsuleCollider2D))
         {
-            var randomNumber = GameHandler.instance.GetComponent<RandomDamageNumber>().GenerateRandomNumber();
+            var randomNumber = GameHandler.instance.GetComponent<GlobalRandomMultiplier>().GenerateRandomNumber();
             other.GetComponent<EnemyController>().DoDamage(attackDamage * randomNumber);
         }
     }

@@ -16,7 +16,7 @@ public class LightningAttack : MonoBehaviour
     {
         if (other.gameObject.tag == "Enemy" && lightningDamageTimer <= 0)
         {
-            var randomNumber = GameHandler.instance.GetComponent<RandomDamageNumber>().GenerateRandomNumber();
+            var randomNumber = GameHandler.instance.GetComponent<GlobalRandomMultiplier>().GenerateRandomNumber();
             other.GetComponentInParent<EnemyController>().DoDamage(lightningDamage * randomNumber);
             lightningDamageTimer = lightningAttackDelay;
         }

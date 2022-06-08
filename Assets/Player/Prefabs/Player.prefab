@@ -261,10 +261,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c62cee24fe8e93e47a4290edadb3a75d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 50
-  currentHealth: 50
+  maxHealth: 25
+  currentHealth: 25
   healthRegenTime: 0
   maxStamina: 20
   currentStamina: 20
   staminaRegenTime: 2
   attackDamage: 5
+  normalEnemyMeter: 0
+  eliteEnemyMeter: 0
+  bossEnemyMeter: 0
