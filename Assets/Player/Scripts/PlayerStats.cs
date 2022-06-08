@@ -9,6 +9,9 @@ public class PlayerStats : MonoBehaviour
     public float currentStamina;
     public float staminaRegenTime;
     public float attackDamage;
+    public int normalEnemyMeter;
+    public int eliteEnemyMeter;
+    public int bossEnemyMeter;
     void Start()
     {
         
@@ -16,6 +19,6 @@ public class PlayerStats : MonoBehaviour
 
     void Update()
     {
-
+        //Debug.Log(normalEnemyMeter + eliteEnemyMeter + bossEnemyMeter);
     }
 }

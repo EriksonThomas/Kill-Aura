@@ -100,7 +100,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 0.3
-  target: {fileID: 5289806291807088815, guid: bf38bd032e874eb46a46db7985ee416b, type: 3}
 --- !u!114 &361747104605873926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -113,7 +112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 086932dab37a850408ccaff9dcbd591c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  expValue: 100
+  expElement: 0
   audioSource: {fileID: 0}
   Bwip: {fileID: 8300000, guid: 427f2074584dd7a459cf6ac54924c7e6, type: 3}
   volume: 1

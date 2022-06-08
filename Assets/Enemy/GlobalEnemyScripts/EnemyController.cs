@@ -37,8 +37,8 @@ public class EnemyController : MonoBehaviour
     public void DoDamage(float damage)
     {
         
-        currentHealth -= damage;  
-        DamageNumbers.instance.Create(gameObject.GetComponent<Transform>().position, Mathf.RoundToInt(damage));
+        currentHealth -= damage;
+        DamageNumbers.instance.Create(gameObject.GetComponent<Transform>().position, Mathf.RoundToInt(damage), 0);
         //Debug.Log(gameObject.ToString() +" TOOK " + damage + " DAMAGE ");
         if (currentHealth <= 0)
         {
@@ -74,12 +74,10 @@ public class EnemyController : MonoBehaviour
         //    gameObject.transform.position = gameObject.transform.position + (Random.insideUnitSphere * .3f);
         //    GameObject gem = Instantiate(gemPrefab[randomNumber], gameObject.transform.position, Quaternion.Euler(0.0f, 0.0f, 0.0f));
         //}
-
-        for (float i = 0; i <= Random.Range(0, 6.0f); i++)
-        {
-            // Take a random number in EXP Prefab array and cast it to the spawn it in on death
-            gameObject.transform.position = gameObject.transform.position + (Random.insideUnitSphere * .3f);
-            GameObject exp = Instantiate(expPrefab[expDropped], gameObject.transform.position, Quaternion.identity);
-        }
+        
+        // Take a random number in EXP Prefab array and cast it to the spawn it in on death
+        gameObject.transform.position = gameObject.transform.position + (Random.insideUnitSphere * .3f);
+        GameObject exp = Instantiate(expPrefab[expDropped], gameObject.transform.position, Quaternion.identity);
+        
     }
 }

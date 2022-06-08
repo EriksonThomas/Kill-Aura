@@ -23,7 +23,9 @@ public class HealingDropEffect : MonoBehaviour
             // Destroy(part, 2);
 
             // heal player
-            other.GetComponentInParent<PlayerController2D>().DoHeal(healValue);
+            var randomNumber = GameHandler.instance.GetComponent<GlobalRandomMultiplier>().GenerateRandomNumber();
+            DamageNumbers.instance.Create(gameObject.GetComponent<Transform>().position, Mathf.RoundToInt(healValue * randomNumber), 1);
+            other.GetComponentInParent<PlayerController2D>().DoHeal(healValue * randomNumber);
             hasTriggered = true;
         }
     }

@@ -5,8 +5,7 @@ using UnityEngine;
 public class ExpFollowPlayer : MonoBehaviour
 {
     public float moveSpeed;
-    public GameObject target;
-    
+    private GameObject target;
     private float vectorTimer = 1;
     private Vector3 randomDir;
     private Vector3 lastTargetPos;
