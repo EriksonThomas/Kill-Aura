@@ -12,8 +12,12 @@ public class RockProjectileLogic : MonoBehaviour
     private Rigidbody2D body;
     private Vector3 prevMovement;
     private Vector3 axis;
+    public Sprite[] allSprites;
+
     void Start()
     {
+        int rand = Random.Range(0, allSprites.Length);
+        gameObject.GetComponent<SpriteRenderer>().sprite = allSprites[rand];
         
         
         //check for the direction of the player
