@@ -24,7 +24,7 @@ public class MobSpawner : MonoBehaviour
         randomNumber = Random.Range(0, 100);
         if(randomNumber < 5)
         {
-            randomEnemy = 0;
+            randomEnemy = 4;
         }
         else if(randomNumber > 5 && randomNumber < 45)
         {   
@@ -50,7 +50,7 @@ public class MobSpawner : MonoBehaviour
         var adjusted = gameObject.transform.position + positionOffset;
 
         GameObject currentEnemy = Instantiate(enemyPrefab[randomEnemy], adjusted, Quaternion.identity);
-        
+        Debug.Log(enemyPrefab[randomEnemy]);
         currentEnemy.GetComponent<EnemyStats>().ScaleEnemy(waveNumber);
 
     }

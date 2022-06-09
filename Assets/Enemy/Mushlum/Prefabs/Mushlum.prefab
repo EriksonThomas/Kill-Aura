@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: 1395002179024953186}
   - component: {fileID: -5917056545321937484}
   m_Layer: 12
-  m_Name: Bat
+  m_Name: Mushlum
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -81,7 +81,7 @@ SpriteRenderer:
   m_SortingLayerID: -2002269539
   m_SortingLayer: 5
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1046882008, guid: 6cb5371479b8b83488ba3e8dba6ade07, type: 3}
+  m_Sprite: {fileID: 1892061150, guid: a4f483d28ebfd7248b45effeafa2f570, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -102,7 +102,7 @@ Animator:
   m_GameObject: {fileID: 132615332186250358}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 0333b956102f8064c94134612f0b88d2, type: 2}
+  m_Controller: {fileID: 9100000, guid: 2c2b6a94e9a285f448394d6aac63f4a2, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -225,12 +225,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a08d2f2eadcf634f8973deba13183aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 1.1
-  moveSpeedStart: 1
+  moveSpeed: 0.3
+  moveSpeedStart: 0.3
   maxHealth: 9
   currentHealth: 9
-  healthRegenTime: 0
+  healthRegenTime: 1
   attackDamage: 7
-  dazeTime: 0.3
-  dazeCounter: 0.3
+  dazeTime: 0.8
+  dazeCounter: 0.8
   expDropped: 1

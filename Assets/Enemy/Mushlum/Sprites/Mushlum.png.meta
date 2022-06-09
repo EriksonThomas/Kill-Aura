@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6cb5371479b8b83488ba3e8dba6ade07
+guid: a4f483d28ebfd7248b45effeafa2f570
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -104,7 +104,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Bat Enemy 1_0
+      name: Mushlum_0
       rect:
         serializedVersion: 2
         x: 0
@@ -118,14 +118,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: becf2d3f6a4241540b94c37d91fce3bd
-      internalID: 1046882008
+      spriteID: 6d417686779da914392e2165012d70f4
+      internalID: 1892061150
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bat Enemy 1_1
+      name: Mushlum_1
       rect:
         serializedVersion: 2
         x: 32
@@ -139,14 +139,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eaf964c7d864e7745b51e3948d64d444
-      internalID: 341252986
+      spriteID: 94093b40d55258d449491050b9df32b0
+      internalID: 1827733431
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bat Enemy 1_2
+      name: Mushlum_2
       rect:
         serializedVersion: 2
         x: 64
@@ -160,14 +160,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1f9dc68cc1e6f6a498dfd301191df2ac
-      internalID: -1181718971
+      spriteID: fde70962d59fd804a86e4f1c69b469d8
+      internalID: 1795060762
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bat Enemy 1_3
+      name: Mushlum_3
       rect:
         serializedVersion: 2
         x: 96
@@ -181,14 +181,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 56453fbfd2b74ac44a6675b17d701b45
-      internalID: -12917617
+      spriteID: 84732c27260fbff488f7af1eaf5ceadc
+      internalID: -1290262344
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bat Enemy 1_4
+      name: Mushlum_4
       rect:
         serializedVersion: 2
         x: 128
@@ -202,8 +202,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ed537932dfe183e4fb9a8c3368b1be54
-      internalID: -1895063610
+      spriteID: 20bfdbce5699832438ef0b113af8fe28
+      internalID: 173123859
       vertices: []
       indices: 
       edges: []
@@ -219,11 +219,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Bat Enemy 1_0: 1046882008
-      Bat Enemy 1_3: -12917617
-      Bat Enemy 1_4: -1895063610
-      Bat Enemy 1_1: 341252986
-      Bat Enemy 1_2: -1181718971
+      Mushlum_1: 1827733431
+      Mushlum_4: 173123859
+      Mushlum_3: -1290262344
+      Mushlum_0: 1892061150
+      Mushlum_2: 1795060762
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
