@@ -1,38 +1,64 @@
-using UnityEngine;
+ using UnityEngine;
+ using System.Collections;
+ using UnityEngine.UI;
+ using System;
+using System.Collections.Generic;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class SkullProjectileLogic : MonoBehaviour
 {
     // Start is called before the first frame update
     public float projectileMoveSpeed;
+    public float adderRange;
     // public float projectileMoveSpeedStart = 1f;
     private GameObject target;
     private Rigidbody2D body;
     private Vector3 prevMovement;
+    List<GameObject> closestTargets = new List<GameObject>();
     void Start()
     {
         //check for the direction of the player
         body = GetComponent<Rigidbody2D>();
         body.freezeRotation = true;
+
         if (GameObject.FindGameObjectWithTag("Enemy") != null)
         {
-        target = GameObject.FindGameObjectWithTag("Enemy");
-
-        GameObject closest = target;
-        float closeDistance = Vector3.Distance(gameObject.transform.position, target.transform.position);
-
-        GameObject[] taggedObjects = GameObject.FindGameObjectsWithTag("Enemy");
-        for(int i = 0; i < taggedObjects.Length; i++)
-         {
-             float thisDistance = Vector3.Distance(gameObject.transform.position, taggedObjects[i].transform.position);
-                if( thisDistance <= closeDistance)
+            GameObject[] taggedObjects = GameObject.FindGameObjectsWithTag("Enemy");
+            for(int i = 0; i < taggedObjects.Length; i++)
+            {
+                float thisDistance = Vector3.Distance(GameHandler.instance.player.transform.position, taggedObjects[i].transform.position);
+                    if( thisDistance <= adderRange)
+                    {
+                        closestTargets.Add(taggedObjects[i]);
+                    }
+            }
+            if(closestTargets.Count > 0)
+            {
+                Vector3 averagePos = Vector3.zero;
+                foreach( GameObject item in closestTargets )
                 {
-                        closeDistance = thisDistance;
-                        closest = taggedObjects[i];
+                    averagePos += item.transform.position;
                 }
-         }
-         target = closest;
-        }else{
+                averagePos = averagePos /  closestTargets.Count;
+
+                target = GameObject.FindGameObjectWithTag("Enemy");
+                for(int i = 0; i < taggedObjects.Length; i++)
+                {
+                float thisDistance = Vector3.Distance(averagePos, taggedObjects[i].transform.position);
+                    if( thisDistance <= Vector3.Distance(averagePos, target.transform.position))
+                    {
+                        target = taggedObjects[i];
+                    }
+                }
+
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
+        }
+        else
+        {
             Destroy(gameObject);
         }
 
@@ -62,7 +88,7 @@ public class SkullProjectileLogic : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         //Collided with player (layer 8)
-        if (other.gameObject.tag == "Enemy")
+        if (other.gameObject == target)
         {
             Destroy(gameObject);
             other.gameObject.GetComponent<EnemyController>().DoDamage(5);
