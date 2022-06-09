@@ -8,7 +8,6 @@ public class NormalEnemyProgress : MonoBehaviour
     void Start()
     {
         slider = GetComponent<Slider>();
-        gameObject.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
     }
     void Update()
     {   
