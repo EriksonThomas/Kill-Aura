@@ -5,8 +5,6 @@ public class MobSpawner : MonoBehaviour
     private GameObject target;
     private Vector3 dir;
     private int randomNumber;
-    public float currentDamageDebug;
-    public float currentHealthDebug;
     private int randomEnemy;
     private float innerBound = 6;
     private float outerBound = 8;
@@ -53,8 +51,7 @@ public class MobSpawner : MonoBehaviour
 
         GameObject currentEnemy = Instantiate(enemyPrefab[randomEnemy], adjusted, Quaternion.identity);
         
-        currentEnemy.GetComponent<EnemyStats>().ScaleAttackDamage(waveNumber);
-        currentEnemy.GetComponent<EnemyStats>().ScaleHealth(waveNumber);
+        currentEnemy.GetComponent<EnemyStats>().ScaleEnemy(waveNumber);
 
     }
     void OnDestroy()

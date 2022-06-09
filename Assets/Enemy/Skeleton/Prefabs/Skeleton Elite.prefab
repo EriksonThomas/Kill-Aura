@@ -233,4 +233,4 @@ MonoBehaviour:
   attackDamage: 14
   dazeTime: 0.2
   dazeCounter: 0.2
-  expDropped: 1
+  expDropped: 2
