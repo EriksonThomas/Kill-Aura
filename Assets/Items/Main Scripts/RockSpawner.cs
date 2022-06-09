@@ -14,7 +14,7 @@ public class RockSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameHandler.instance.globalTimer.GetComponent<GlobalTimer>().requestAbility("arrowspawn"))
+        if (GameHandler.instance.globalTimer.GetComponent<GlobalTimer>().requestAbility("rockspawn"))
         {
             Instantiate(deleteme, gameObject.GetComponent<Transform>().position,Quaternion.identity);
             Debug.Log("spawnign");

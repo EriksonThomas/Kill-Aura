@@ -11,8 +11,6 @@ public class RockProjectileLogic : MonoBehaviour
     private GameObject target;
     private Rigidbody2D body;
     private Vector3 prevMovement;
-    public float frequency;  // Speed of sine movement
-    public float magnitude;
     private Vector3 axis;
     void Start()
     {
@@ -52,18 +50,8 @@ public class RockProjectileLogic : MonoBehaviour
             prevMovement = dir.normalized * projectileMoveSpeed * Time.fixedDeltaTime;
             //apply movement to the enemy
         }
-        
         transform.rotation = Quaternion.LookRotation(Vector3.forward,prevMovement);
-        // transform.position+=prevMovement;
-
-        Vector2 perp = Vector2.Perpendicular(new Vector2(prevMovement.x, prevMovement.y));
-        axis = Vector3.Normalize(new Vector3(perp.x,perp.y,0));
-        transform.position += axis * Mathf.Sin (Time.time * frequency) * magnitude;
-
-        // Vector2 a = new Vector2(prevMovement.x, prevMovement.y);
-        // transform.position += prevMovement * Mathf.Sin (Time.time * frequency) * magnitude;
-        // transform.position += axis 
-             
+        transform.position+=prevMovement;           
     }
 
     private void OnTriggerEnter2D(Collider2D other)
