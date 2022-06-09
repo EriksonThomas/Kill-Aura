@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a8ac6749dbfa74648a75edf6a73aaf21
+guid: 62e9ed7a7f3f4f046a003df88a905844
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -100,17 +100,29 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Floating Rocks_0
+      name: RockComponents_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,20 +130,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 55711e9a462d97f45907e970e2426569
-      internalID: 483696634
+      spriteID: c7a29445598154c4b876960f2b6992f6
+      internalID: -760995836
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Floating Rocks_1
+      name: RockComponents_1
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae6c67ddc7eeda445a20926a532d14bd
+      internalID: 1643318258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RockComponents_2
       rect:
         serializedVersion: 2
         x: 32
         y: 0
-        width: 32
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -139,20 +172,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9f3bd378e8fb8ed43a754d9f4725701b
-      internalID: -1508955288
+      spriteID: 809e739875abf114c82fc96fdd116969
+      internalID: 1964817006
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Floating Rocks_2
+      name: RockComponents_3
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4e12f70e42f1ac4192903ae9e24bc10
+      internalID: 116992133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RockComponents_4
       rect:
         serializedVersion: 2
         x: 64
         y: 0
-        width: 32
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -160,20 +214,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4f05ee54eb38a1e48a82e2a3ee8445de
-      internalID: -149222500
+      spriteID: 13bec31bc71fb544995e38e1717fc1bb
+      internalID: 1966594195
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Floating Rocks_3
+      name: RockComponents_5
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59e7e3f8031ceb141884df5652c8be09
+      internalID: 58747289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RockComponents_6
       rect:
         serializedVersion: 2
         x: 96
         y: 0
-        width: 32
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,20 +256,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e02361ec476478e4395efb0aa0356232
-      internalID: 602596927
+      spriteID: d8a6e26a31038724491fcadc4534bc40
+      internalID: -857895174
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Floating Rocks_4
+      name: RockComponents_7
       rect:
         serializedVersion: 2
-        x: 128
+        x: 112
         y: 0
-        width: 32
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -202,8 +277,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 490f15b3f3db8834da321f10b6532cfc
-      internalID: -16337855
+      spriteID: 938089072808b914ca2b1d8d5837ca7b
+      internalID: -1058955858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RockComponents_8
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0723d5dd682b6e9419f17528faaec5b6
+      internalID: 1376730444
       vertices: []
       indices: 
       edges: []
@@ -219,11 +315,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Floating Rocks_2: -149222500
-      Floating Rocks_1: -1508955288
-      Floating Rocks_0: 483696634
-      Floating Rocks_3: 602596927
-      Floating Rocks_4: -16337855
+      RockComponents_4: 1966594195
+      RockComponents_7: -1058955858
+      RockComponents_3: 116992133
+      RockComponents_5: 58747289
+      RockComponents_6: -857895174
+      RockComponents_1: 1643318258
+      RockComponents_0: -760995836
+      RockComponents_2: 1964817006
+      RockComponents_8: 1376730444
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
