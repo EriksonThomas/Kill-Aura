@@ -10,6 +10,7 @@ public class SkullProjectileLogic : MonoBehaviour
     // Start is called before the first frame update
     public float projectileMoveSpeed;
     public float adderRange;
+    public GameObject explosion;
     // public float projectileMoveSpeedStart = 1f;
     private GameObject target;
     private Rigidbody2D body;
@@ -90,8 +91,8 @@ public class SkullProjectileLogic : MonoBehaviour
         //Collided with player (layer 8)
         if (other.gameObject == target)
         {
+            Instantiate(explosion, other.transform.position,Quaternion.identity);
             Destroy(gameObject);
-            other.gameObject.GetComponent<EnemyController>().DoDamage(5);
         }
     }
 }

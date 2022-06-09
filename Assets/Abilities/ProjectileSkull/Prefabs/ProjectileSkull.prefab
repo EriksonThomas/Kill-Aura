@@ -102,6 +102,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectileMoveSpeed: 2
   adderRange: 2.75
+  explosion: {fileID: 1624587383624654158, guid: 0e4de12b267b8d24aaba0118274cfce6,
+    type: 3}
 --- !u!58 &1624587383624654149
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -117,7 +119,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.1
+  m_Radius: 0.02
 --- !u!96 &1624587383624654154
 TrailRenderer:
   serializedVersion: 2
