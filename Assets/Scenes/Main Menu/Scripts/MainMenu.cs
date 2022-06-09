@@ -45,10 +45,13 @@ public class MainMenu : MonoBehaviour
     {
         SetActiveMenu(settingsMenu);
     }
-
     public void settings_handleFullscreenPressed()
     {
         UnityEngine.Screen.fullScreenMode = FullScreenMode.Windowed;
+    }
+    public void settings_handleEscape()
+    {
+        SetActiveMenu(splashMenu);
     }
 
     public void character_handleCharacter0Selected()
@@ -62,6 +65,10 @@ public class MainMenu : MonoBehaviour
     public void character_handleCharacter2Selected()
     {
         SceneManager.LoadScene(levels[0]);
+    }
+    public void character_handleEscape()
+    {
+        SetActiveMenu(splashMenu);
     }
 
 }
