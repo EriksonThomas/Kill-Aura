@@ -53,10 +53,8 @@ public class RockProjectileLogic : MonoBehaviour
         transform.rotation = Quaternion.LookRotation(Vector3.forward,prevMovement);
         transform.position+=prevMovement;           
     }
-
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log(other);
         //Collided with player (layer 8)
         if (other.gameObject.tag == "Enemy")
         {

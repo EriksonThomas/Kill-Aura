@@ -23,7 +23,6 @@ public class EliteEnemyProgress : MonoBehaviour
 
         var playerProgress = GameHandler.instance.player.GetComponent<PlayerStats>().eliteEnemyMeter;
         var playerProgressNeeded = WaveManager.instance.GetComponent<WaveManager>().eliteEnemyMeterMax;
-        Debug.Log("fuck ya" + (float) playerProgress / (float) playerProgressNeeded);
         float fillValue = (float) playerProgress / (float) playerProgressNeeded;
         slider.value = fillValue;
     }
