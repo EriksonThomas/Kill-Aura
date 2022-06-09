@@ -54,11 +54,11 @@ public class ArrowProjectileLogic : MonoBehaviour
         }
         
         transform.rotation = Quaternion.LookRotation(Vector3.forward,prevMovement);
-        transform.position+=prevMovement;
+        // transform.position+=prevMovement;
 
-        // Vector2 perp = Vector2.Perpendicular(new Vector2(prevMovement.x, prevMovement.y));
-        // axis = Vector3.Normalize(new Vector3(perp.x,perp.y,0));
-        // transform.position += axis * Mathf.Sin (Time.time * frequency) * magnitude;
+        Vector2 perp = Vector2.Perpendicular(new Vector2(prevMovement.x, prevMovement.y));
+        axis = Vector3.Normalize(new Vector3(perp.x,perp.y,0));
+        transform.position += axis * Mathf.Sin (Time.time * frequency) * magnitude;
 
         // Vector2 a = new Vector2(prevMovement.x, prevMovement.y);
         // transform.position += prevMovement * Mathf.Sin (Time.time * frequency) * magnitude;

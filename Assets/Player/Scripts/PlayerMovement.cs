@@ -24,6 +24,8 @@ public class PlayerMovement : MonoBehaviour
             if (playerStats.currentStamina >= dodgeStamina && GameHandler.instance.globalTimer.GetComponent<GlobalTimer>().requestAbility("dodgeCD"))
             {
                 playerStats.currentStamina -= dodgeStamina;
+                GameHandler.instance.player.GetComponent<Animator>().SetFloat("movementX", movement.x);
+                GameHandler.instance.player.GetComponent<Animator>().Play("dodge");
                 GameHandler.instance.player.GetComponent<EffectableObject>().ApplyEffect(dodgeData);
             } 
         }

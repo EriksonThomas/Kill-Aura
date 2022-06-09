@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1624587383624654153}
   - component: {fileID: 1624587383624654148}
+  - component: {fileID: 1624587383624654155}
   - component: {fileID: 1624587383624654149}
   - component: {fileID: 1624587383624654154}
-  - component: {fileID: 1624587383624654155}
   - component: {fileID: 1624587383624654152}
   m_Layer: 8
   m_Name: ProjectileSkull
@@ -88,6 +88,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1624587383624654155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1624587383624654158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71edf42e381632b4f82c6b3e25073594, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectileMoveSpeed: 2
+  adderRange: 2.75
+  explosion: {fileID: 1624587383624654158, guid: 0e4de12b267b8d24aaba0118274cfce6,
+    type: 3}
 --- !u!58 &1624587383624654149
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -103,7 +119,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.1
+  m_Radius: 0.02
 --- !u!96 &1624587383624654154
 TrailRenderer:
   serializedVersion: 2
@@ -212,19 +228,6 @@ TrailRenderer:
   m_MinVertexDistance: 0
   m_Autodestruct: 1
   m_Emitting: 1
---- !u!114 &1624587383624654155
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1624587383624654158}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71edf42e381632b4f82c6b3e25073594, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectileMoveSpeed: 2
 --- !u!50 &1624587383624654152
 Rigidbody2D:
   serializedVersion: 4
