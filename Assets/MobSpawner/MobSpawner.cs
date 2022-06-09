@@ -52,12 +52,10 @@ public class MobSpawner : MonoBehaviour
         var adjusted = gameObject.transform.position + positionOffset;
 
         GameObject currentEnemy = Instantiate(enemyPrefab[randomEnemy], adjusted, Quaternion.identity);
-        
-        currentEnemy.GetComponent<EnemyController>().attackDamage = currentEnemy.GetComponent<EnemyController>().attackDamage + (waveNumber / 6);
-        currentDamageDebug = currentEnemy.GetComponent<EnemyController>().attackDamage / attackDamage;
 
-        currentEnemy.GetComponent<EnemyController>().maxHealth = currentEnemy.GetComponent<EnemyController>().maxHealth + (waveNumber / 2);
-        currentEnemy.GetComponent<EnemyController>().currentHealth = currentEnemy.GetComponent<EnemyController>().currentHealth + (waveNumber / 2);
+        currentEnemy.GetComponent<EnemyStats>().attackDamage = currentEnemy.GetComponent<EnemyStats>().attackDamage + (waveNumber / 6);
+        currentEnemy.GetComponent<EnemyStats>().maxHealth = currentEnemy.GetComponent<EnemyStats>().maxHealth + (waveNumber / 2);
+        currentEnemy.GetComponent<EnemyStats>().currentHealth = currentEnemy.GetComponent<EnemyStats>().currentHealth + (waveNumber / 2);
     }
     void OnDestroy()
     {
