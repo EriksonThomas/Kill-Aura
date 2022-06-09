@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: 1395002179024953186}
   - component: {fileID: -5917056545321937484}
   m_Layer: 12
-  m_Name: Mushlum
+  m_Name: Mushloom
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
