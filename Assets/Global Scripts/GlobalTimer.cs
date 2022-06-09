@@ -52,7 +52,7 @@ public class GlobalTimer : MonoBehaviour
     {
         foreach( KeyValuePair<GameObject, double> item in objectsToDestroy )
         {
-            Debug.Log(item.Key + " | " + item.Value);
+            // Debug.Log(item.Key + " | " + item.Value);
             if (item.Value <= Time.time)
             {
                 Destroy(item.Key);

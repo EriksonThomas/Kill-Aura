@@ -17,7 +17,6 @@ public class ArrowSpawner : MonoBehaviour
         if (GameHandler.instance.globalTimer.GetComponent<GlobalTimer>().requestAbility("arrowspawn"))
         {
             Instantiate(deleteme, gameObject.GetComponent<Transform>().position,Quaternion.identity);
-            Debug.Log("spawnign");
         }
     }
 }
