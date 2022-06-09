@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
@@ -13,8 +11,6 @@ public class SkullProjectileLogic : MonoBehaviour
     private Vector3 prevMovement;
     void Start()
     {
-        
-        
         //check for the direction of the player
         body = GetComponent<Rigidbody2D>();
         body.freezeRotation = true;
@@ -65,7 +61,6 @@ public class SkullProjectileLogic : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log(other);
         //Collided with player (layer 8)
         if (other.gameObject.tag == "Enemy")
         {

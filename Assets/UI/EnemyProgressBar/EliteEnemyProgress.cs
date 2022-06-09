@@ -22,10 +22,11 @@ public class EliteEnemyProgress : MonoBehaviour
         }
 
         var playerProgress = GameHandler.instance.player.GetComponent<PlayerStats>().eliteEnemyMeter;
-        var playerProgressNeeded = WaveManager.instance.GetComponent<WaveManager>().eliteEnemyMeterMax;
-
+        var playerProgressNeeded = WaveManager.instance.GetComponent<WaveManager>().eliteEnemyMeterMax;  
+        Debug.Log("fuck you" + (float) playerProgress / (float) playerProgressNeeded);
         float fillValue = (float) playerProgress / (float) playerProgressNeeded;
-        Debug.Log(fillValue);
+        //slider.value = (float) playerProgress / (float) playerProgressNeeded * 100.0;
         slider.value = fillValue;
+        Debug.Log(slider.value);
     }
 }

@@ -23,9 +23,8 @@ public class NormalEnemyProgress : MonoBehaviour
 
         var playerProgress = GameHandler.instance.player.GetComponent<PlayerStats>().normalEnemyMeter;
         var playerProgressNeeded = WaveManager.instance.GetComponent<WaveManager>().normalEnemyMeterMax;
-
+        Debug.Log("fuck ya" + (float) playerProgress / (float) playerProgressNeeded);
         float fillValue = (float) playerProgress / (float) playerProgressNeeded;
-        Debug.Log(fillValue);
         slider.value = fillValue;
     }
 }

@@ -1,13 +1,13 @@
 using UnityEngine;
-
+using System.Collections.Generic;
 public class WaveManager : MonoBehaviour
 {
     public static WaveManager instance;
     public GameObject enemySpawnerPrefab;
     public bool mobSpawnerEnabled;
     public bool waveInProgress;
-    public float waveNumber;
-    public float waveNumberCleared;
+    public int waveNumber;
+    public int waveNumberCleared;
     public float currentWaveLength;
     public float waveTimer;
     public float waveTextTimer;
@@ -16,17 +16,23 @@ public class WaveManager : MonoBehaviour
     public int normalEnemyMeterMax;
     public int eliteEnemyMeterMax;
     public int bossEnemyMeterMax;
-    [System.NonSerialized] public bool startNextWave;
-
+    private List<Level> levelData;
     void Start()
     {
+        levelData = gameObject.GetComponent<LoadLevels>().levels;
         //instance the script and find WaveNumber text
         instance = this;
         waveNumberTextObject = GameObject.Find("WaveNumber");
-        //waveNumberTextObject.SetActive(true);
     }
     void Update()
     {
+        
+        normalEnemyMeterMax = levelData[waveNumberCleared].normal;
+        eliteEnemyMeterMax = levelData[waveNumberCleared].elite;
+        bossEnemyMeterMax = levelData[waveNumberCleared].boss;
+        
+        //Debug.Log("eliteEnemyMeterMax" + eliteEnemyMeterMax);
+        
         //check to see if mob spawner is enabled on the WaveManager GameObject
         if(mobSpawnerEnabled == true)
         {
@@ -40,7 +46,6 @@ public class WaveManager : MonoBehaviour
                 else
                 {
                     waveNumberTextObject.SetActive(false);
-                    Debug.Log("spawning wave");
                     waveNumberTextObject.SetActive(false);
                     //If the timer is complete hide the text and spawn a new wave
                     waveNumber += 1;
@@ -55,7 +60,7 @@ public class WaveManager : MonoBehaviour
         }
 
         var player = GameHandler.instance.player.GetComponent<PlayerStats>();
-        if(player.normalEnemyMeter >= normalEnemyMeterMax && player.eliteEnemyMeter >= eliteEnemyMeterMax && player.bossEnemyMeter >= bossEnemyMeterMax)
+        if(player.normalEnemyMeter >= levelData[waveNumberCleared].normal && player.eliteEnemyMeter >= levelData[waveNumberCleared].elite && player.bossEnemyMeter >= levelData[waveNumberCleared].boss)
         {
             waveProgressComplete = true;
             waveNumberCleared += 1;
@@ -63,7 +68,7 @@ public class WaveManager : MonoBehaviour
 
         if(waveProgressComplete == true)
         {
-            Debug.Log("Wave cleared " + waveNumberCleared);
+            Debug.Log("Wave cleared " + waveNumberCleared + "normalEnemyMeterMax" + normalEnemyMeterMax + "eliteEnemyMeterMax" + eliteEnemyMeterMax);
             //waveNumberTextObject.SetActive(true);
             waveProgressComplete = false;
             player.normalEnemyMeter = 0;

@@ -1,5 +1,4 @@
 using UnityEngine;
-
 public class GlobalRandomMultiplier : MonoBehaviour
 {
     private float randomNumber;
