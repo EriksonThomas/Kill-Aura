@@ -13,11 +13,7 @@ public class EchoEffect : MonoBehaviour
     {
         if(timeBtwSpawns <=0)
         {
-            float offsetX =(float)(Random.Range(0,10)/10);
-            float offsetY = (float)(Random.Range(0,10)/10);
-            Debug.Log(offsetX.ToString() +"|" + offsetY.ToString());
-            Vector3 offset = new Vector3(offsetX,offsetY,0);
-            GameObject temp = Instantiate(echo, transform.position + offset, Quaternion.identity);
+            GameObject temp = Instantiate(echo, transform.position, Quaternion.identity);
             Destroy(temp, 4f);
             timeBtwSpawns = startTimeBtwSpawns;
         }
