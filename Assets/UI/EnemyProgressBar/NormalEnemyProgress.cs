@@ -5,12 +5,14 @@ public class NormalEnemyProgress : MonoBehaviour
 {
     public Image fillImage;
     private Slider slider;
-    void Awake()
+    void Start()
     {
         slider = GetComponent<Slider>();
+        gameObject.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
     }
     void Update()
-    {
+    {   
+        
         if (slider.value <= slider.minValue)
         {
             fillImage.enabled = false;

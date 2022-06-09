@@ -4,6 +4,8 @@ public class ItemManager : MonoBehaviour
 {
     public bool diceItemEnabled = false;
     public GameObject diceItemyPrefab;
+    public bool rocksItemEnabled = false;
+    public GameObject rocksItemyPrefab;
     public bool puzzleItemEnabled = false;
     public GameObject puzzleItemyPrefab;
     
@@ -18,6 +20,11 @@ public class ItemManager : MonoBehaviour
         if(puzzleItemEnabled == true)
         {
             Instantiate(puzzleItemyPrefab);
+        }
+        
+        if(rocksItemEnabled == true)
+        {
+            Instantiate(rocksItemyPrefab);
         }
     }
 }
