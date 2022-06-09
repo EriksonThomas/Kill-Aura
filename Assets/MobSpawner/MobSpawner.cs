@@ -5,8 +5,6 @@ public class MobSpawner : MonoBehaviour
     private GameObject target;
     private Vector3 dir;
     private int randomNumber;
-    public float currentDamageDebug;
-    public float currentHealthDebug;
     private int randomEnemy;
     private float innerBound = 6;
     private float outerBound = 8;
@@ -26,7 +24,7 @@ public class MobSpawner : MonoBehaviour
         randomNumber = Random.Range(0, 100);
         if(randomNumber < 5)
         {
-            randomEnemy = 0;
+            randomEnemy = 4;
         }
         else if(randomNumber > 5 && randomNumber < 45)
         {   
@@ -52,13 +50,9 @@ public class MobSpawner : MonoBehaviour
         var adjusted = gameObject.transform.position + positionOffset;
 
         GameObject currentEnemy = Instantiate(enemyPrefab[randomEnemy], adjusted, Quaternion.identity);
-        var attackDamage = currentEnemy.GetComponent<EnemyController>().attackDamage;
+        Debug.Log(enemyPrefab[randomEnemy]);
+        currentEnemy.GetComponent<EnemyStats>().ScaleEnemy(waveNumber);
 
-        currentEnemy.GetComponent<EnemyController>().attackDamage = currentEnemy.GetComponent<EnemyController>().attackDamage + (waveNumber / 6);
-        currentDamageDebug = currentEnemy.GetComponent<EnemyController>().attackDamage / attackDamage;
-
-        currentEnemy.GetComponent<EnemyController>().maxHealth = currentEnemy.GetComponent<EnemyController>().maxHealth + (waveNumber / 2);
-        currentEnemy.GetComponent<EnemyController>().currentHealth = currentEnemy.GetComponent<EnemyController>().currentHealth + (waveNumber / 2);
     }
     void OnDestroy()
     {

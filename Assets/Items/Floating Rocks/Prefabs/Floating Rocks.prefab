@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1624587383624654153}
   - component: {fileID: 5803640224413817558}
-  - component: {fileID: -7901570137418675190}
+  - component: {fileID: 7605425508470342405}
   - component: {fileID: 1624587383624654148}
   - component: {fileID: 1624587383624654149}
   - component: {fileID: 1624587383624654152}
@@ -51,7 +51,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 0.3
   minimumDistance: 0.4
---- !u!114 &-7901570137418675190
+--- !u!114 &7605425508470342405
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -60,10 +60,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1624587383624654158}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 975329553895b714295506f20cd8538c, type: 3}
+  m_Script: {fileID: 11500000, guid: b04de1e33b9309249aa9962d1bdd1f63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deleteme: {fileID: 1624587383624654158, guid: 8ef2ed6edb1c9044884b74864cfa414f,
+  deleteme: {fileID: 1624587383624654158, guid: 0f2e61fe6a523cd40ac7825064979249,
     type: 3}
 --- !u!212 &1624587383624654148
 SpriteRenderer:
@@ -106,12 +106,12 @@ SpriteRenderer:
   m_SortingLayerID: -2002269539
   m_SortingLayer: 5
   m_SortingOrder: 0
-  m_Sprite: {fileID: 483696634, guid: a8ac6749dbfa74648a75edf6a73aaf21, type: 3}
+  m_Sprite: {fileID: 834892574, guid: a8ac6749dbfa74648a75edf6a73aaf21, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.16, y: 0.16}
+  m_Size: {x: 0.08, y: 0.08}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

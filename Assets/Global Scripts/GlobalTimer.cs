@@ -16,6 +16,8 @@ public class GlobalTimer : MonoBehaviour
         globalCooldownLength.Add("dodgeCD", .31);
         globalCooldownLength.Add("skullspawn", .8);
         globalCooldownLength.Add("arrowspawn", .7);
+        globalCooldownLength.Add("rockspawn", .6);
+        globalCooldownLength.Add("echo", .08);
         
     }
     void FixedUpdate()

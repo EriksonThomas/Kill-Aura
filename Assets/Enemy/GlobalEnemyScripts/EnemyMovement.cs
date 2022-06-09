@@ -1,13 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
+﻿using UnityEngine;
 public class EnemyMovement : MonoBehaviour
 {
-    public float moveSpeed;
-    public float moveSpeedStart = 1f;
     private GameObject target;
-    public Rigidbody2D body;
+    private Rigidbody2D body;
     void Start()
     {
         //check for the direction of the player
@@ -30,6 +25,6 @@ public class EnemyMovement : MonoBehaviour
             transform.rotation = Quaternion.Euler(0f,180,0f);
         }
         //apply movement to the enemy
-        transform.position += dir.normalized * moveSpeed * Time.fixedDeltaTime;
+        transform.position += dir.normalized * gameObject.GetComponent<EnemyStats>().moveSpeed * Time.fixedDeltaTime;
     }
 }

@@ -100,6 +100,18 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -118,8 +130,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 55711e9a462d97f45907e970e2426569
-      internalID: 483696634
+      spriteID: caa9ca03b1f627d4f9619f81a0d2b127
+      internalID: 834892574
       vertices: []
       indices: 
       edges: []
@@ -139,8 +151,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9f3bd378e8fb8ed43a754d9f4725701b
-      internalID: -1508955288
+      spriteID: 70f0575420d2a8944bf97acfd2267600
+      internalID: 652070096
       vertices: []
       indices: 
       edges: []
@@ -160,8 +172,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4f05ee54eb38a1e48a82e2a3ee8445de
-      internalID: -149222500
+      spriteID: 464c90abb3f984f40abc3bd5ebea8a5e
+      internalID: -645124007
       vertices: []
       indices: 
       edges: []
@@ -181,8 +193,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e02361ec476478e4395efb0aa0356232
-      internalID: 602596927
+      spriteID: 3466c0ad79c8f67459d67dee002043fe
+      internalID: -1356378527
       vertices: []
       indices: 
       edges: []
@@ -202,8 +214,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 490f15b3f3db8834da321f10b6532cfc
-      internalID: -16337855
+      spriteID: 99deb1ea4b7e2f946a4bc50032060fe3
+      internalID: -743458820
       vertices: []
       indices: 
       edges: []
@@ -219,11 +231,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Floating Rocks_2: -149222500
-      Floating Rocks_1: -1508955288
-      Floating Rocks_0: 483696634
-      Floating Rocks_3: 602596927
-      Floating Rocks_4: -16337855
+      Floating Rocks_2: -645124007
+      Floating Rocks_1: 652070096
+      Floating Rocks_0: 834892574
+      Floating Rocks_3: -1356378527
+      Floating Rocks_4: -743458820
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -1,7 +1,7 @@
 using UnityEngine;
-
 public class PlayerStats : MonoBehaviour
 {
+    public float moveSpeed;
     public float maxHealth;
     public float currentHealth;
     public float healthRegenTime;
@@ -12,13 +12,4 @@ public class PlayerStats : MonoBehaviour
     public int normalEnemyMeter;
     public int eliteEnemyMeter;
     public int bossEnemyMeter;
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        //Debug.Log(normalEnemyMeter + eliteEnemyMeter + bossEnemyMeter);
-    }
 }

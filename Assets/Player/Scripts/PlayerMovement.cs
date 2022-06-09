@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float moveSpeed = 5f;
     [SerializeField] private float dodgeStamina = 5f;
     [SerializeField] private Effect_Dodge dodgeData; 
     private Rigidbody2D body;
@@ -24,6 +23,8 @@ public class PlayerMovement : MonoBehaviour
             if (playerStats.currentStamina >= dodgeStamina && GameHandler.instance.globalTimer.GetComponent<GlobalTimer>().requestAbility("dodgeCD"))
             {
                 playerStats.currentStamina -= dodgeStamina;
+                GameHandler.instance.player.GetComponent<Animator>().SetFloat("movementX", movement.x);
+                GameHandler.instance.player.GetComponent<Animator>().Play("dodge");
                 GameHandler.instance.player.GetComponent<EffectableObject>().ApplyEffect(dodgeData);
             } 
         }
@@ -51,6 +52,6 @@ public class PlayerMovement : MonoBehaviour
             movement += Vector2.right;
         }
         movement = movement.normalized;
-        body.MovePosition(body.position + movement * moveSpeed * Time.fixedDeltaTime);
+        body.MovePosition(body.position + movement * GameHandler.instance.player.GetComponent<PlayerStats>().moveSpeed * Time.fixedDeltaTime);
     }
 }

@@ -2,19 +2,12 @@
 
 public class EnemyController : MonoBehaviour
 {
-    public float maxHealth;
-    public float currentHealth;
-    private const float dazeTime = 0.4f;
-    public float dazeCounter;
-    private float randomCount;
     private SpriteRenderer my_sprite_renderer;
     private Material white_mat;
     private Material default_mat;
     public GameObject[] gemPrefab;
     public GameObject[] expPrefab;
-    public int expDropped;
-    private int randomNumber;
-    public float attackDamage;
+    private EnemyStats enemyStats;
 
     void Start()
     {
@@ -23,24 +16,25 @@ public class EnemyController : MonoBehaviour
         default_mat = my_sprite_renderer.material;
     }
     void FixedUpdate()
-    {       
-        if (dazeCounter > 0)
+    {     
+        enemyStats = gameObject.GetComponent<EnemyStats>();
+        if (enemyStats.dazeCounter > 0)
         {
-            gameObject.GetComponent<EnemyMovement>().moveSpeed = 0.0f;
-            dazeCounter -= Time.fixedDeltaTime;            
+            enemyStats.moveSpeed = 0.0f;
+            enemyStats.dazeCounter -= Time.fixedDeltaTime;            
         }
         else
         {
-            gameObject.GetComponent<EnemyMovement>().moveSpeed = gameObject.GetComponent<EnemyMovement>().moveSpeedStart;
+            enemyStats.moveSpeed = enemyStats.moveSpeedStart;
         }
     }
     public void DoDamage(float damage)
     {
         
-        currentHealth -= damage;
+        gameObject.GetComponent<EnemyStats>().currentHealth -= damage;
         DamageNumbers.instance.Create(gameObject.GetComponent<Transform>().position, Mathf.RoundToInt(damage), 0);
         //Debug.Log(gameObject.ToString() +" TOOK " + damage + " DAMAGE ");
-        if (currentHealth <= 0)
+        if (enemyStats.currentHealth <= 0)
         {
             Destroy(gameObject);
             spawn_loot();
@@ -52,14 +46,14 @@ public class EnemyController : MonoBehaviour
                 }
             }
         }
-        dazeCounter = dazeTime;
+        enemyStats.dazeCounter = enemyStats.dazeTime;
         flash_white_mat();
     }
     
     private void flash_white_mat()
     {
         my_sprite_renderer.material = white_mat;
-        Invoke("reset_material", dazeTime/2);
+        Invoke("reset_material", enemyStats.dazeTime / 2);
     }
     private void reset_material()
     {
@@ -77,7 +71,7 @@ public class EnemyController : MonoBehaviour
         
         // Take a random number in EXP Prefab array and cast it to the spawn it in on death
         gameObject.transform.position = gameObject.transform.position + (Random.insideUnitSphere * .3f);
-        GameObject exp = Instantiate(expPrefab[expDropped], gameObject.transform.position, Quaternion.identity);
+        GameObject exp = Instantiate(expPrefab[enemyStats.expDropped], gameObject.transform.position, Quaternion.identity);
         
     }
 }
