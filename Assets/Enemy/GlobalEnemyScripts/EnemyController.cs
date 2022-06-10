@@ -8,6 +8,7 @@ public class EnemyController : MonoBehaviour
     public GameObject[] gemPrefab;
     public GameObject[] expPrefab;
     private EnemyStats enemyStats;
+    public Collider2D hurtbox;
 
     void Start()
     {

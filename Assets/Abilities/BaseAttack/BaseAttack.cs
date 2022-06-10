@@ -11,7 +11,7 @@ public class BaseAttack : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         //TEMPORARY CHECK CAPSULE COLLIDER INSTEAD OF TAG
-        if (other.gameObject.tag == "Enemy" && other.GetType() == typeof(CapsuleCollider2D))
+        if (other.gameObject.tag == "Enemy" && other.GetComponent<EnemyController>().hurtbox == other)
         {
             var randomNumber = GameHandler.instance.GetComponent<GlobalRandomMultiplier>().GenerateRandomNumber();
             other.GetComponent<EnemyController>().DoDamage(attackDamage * randomNumber);
