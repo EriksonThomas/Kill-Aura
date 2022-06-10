@@ -8,46 +8,84 @@ public class HalberdAttack : MonoBehaviour
     public AudioClip Attack;
     public float volume = 5f;
     private bool right = true;
+    private bool set = false;
+    private int dir = -1;
     void Start()
     {
         anim = GetComponent<Animator>();        
     }
-    void FixedUpdate()
-    {
-        if(Input.GetKey(KeyCode.UpArrow))
+    void Update()
+    {   set = false;
+        dir = 4;
+        if(Input.GetKeyDown(KeyCode.UpArrow))
         {
-            reset_triggers();
-            anim.SetTrigger("up_attack_trigger");
+            dir = 0;
+            set = true;
         }
-
-        if(Input.GetKey(KeyCode.DownArrow))
+        if(Input.GetKeyDown(KeyCode.DownArrow))
         {
-            reset_triggers();
-            anim.SetTrigger("down_attack_trigger");
+            dir = 1;
+            set = true;
         }  
-        
-        if(Input.GetKey(KeyCode.LeftArrow))
+        if(Input.GetKeyDown(KeyCode.LeftArrow))
         {
-            right = false;
-            transform.rotation = Quaternion.Euler(0f,180f,0f);
-            reset_triggers();
-            anim.SetTrigger("front_attack_trigger");
+            dir = 2;
+            set = true;
         }
-
-        if(Input.GetKey(KeyCode.RightArrow))
+        if(Input.GetKeyDown(KeyCode.RightArrow))
         {
-            right = true;
-            transform.rotation = Quaternion.Euler(0f,0f,0f);
-            reset_triggers();
-            anim.SetTrigger("front_attack_trigger");
+            dir = 3;
+            set = true;
         }
-    }
+        if (!set)
+        {
+            if(Input.GetKey(KeyCode.UpArrow))
+            {
+                dir = 0;
+            }
 
-    void reset_triggers()
-    {
-        anim.ResetTrigger("up_attack_trigger");
-        anim.ResetTrigger("front_attack_trigger");
-        anim.ResetTrigger("down_attack_trigger");        
+            if(Input.GetKey(KeyCode.DownArrow))
+            {
+                dir = 1;
+            }  
+            
+            if(Input.GetKey(KeyCode.LeftArrow))
+            {
+                dir = 2;
+            }
+
+            if(Input.GetKey(KeyCode.RightArrow))
+            {
+                dir = 3;
+            }
+        }
+        if(!anim.GetBool("attacking")){
+            switch(dir)
+            {
+                case 0:
+                anim.SetTrigger("up_attack_trigger");
+                break;
+
+                case 1:
+                anim.SetTrigger("down_attack_trigger");
+                break;
+
+                case 2:
+                right = false;
+                transform.rotation = Quaternion.Euler(0f,180f,0f);
+                anim.SetTrigger("front_attack_trigger");
+                break;
+
+                case 3:
+                right = true;
+                transform.rotation = Quaternion.Euler(0f,0f,0f);
+                anim.SetTrigger("front_attack_trigger");
+                break;
+
+                case 4:
+                break;
+            }
+        }
     }
 
     void spawn_up_attack()
