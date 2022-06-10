@@ -212,14 +212,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a08d2f2eadcf634f8973deba13183aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0.5
-  moveSpeedStart: 0.5
+  moveSpeed: 0.4
+  moveSpeedStart: 0.4
   maxHealth: 13
   currentHealth: 13
   healthRegenTime: 0
-  attackDamage: 7
-  dazeTime: 0.3
-  dazeCounter: 0.3
+  attackDamage: 5
+  dazeTime: 0.2
+  dazeCounter: 0.2
   expDropped: 1
 --- !u!114 &1395002179024953186
 MonoBehaviour:

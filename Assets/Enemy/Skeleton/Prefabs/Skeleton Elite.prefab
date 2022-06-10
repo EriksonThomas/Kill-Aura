@@ -225,12 +225,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a08d2f2eadcf634f8973deba13183aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 1.2
+  moveSpeed: 0.6
   moveSpeedStart: 0.6
   maxHealth: 23
   currentHealth: 23
   healthRegenTime: 2
-  attackDamage: 14
-  dazeTime: 0.2
-  dazeCounter: 0.2
+  attackDamage: 9
+  dazeTime: 0.15
+  dazeCounter: 0.15
   expDropped: 2

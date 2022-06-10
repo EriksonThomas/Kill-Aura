@@ -7,11 +7,11 @@ public class MobSpawner : MonoBehaviour
     private int randomNumber;
     private int randomEnemy;
     private float innerBound = 6;
-    private float outerBound = 8;
+    private float outerBound = 7;
     void Start()
     {
         //set spawning interval for enemies and kill the mob spawner after a set amount of time
-        InvokeRepeating("SpawnEnemy", 2f, .4f);
+        InvokeRepeating("SpawnEnemy", 2f, .3f);
         Destroy(gameObject, WaveManager.instance.GetComponent<WaveManager>().GenerateWaveLength());
     }
     void Update()
@@ -22,15 +22,15 @@ public class MobSpawner : MonoBehaviour
     {
         //generate a randomized enemy prefab from the array
         randomNumber = Random.Range(0, 100);
-        if(randomNumber < 5)
+        if(randomNumber <= 12)
         {
             randomEnemy = 4;
         }
-        else if(randomNumber > 5 && randomNumber < 45)
+        else if(randomNumber > 12 && randomNumber < 45)
         {   
             randomEnemy = 0;
         }
-        else if(randomNumber > 45 && randomNumber < 94)
+        else if(randomNumber >= 45 && randomNumber < 94)
         {
             randomEnemy = 1;
         }

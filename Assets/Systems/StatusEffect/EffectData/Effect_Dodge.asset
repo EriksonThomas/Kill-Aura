@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Effect_Dodge
   m_EditorClassIdentifier: 
   duration: 0.3
-  permanent: 1
+  permanent: 0
   icon: {fileID: 6453193544218790201, guid: a064e5b2e61f6b94684cae288dbae6c6, type: 3}
   statusSprite: {fileID: 0}

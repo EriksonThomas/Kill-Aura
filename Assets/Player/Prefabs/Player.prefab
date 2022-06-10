@@ -261,13 +261,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 1.3
-  maxHealth: 25
-  currentHealth: 25
+  maxHealth: 50
+  currentHealth: 50
   healthRegenTime: 0
-  maxStamina: 20
-  currentStamina: 20
-  staminaRegenTime: 2
-  attackDamage: 5
+  maxStamina: 25
+  currentStamina: 25
+  staminaRegenTime: 1.5
+  attackDamage: 7
   normalEnemyMeter: 0
   eliteEnemyMeter: 0
   bossEnemyMeter: 0

@@ -33,8 +33,9 @@ public class EnemyStats : MonoBehaviour
     public void ScaleSpeed(int waveNumber)
     {
         Debug.Log("Scale Speed");
-        Debug.Log(moveSpeed = moveSpeed + (waveNumber / 9.0f));
-        moveSpeedStart = moveSpeedStart + (waveNumber / 9.0f);
+        
+        moveSpeedStart = moveSpeedStart + (waveNumber / 9.7f);
         moveSpeed = moveSpeed + (waveNumber / 9.0f);
+        //print(moveSpeed = moveSpeed + (waveNumber / 9.0f));
     }
 }
