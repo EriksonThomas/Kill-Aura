@@ -60,6 +60,8 @@ public class WaveManager : MonoBehaviour
         }
 
         var player = GameHandler.instance.player.GetComponent<PlayerStats>();
+        Debug.Log(levelData[waveNumberCleared].normal);
+        Debug.Log(levelData[waveNumberCleared].elite);
         if(player.normalEnemyMeter >= levelData[waveNumberCleared].normal && player.eliteEnemyMeter >= levelData[waveNumberCleared].elite && player.bossEnemyMeter >= levelData[waveNumberCleared].boss)
         {
             waveProgressComplete = true;

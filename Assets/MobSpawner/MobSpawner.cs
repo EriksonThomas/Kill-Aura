@@ -21,16 +21,17 @@ public class MobSpawner : MonoBehaviour
     void SpawnEnemy()
     {
         //generate a randomized enemy prefab from the array
+        //Bat = 0, Skeleton = 1, Skeleton Elite = 2, Snail = 3, Mushroom = 4
         randomNumber = Random.Range(0, 100);
-        if(randomNumber <= 12)
+        if(randomNumber <= 17)
         {
             randomEnemy = 4;
         }
-        else if(randomNumber > 12 && randomNumber < 45)
+        else if(randomNumber > 17 && randomNumber < 35)
         {   
             randomEnemy = 0;
         }
-        else if(randomNumber >= 45 && randomNumber < 94)
+        else if(randomNumber >= 35 && randomNumber < 90)
         {
             randomEnemy = 1;
         }
